@@ -24,7 +24,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.firewall.enable = true;
+  networking.firewall.enable = false;
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
@@ -37,7 +37,8 @@
 
   # Enable the GNOME Desktop Environment.
   #services.xserver.displayManager.gdm.enable = true;
-  services.displayManager.sddm.enable = true;
+  #services.displayManager.sddm.enable = true;
+  services.displayManager.ly.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
 
   # Configure keymap in X11
@@ -49,6 +50,19 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  #power
+  services.upower.enable = true;
+  # Untuk ganti profil power (performance, balanced, powersave)
+  services.power-profiles-daemon.enable = true;
+
+  # Untuk pengelolaan daya yang lebih advanced (bisa dipakai bareng upower)
+  # services.tlp.enable = true;
+
+  #bluetooth
+  services.blueman.enable = true; # (opsional, untuk GUI tray Bluetooth)
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;

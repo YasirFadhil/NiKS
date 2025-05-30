@@ -41,7 +41,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.users.yasirfadhil = import ./home.nix;
+          home-manager.users.yasirfadhil = import ./home/home.nix;
         }
 
         ({ pkgs, ... }: {
@@ -56,6 +56,18 @@
       specialArgs = {
         inherit home-manager zen-browser hyprland;
       };
+    };
+
+    # Firewall
+    networking.firewall = {
+      enable = true;
+      allowedTCPPorts = [80 443 3000 9000];
+      allowedUDPPortRanges = [
+        {
+          from = 40000;
+          to = 50000;
+        }
+      ];
     };
 
       devShells.${system}.default = nixpkgs.legacyPackages.${system}.mkShell {
