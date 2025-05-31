@@ -10,6 +10,10 @@ in
 {
   imports = [
     ./hypr/hyprland.nix
+    ./nushell
+    ./fastfetch
+    ./fastfetch/def-comp.nix
+    ./hypr/polkitagent.nix
     hyprlockConfig
     hyprIdleConfig
   ];
@@ -20,6 +24,7 @@ in
   programs.home-manager.enable = true;
   home.packages = import ./packages.nix {inherit pkgs;};
 
+  #programs.gnome-keyring.enable = true;
   programs.nushell.enable = true;
   programs.zsh.enable = true;
   programs.git.enable = true;
@@ -43,6 +48,7 @@ in
     XCURSOR_SIZE = "20";
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
+    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh";
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "qt6ct";
     XDG_SESSION_TYPE = "wayland";

@@ -62,4 +62,6 @@
    pamixer
    gimp3
    upower
+   polkit_gnome
+   gnome-keyring
   ]
