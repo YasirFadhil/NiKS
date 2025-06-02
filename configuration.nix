@@ -39,7 +39,7 @@
   #services.xserver.displayManager.gdm.enable = true;
   #services.displayManager.sddm.enable = true;
   services.displayManager.ly.enable = true;
-  services.desktopManager.gnome.enable = false;
+  services.desktopManager.gnome.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
   # Configure keymap in X11
@@ -59,6 +59,9 @@
 
   # Untuk pengelolaan daya yang lebih advanced (bisa dipakai bareng upower)
   # services.tlp.enable = true;
+
+  security.polkit.enable = true;
+  services.devmon.enable = false;
 
   #bluetooth
   services.blueman.enable = true; # (opsional, untuk GUI tray Bluetooth)
@@ -121,6 +124,8 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  services.dbus.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -129,6 +134,12 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 	wget
+  xfce.thunar
+  xfce.tumbler
+  xfce.thunar-volman
+  dbus
+  gvfs
+  udisks
 	zed-editor
 	fish
 	zsh

@@ -1,11 +1,15 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
+    bindm = [
+      "SUPER, mouse:272, movewindow" # Move Window (mouse)
+      "SUPER, mouse:273, resizewindow" # Resize Window (mouse)
+    ];
     bindl = [
-      "SUPER, XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 ; wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
-      "SUPER, XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 ; wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
-      "SUPER, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      "SUPER, XF86MonBrightnessUp, exec, brightnessctl s 2%+"
-      "SUPER, XF86MonBrightnessDown, exec, brightnessctl s 2%-"
+      ",XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 ; wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
+      ",XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 ; wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
+      ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ",XF86MonBrightnessUp, exec, brightnessctl s 2%+"
+      ",XF86MonBrightnessDown, exec, brightnessctl s 2%-"
     ];
     bind = [
       "SUPER, T, exec, kitty"
@@ -19,10 +23,11 @@
       "SUPER, P, exec, wlogout"
       "SUPER, L, exec, hyprlock"
       "SUPER SHIFT, V, exec, wl-clipboard"
+      "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
 
       #screenshot
-      "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/screenshot_$(date +%s).png | wl-copy"
-      "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/screenreg-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
 
       #window focus
       "SUPER, H, movefocus, l"

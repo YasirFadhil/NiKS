@@ -7,7 +7,7 @@
     settings = {
       display = {
         color = {
-          output = "blue"; # warna biru seperti logo NixOS
+          output = "blue";
         };
       };
 

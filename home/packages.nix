@@ -2,9 +2,8 @@
 
 
   with pkgs; [
-   xfce.thunar
-   xfce.tumbler
    kitty
+   discord
    pavucontrol
    git
    clang

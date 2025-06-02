@@ -42,7 +42,7 @@ in
       general = {
         gaps_in = 8;
         gaps_out = 13;
-        border_size = 1;
+        border_size = 0;
         # col.active_border = "rgba(33ccffee)";
         # col.inactive_border = "rgba(595959aa)";
       };
@@ -63,6 +63,14 @@ in
         pseudotile = true;
         preserve_split = true;
       };
+      env = [
+          "XDG_CURRENT_DESKTOP, Hyprland"
+          "XDG_SESSION_TYPE, wayland"
+          "GTK_USE_PORTAL, 1"
+          "MOZ_ENABLE_WAYLAND, 1"
+          "QT_QPA_PLATFORM,wayland"
+          "QT_QPA_PLATFORMTHEME,qt6ct"
+      ];
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
