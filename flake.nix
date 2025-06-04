@@ -10,12 +10,12 @@
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    # spicetify-nix = {
-    #       url = "github:Gerg-L/spicetify-nix";
-    #       inputs.nixpkgs.follows = "nixpkgs";
-    #     };
-    # hyprland = {
+    # spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+          url = "github:Gerg-L/spicetify-nix";
+          inputs.nixpkgs.follows = "nixpkgs";
+        };
+     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
