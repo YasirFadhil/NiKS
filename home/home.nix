@@ -6,7 +6,6 @@ let
   volumePkgs = import ../system/volume { pkgs = pkgs; };
   hyprlockConfig = import ./hypr/hyprlock.nix { inherit pkgs; };
   hyprIdleConfig = import ./hypr/hypridle.nix { inherit pkgs; };
-  # batteryScript = import ./scripts/battery.nix { inherit  pkgs; };
 in
 {
   imports = [
@@ -23,7 +22,6 @@ in
     #./zenn
     hyprlockConfig
     hyprIdleConfig
-    # batteryScript
   ];
 
   home.username = "yasirfadhil";
