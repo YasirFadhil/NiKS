@@ -32,8 +32,6 @@ in
   programs.home-manager.enable = true;
   home.packages = import ./packages.nix {inherit pkgs;};
 
-  #programs.gnome-keyring.enable = true;
-  # programs.nushell.enable = true;
   programs.zsh.enable = true;
   programs.git.enable = true;
 
