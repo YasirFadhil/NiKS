@@ -126,6 +126,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "ventoy-1.1.05"
+  # ];
+
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -148,7 +154,7 @@
 	efibootmgr
 	pamixer
 	brightnessctl
-	(zen-browser.packages.${pkgs.system}.default)
+	# (zen-browser.packages.${pkgs.system}.default)
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

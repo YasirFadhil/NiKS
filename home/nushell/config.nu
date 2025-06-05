@@ -46,13 +46,6 @@ def git-we [] {
   git push -u ori main
 }
 
-def g-nih [] {
-  let msg = (input "Commit Message: ")
-  git add .
-  git commit -m $msg
-  git push -u nis main
-}
-
 #alias shortcut
 alias l = clear
 alias g = git

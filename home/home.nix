@@ -15,11 +15,11 @@ in
     # ./var.nix
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
-    ./nushell
+    ./nushell/default.nix
     ./fastfetch
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix
-    #./zenn
+    ./zenn
     hyprlockConfig
     hyprIdleConfig
   ];
