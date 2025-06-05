@@ -1,14 +1,17 @@
 { config, lib, ... }:
 
+let
+  username = config.var.username;
+in
 {
-  options.yasirfadhil.powerKeyAction = lib.mkOption {
+  options.username.powerKeyAction = lib.mkOption {
     type = lib.types.str;
     default = "ignore";
   };
 
   config = {
     services.logind.extraConfig = ''
-      HandlePowerKey=${config.yasirfadhil.powerKeyAction}
+      HandlePowerKey=${config.username.powerKeyAction}
     '';
   };
 }
