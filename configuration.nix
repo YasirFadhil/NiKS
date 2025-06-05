@@ -7,9 +7,9 @@
   {
   imports = [
     ./hardware-configuration.nix
-    ./system/net/default.nix
-    ./system/volume/default.nix
-    ./system/displ/dis.nix
+    ./system/network.nix
+    ./system/sound.nix
+    ./system/display.nix
     #<home-manager/nixos>
   ];
 
