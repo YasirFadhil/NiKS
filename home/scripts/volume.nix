@@ -14,7 +14,7 @@ pkgs.writeShellScriptBin "volume-control" ''
   }
 
   play_feedback_sound() {
-    ${pkgs.libcanberra}/bin/canberra-gtk-play -i audio-volume-change -d "volume-feedback" &>/dev/null &
+    ${pkgs.libcanberra}/bin/canberra-gtk-play -i audio-volume-change
   }
 
   case "$1" in

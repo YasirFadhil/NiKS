@@ -14,7 +14,7 @@
     #<home-manager/nixos>
   ];
 
-  yasir.powerKeyAction = "ignore";
+  yasirfadhil.powerKeyAction = "ignore";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
