@@ -2,8 +2,6 @@
 
 
 let
-  brightnessPkgs = import ../system/brightness { pkgs = pkgs; };
-  volumePkgs = import ../system/volume { pkgs = pkgs; };
   hyprlockConfig = import ./hypr/hyprlock.nix { inherit pkgs; };
   hyprIdleConfig = import ./hypr/hypridle.nix { inherit pkgs; };
 in
@@ -13,6 +11,7 @@ in
     # inputs.stylix.homeModules.stylix
     # ../themes/stylix/nixy.nix
     # ./var.nix
+    # ./spicetify
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
     ./nushell/default.nix

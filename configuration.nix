@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
     ./system/net/default.nix
     ./system/volume/default.nix
-    ./system/display/default.nix
+    ./system/displ/dis.nix
     #<home-manager/nixos>
   ];
 
