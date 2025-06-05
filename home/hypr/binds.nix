@@ -1,13 +1,18 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+{
+  home.packages = with pkgs; [
+    (import ../scripts/volume.nix { inherit pkgs ; })
+  ];
+
   wayland.windowManager.hyprland.settings = {
     bindm = [
       "SUPER, mouse:272, movewindow" # Move Window (mouse)
       "SUPER, mouse:273, resizewindow" # Resize Window (mouse)
     ];
     bindl = [
-      ",XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 ; wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
-      ",XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 ; wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
-      ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ",XF86AudioRaiseVolume, exec, volume-control up"
+      ",XF86AudioLowerVolume, exec, volume-control down"
+      ",XF86AudioMute, exec, volume-control mute"
       ",XF86MonBrightnessUp, exec, brightnessctl s 2%+"
       ",XF86MonBrightnessDown, exec, brightnessctl s 2%-"
     ];

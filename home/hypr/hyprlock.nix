@@ -1,15 +1,9 @@
 { pkgs, ... }:
 
-# let
-#   batteryScript = import ../scripts/battery.nix { inherit pkgs; };
-#   # Optional: Kalau ada nowplay.nix, tambahkan juga
-#   # nowplayScript = import ./nowplay.nix { inherit pkgs; };
-# in
 {
   home.packages = with pkgs; [
     hyprlock
-    # batteryScript
-    # nowplayScript
+    (import ../scripts/battery.nix { inherit pkgs ; })
   ];
 
   xdg.configFile."hypr/hyprlock.conf".text = ''
@@ -23,7 +17,6 @@
 
     animations {
         enabled = true
-
         bezier = ease, 0.25, 0.1, 0.25, 1.0
         animation = windows, 1, 4, ease
         animation = fade, 1, 6, ease
@@ -113,7 +106,8 @@
     }
     label { # Status
         monitor =
-        text = cmd[update:1000]~/.config/hypr/scripts/battery.sh
+        # text = cmd[update:1000]~/.config/hypr/scripts/battery.sh
+        text = cmd[update:1000] battery
         shadow_passes = 1
         shadow_boost = 0.5
         color = $text_color

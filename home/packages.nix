@@ -63,4 +63,6 @@
    upower
    polkit_gnome
    gnome-keyring
+   # libcanberra
+   libcanberra-gtk3
   ]

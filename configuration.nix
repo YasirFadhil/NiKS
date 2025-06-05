@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, zen-browser, ... }:
+{ config, pkgs, ... }:
 
   {
   imports = [
@@ -10,9 +10,11 @@
     ./system/network.nix
     ./system/sound.nix
     ./system/display.nix
+    ./system/power-btn.nix
     #<home-manager/nixos>
   ];
 
+  yasir.powerKeyAction = "ignore";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -104,7 +106,6 @@
 	efibootmgr
 	pamixer
 	brightnessctl
-	# (zen-browser.packages.${pkgs.system}.default)
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
