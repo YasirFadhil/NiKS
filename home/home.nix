@@ -11,7 +11,7 @@ in
     # inputs.stylix.homeModules.stylix
     # ../themes/stylix/nixy.nix
     # ./var.nix
-    # ./spicetify
+     ./spicetify
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
     ./nushell/default.nix

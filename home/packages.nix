@@ -16,7 +16,7 @@
    google-chrome
    carapace
    zoxide
-   spotify
+   # spotify
    hyprpaper
    hyprpolkitagent
    rofi-wayland
