@@ -11,10 +11,11 @@
     ./system/sound.nix
     ./system/display.nix
     ./system/power-btn.nix
+    ./system/users.nix
+    ./system/sys-env.nix
+    ./home/var.nix
     #<home-manager/nixos>
   ];
-
-  # yasirfadhil.powerKeyAction = "ignore";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -56,25 +57,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.yasirfadhil = {
-    shell = pkgs.nushell;
-    isNormalUser = true;
-    description = "yasirfadhil";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
-
-  #fish
-  programs.fish.enable = true;
-
-  #zsh
-  programs.zsh.enable = true;
-
-  #git
-  programs.git.enable = true;
-
-  # services.dbus.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -86,27 +68,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	wget
-  xfce.thunar
-  xfce.tumbler
-  xfce.thunar-volman
-  dbus
-  gvfs
-  udisks
-	zed-editor
-	fish
-	zsh
-	nushell
-	oh-my-zsh
-	zsh-syntax-highlighting
-	vim
-	neovim
-	efibootmgr
-	pamixer
-	brightnessctl
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
