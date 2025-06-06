@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  import = [
-  ./starship.nix
-  ];
-
   programs.nushell = {
     enable = true;
     configFile.text = ''

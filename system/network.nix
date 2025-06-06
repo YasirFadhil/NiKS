@@ -3,6 +3,8 @@
 {
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
+  services.dbus.enable = true;
+  security.polkit.enable = true;
 
   # Allow KDE Connect port range
   networking.firewall.allowedTCPPortRanges = [

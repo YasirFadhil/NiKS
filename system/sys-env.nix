@@ -20,5 +20,6 @@
 	efibootmgr
 	pamixer
 	brightnessctl
+	noto-fonts
   ];
 }

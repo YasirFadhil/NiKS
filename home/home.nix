@@ -14,7 +14,7 @@ in
     ./spicetify
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
-    ./nushell/default.nix
+    ./nus
     ./fastfetch
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix

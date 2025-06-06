@@ -3,6 +3,7 @@
 
   with pkgs; [
    kitty
+   starship
    discord
    pavucontrol
    git
