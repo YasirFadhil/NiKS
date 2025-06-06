@@ -7,6 +7,7 @@ in
   imports = [
     ./polkitagent.nix
     ./binds.nix
+    ./hyprpaper.nix
     # ../hyprpanel/def2.nix
   ];
 

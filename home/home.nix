@@ -10,8 +10,8 @@ in
      inputs.spicetify-nix.homeManagerModules.default
     # inputs.stylix.homeModules.stylix
     # ../themes/stylix/nixy.nix
-    # ./var.nix
-     ./spicetify
+    ./var.nix
+    ./spicetify
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
     ./nushell/default.nix
