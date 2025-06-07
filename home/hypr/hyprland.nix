@@ -23,6 +23,7 @@ in
         "hyprpanel &"
         "hypridle &"
         "hyprpaper &"
+        "nm-applet &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Ice 20"

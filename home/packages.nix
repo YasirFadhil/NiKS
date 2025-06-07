@@ -1,6 +1,5 @@
 { pkgs, ... }:
 
-
   with pkgs; [
    kitty
    starship
@@ -64,6 +63,5 @@
    upower
    polkit_gnome
    gnome-keyring
-   # libcanberra
    libcanberra-gtk3
   ]
