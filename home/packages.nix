@@ -64,4 +64,6 @@
    polkit_gnome
    gnome-keyring
    libcanberra-gtk3
+   libreoffice
+   corefonts
   ]
