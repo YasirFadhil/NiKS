@@ -21,20 +21,6 @@
         git push origin main
       }
 
-      def git-we3pro [] {
-        let msg = (input "Commit message: ")
-        git add .
-        git commit -m $msg
-        git push -u update main
-      }
-
-      def git-we [] {
-        let msg = (input "Commit message: ")
-        git add .
-        git commit -m $msg
-        git push -u ori main
-      }
-
       # Alias shortcut
       alias l = clear
       alias g = git
