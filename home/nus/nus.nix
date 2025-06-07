@@ -18,7 +18,7 @@
         let msg = (input "Commit message: ")
         git add .
         git commit -m $msg
-        git push -u origin main
+        git push origin main
       }
 
       def git-we3pro [] {
