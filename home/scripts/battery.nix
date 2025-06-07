@@ -25,6 +25,6 @@ pkgs.writeShellScriptBin "battery" ''
       echo "$battery_percentage% Charging "
     fi
   else
-    echo "$battery_percentage% $battery_icon $time_remaining"
+    echo "$battery_percentage% $battery_icon"
   fi
 ''
