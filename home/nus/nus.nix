@@ -14,7 +14,7 @@
       source ~/.cache/carapace/init.nu
 
       # Custom git commands
-      def git-up [] {
+      def gup [] {
         let msg = (input "Commit message: ")
         git add .
         git commit -m $msg
