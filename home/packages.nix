@@ -46,7 +46,7 @@
    hyprpanel
    dunst
    kdePackages.gwenview
-   kdePackages.kdeconnect-kde
+   # kdePackages.kdeconnect-kde
    hyprshot
    swappy
    grim

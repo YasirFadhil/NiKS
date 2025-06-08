@@ -14,7 +14,6 @@ in
     ];
     enabledCustomApps = with spicePkgs.apps; [
       newReleases
-      ncsVisualizer
     ];
     enabledSnippets = with spicePkgs.snippets; [
       pointer

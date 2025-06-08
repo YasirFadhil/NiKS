@@ -5,6 +5,7 @@
   networking.firewall.enable = true;
   services.dbus.enable = true;
   security.polkit.enable = true;
+  programs.kdeconnect.enable = true;
 
   # Allow KDE Connect port range
   networking.firewall.allowedTCPPortRanges = [
