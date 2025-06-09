@@ -49,7 +49,7 @@
           padding_x = "0.7rem";
           opacity = 100;
         };
-        outer_spacing = "2.6em";
+        outer_spacing = "1em";
         layer = "top";
         margin_top = "1.2em";
         border_radius = "0.4em";
