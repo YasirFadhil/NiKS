@@ -16,7 +16,7 @@ in
     enable = true;
     xwayland.enable = true;
     settings = {
-      monitor = [ "eDP-1,1700x970@60,0x0,1" ];
+      monitor = [ "eDP-1,1700x950@60,0x0,1" ];
       exec-once = [
         "polkit-gnome-authentication-agent-1"
         "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,pgp"
