@@ -14,6 +14,7 @@
     ./system/users.nix
     ./system/sys-env.nix
     ./home/var.nix
+    ./system/smbser.nix
     #<home-manager/nixos>
   ];
 

@@ -16,7 +16,7 @@ in
     enable = true;
     xwayland.enable = true;
     settings = {
-      monitor = [ "eDP-1,1700x950@60,0x0,1" ];
+      monitor = [ "eDP-1,1700x970@60,0x0,1" ];
       exec-once = [
         "polkit-gnome-authentication-agent-1"
         "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,pgp"
@@ -43,8 +43,8 @@ in
       };
       gestures = {workspace_swipe = true;};
       general = {
-        gaps_in = 8;
-        gaps_out = 13;
+        gaps_in = 10;
+        gaps_out = 15;
         border_size = 0;
         # col.active_border = "rgba(33ccffee)";
         # col.inactive_border = "rgba(595959aa)";

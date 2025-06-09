@@ -21,5 +21,6 @@
 	pamixer
 	brightnessctl
 	noto-fonts
+  samba
   ];
 }
