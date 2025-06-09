@@ -20,7 +20,6 @@
    hyprpaper
    hyprpolkitagent
    rofi-wayland
-   networkmanagerapplet
    blueman
    waybar
    adw-gtk3
