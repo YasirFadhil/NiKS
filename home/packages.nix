@@ -31,6 +31,8 @@
    hyprpicker
    gtk3
    gtk4
+   gtk-layer-shell
+   go
    wlogout
    hyprlock
    hypridle
@@ -65,4 +67,7 @@
    libcanberra-gtk3
    libreoffice
    corefonts
+   cmatrix
+   cbonsai
+   nwg-dock-hyprland
   ]
