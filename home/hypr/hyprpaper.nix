@@ -2,8 +2,8 @@
 
 {
   home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = /home/yasirfadhil/Pictures/Fuji.jpg
-    wallpaper = HDMI-A-1,/home/yasirfadhil/Pictures/Fuji.jpg
-    wallpaper = DP-1,/home/yasirfadhil/Pictures/Fuji.jpg
+    preload = ../../themes/pict/Fuji.jpg
+    wallpaper = HDMI-A-1,../../themes/pict/Fuji.jpg
+    wallpaper = DP-1,../../themes/pict/Fuji.jpg
   '';
 }
