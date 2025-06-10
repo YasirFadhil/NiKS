@@ -3,13 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
-    # zen-browser.url = "github:youwen5/zen-browser-flake";
-    # zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     pkgs.follows = "nixpkgs";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
+    zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
     # spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix = {
           url = "github:Gerg-L/spicetify-nix";
@@ -25,7 +23,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, pkgs, home-manager, zen-browser, hyprland, hyprpanel, stylix, apple-fonts, spicetify-nix }: let
+  outputs = inputs @ { self, nixpkgs, pkgs, zen-browser, home-manager, hyprland, hyprpanel, stylix, apple-fonts, spicetify-nix }: let
     system = "x86_64-linux";
     overlays = [
             hyprpanel.overlay

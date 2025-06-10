@@ -32,7 +32,7 @@ in
         kb_model = "chromebook";
         kb_layout = "us";
         follow_mouse = 1;
-        sensitivity = 0.5;
+        sensitivity = 0;
         repeat_delay = 300;
         repeat_rate = 50;
 
@@ -43,8 +43,9 @@ in
       };
       gestures = {workspace_swipe = true;};
       general = {
-        gaps_in = 10;
+        gaps_in = 7;
         gaps_out = 15;
+        gaps_workspaces = 50;
         border_size = 0;
         # col.active_border = "rgba(33ccffee)";
         # col.inactive_border = "rgba(595959aa)";
@@ -56,6 +57,9 @@ in
           size = 8;
           passes = 2;
         };
+        dim_inactive = false;
+        dim_strength = 0.1;
+        dim_special = 0;
       };
       animations = {
         enabled = true;
