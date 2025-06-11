@@ -19,6 +19,7 @@ in
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix
     ./zenn
+    ./nwg-dock
     hyprlockConfig
     hyprIdleConfig
   ];
