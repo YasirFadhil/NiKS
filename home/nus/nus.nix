@@ -23,6 +23,7 @@
 
       # Alias shortcut
       alias l = clear
+      alias sl = ls
       alias g = git
       alias cd = z
       alias cok = fuck
