@@ -24,6 +24,7 @@ in
         "hypridle &"
         "hyprpaper &"
         "nm-applet &"
+        "canberra-gtk-play -i audio-volume-change &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Ice 20"
