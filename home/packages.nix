@@ -46,6 +46,7 @@
    wl-clipboard
    hyprpanel
    dunst
+   rofi-emoji-wayland
    kdePackages.gwenview
    # kdePackages.kdeconnect-kde
    hyprshot
