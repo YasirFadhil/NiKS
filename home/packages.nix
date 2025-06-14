@@ -71,4 +71,6 @@
    cmatrix
    cbonsai
    nwg-dock-hyprland
+   vscode
+   swww
   ]

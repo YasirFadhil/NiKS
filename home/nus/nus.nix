@@ -22,6 +22,7 @@
       }
 
       # Alias shortcut
+      alias nih = sudo nixos-rebuild switch --flake .#nixos
       alias l = clear
       alias sl = ls
       alias g = git
