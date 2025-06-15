@@ -53,7 +53,7 @@
         shadow_passes = 1
         shadow_boost = 0.5
         color = $text_color
-        font_size = 75
+        font_size = 90
         font_family = Noto Sans SemiBold
         position = 0, 280
         halign = center
