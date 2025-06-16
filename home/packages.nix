@@ -16,6 +16,12 @@
    google-chrome
    carapace
    zoxide
+   # python2
+   #pipx
+   #cope
+   #python311Packages.pip
+   #python312Packages.pip
+   #python313Packages.pip
    # spotify
    hyprpaper
    hyprpolkitagent

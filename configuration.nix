@@ -61,9 +61,10 @@
   nixpkgs.config.allowUnfree = true;
 
 
-  # nixpkgs.config.permittedInsecurePackages = [
+  nixpkgs.config.permittedInsecurePackages = [
   #   "ventoy-1.1.05"
-  # ];
+    "python-2.7.18.5"
+  ];
 
 
   # List packages installed in system profile. To search, run:
