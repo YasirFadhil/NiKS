@@ -17,6 +17,9 @@
     #<home-manager/nixos>
   ];
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -56,15 +59,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-
-  nixpkgs.config.permittedInsecurePackages = [
-  #   "ventoy-1.1.05"
-    "python-2.7.18.5"
-  ];
 
 
   # List packages installed in system profile. To search, run:

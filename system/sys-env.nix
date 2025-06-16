@@ -22,5 +22,13 @@
 	brightnessctl
 	noto-fonts
   samba
+  mediawriter
+  ventoy-full
+  ];
+  
+  nixpkgs.config.permittedInsecurePackages = [
+  "ventoy-1.1.05"
   ];
 }
+
+
