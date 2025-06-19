@@ -55,7 +55,7 @@
         color = $text_color
         font_size = 90
         font_family = Noto Sans SemiBold
-        position = 0, 280
+        position = 0, 300
         halign = center
         valign = center
     }
