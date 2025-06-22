@@ -13,9 +13,11 @@
    fastfetch
    ghostty
    gnome-tweaks
+   gnome-extension-manager
    google-chrome
    carapace
    zoxide
+   btop
    # python2
    #pipx
    #cope
@@ -79,4 +81,5 @@
    nwg-dock-hyprland
    vscode
    swww
+   xscreensaver
   ]

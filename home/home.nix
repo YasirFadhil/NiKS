@@ -7,11 +7,10 @@ let
 in
 {
   imports = [
-     inputs.spicetify-nix.homeManagerModules.default
-    # inputs.stylix.homeModules.stylix
-    # ../themes/stylix/nixy.nix
+     #inputs.spicetify-nix.homeManagerModules.default
+     #inputs.stylix.homeModules.stylix
     ./var.nix
-    ./spicetify
+    ./spicetify/def2.nix
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
     ./nus
@@ -33,17 +32,17 @@ in
   programs.zsh.enable = true;
   programs.git.enable = true;
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = lib.mkForce "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
-    };
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      size = 20;
-    };
-  };
+ # gtk = {
+ #    enable = true;
+ #    theme = {
+ #     name = lib.mkForce "adw-gtk3-dark";
+ #     package = pkgs.adw-gtk3;
+ #   };
+ #   cursorTheme = {
+ #     name = "Bibata-Modern-Ice";
+ #     size = 20;
+ #   };
+ # };
 
   home.sessionVariables = {
     PATH = "$HOME/.nix-profile/bin:/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$PATH";
@@ -53,7 +52,7 @@ in
     MOZ_ENABLE_WAYLAND = "1";
     SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh";
     QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";

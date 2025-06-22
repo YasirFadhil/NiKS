@@ -7,7 +7,8 @@ in
   imports = [
     ./polkitagent.nix
     ./binds.nix
-    ./hyprpaper.nix
+ #   ./hyprpaper.nix
+    ./env.nix
   ];
 
   home.packages = myPackages;
@@ -72,23 +73,23 @@ in
         pseudotile = true;
         preserve_split = true;
       };
-      env = [
-        "$file_manager, thunar"
-        "XDG_CURRENT_DESKTOP, Hyprland"
-        "XDG_SESSION_TYPE, wayland"
-        "GTK_USE_PORTAL, 1"
-        "MOZ_ENABLE_WAYLAND, 1"
-        "QT_QPA_PLATFORM=wayland"
-        "QT_QPA_PLATFORMTHEME,qt6ct"
-        # "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-        "MOZ_ENABLE_WAYLAND,1"
-        # "ANKI_WAYLAND,1"
-        # "DISABLE_QT5_COMPAT,0"
-        "NIXOS_OZONE_WL,1"
-        # "XDG_SESSION_DESKTOP,Hyprland"
-        # "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-        "ELECTRON_OZONE_PLATFORM_HINT,auto"
-      ];
+      # env = [
+      #   "$file_manager, thunar"
+      #   "XDG_CURRENT_DESKTOP, Hyprland"
+      #   "XDG_SESSION_TYPE, wayland"
+      #   "GTK_USE_PORTAL, 1"
+      #   "MOZ_ENABLE_WAYLAND, 1"
+      #   "QT_QPA_PLATFORM=wayland"
+      #   "QT_QPA_PLATFORMTHEME,qt6ct"
+      #   # "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+      #   "MOZ_ENABLE_WAYLAND,1"
+      #   # "ANKI_WAYLAND,1"
+      #   # "DISABLE_QT5_COMPAT,0"
+      #   "NIXOS_OZONE_WL,1"
+      #   # "XDG_SESSION_DESKTOP,Hyprland"
+      #   # "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+      #   "ELECTRON_OZONE_PLATFORM_HINT,auto"
+      # ];
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;

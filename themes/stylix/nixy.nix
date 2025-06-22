@@ -1,10 +1,13 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   stylix = {
     enable = true;
+    
+    targets.qt.enable = false;
 
     base16Scheme = {
       base00 = "#0b0b0b"; # Default Background

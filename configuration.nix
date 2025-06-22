@@ -14,6 +14,7 @@
     ./system/users.nix
     ./system/sys-env.nix
     ./home/var.nix
+    ./themes/stylix/nixy.nix
     #<home-manager/nixos>
   ];
 

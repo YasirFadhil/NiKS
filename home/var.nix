@@ -25,6 +25,6 @@
     # autoGarbageCollector = false;
 
     # Choose your theme variables here
-     # theme = import ../themes/var/nixy.nix;
+     theme = import ../themes/var/nixy.nix;
   };
 }

@@ -34,6 +34,7 @@
       modules = [
         ./configuration.nix
         home-manager.nixosModules.default
+        stylix.nixosModules.stylix
         {
         nix.settings = {
             substituters = ["https://hyprland.cachix.org"];

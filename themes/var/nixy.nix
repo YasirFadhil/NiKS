@@ -6,7 +6,7 @@
   inactive-opacity = 0.89;
   blur = true;
   border-size = 1;
-  animation-speed = "medium"; # "fast" | "medium" | "slow"
+  animation-speed =  "fast"; # "fast" | "medium" | "slow"
   fetch = "none"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
 
   bar = {
