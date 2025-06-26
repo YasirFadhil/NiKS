@@ -78,6 +78,7 @@
    corefonts
    cmatrix
    cbonsai
+   neofetch
    nwg-dock-hyprland
    vscode
    swww
