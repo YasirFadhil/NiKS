@@ -2,8 +2,8 @@
 
 {
   home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = /home/yasirfadhil/Pictures/Fuji.jpg
-    wallpaper = HDMI-A-1,/home/yasirfadhil/Pictures/Fuji.jpg
-    wallpaper = eDP-1,/home/yasirfadhil/Pictures/Fuji.jpg
+    preload = /etc/nixos/themes/pict/Fuji.jpg
+    wallpaper = HDMI-A-1, /etc/nixos/themes/pict/Fuji.jpg
+    wallpaper = eDP-1, /etc/nixos/themes/pict/Fuji.jpg
   '';
 }

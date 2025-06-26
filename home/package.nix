@@ -31,6 +31,7 @@
    blueman
    waybar
    adw-gtk3
+   whitesur-gtk-theme
    qt5.qtwayland
    qt6.qtwayland
    libsForQt5.qt5ct

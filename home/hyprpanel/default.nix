@@ -107,7 +107,7 @@
         };
         powermenu = {
           avatar = {
-            image = "/home/yasirfadhil/.face.icon";
+            image = "/etc/nixos/themes/pict/.face.jpg";
           };
         };
         shortcuts = {

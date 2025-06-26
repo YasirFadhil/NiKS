@@ -45,7 +45,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "hmbackup";
+          home-manager.backupFileExtension = "backup";
           home-manager.users.yasirfadhil = import ./home/home.nix;
           home-manager.extraSpecialArgs = { inherit inputs; };
         }

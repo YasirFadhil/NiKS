@@ -10,6 +10,7 @@ in
      # inputs.spicetify-nix.homeManagerModules.default
      #inputs.stylix.homeModules.stylix
     ./var.nix
+    ./nh.nix
     ./spicetify
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
@@ -18,6 +19,7 @@ in
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix
     ./zenn
+    ./gtk
     ./nwg-dock/default.nix
     hyprlockConfig
     hyprIdleConfig
@@ -35,19 +37,6 @@ in
     userName = "YasirFadhil";
     userEmail = "yasirfadhil46@gmail.com";
   };
-
-
-   gtk = {
-      enable = true;
-      theme = {
-       name = lib.mkForce "adw-gtk3-dark";
-       package = pkgs.adw-gtk3;
-     };
-     cursorTheme = {
-       name = "Bibata-Modern-Ice";
-       size = 20;
-     };
-   };
 
   home.sessionVariables = {
     PATH = "$HOME/.nix-profile/bin:/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$PATH";
