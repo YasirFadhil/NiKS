@@ -81,5 +81,4 @@
    nwg-dock-hyprland
    vscode
    swww
-   xscreensaver
   ]
