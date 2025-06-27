@@ -20,7 +20,8 @@
 fastfetch -c ~/.config/fastfetch/config-compact.jsonc
 #pokemon-colorscripts --no-title -s -r
 
-$env.config.show_banner = false
+# $env.config.show_banner = false
+$env.config = ($env.config | upsert show_banner false)
 
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
@@ -41,4 +42,3 @@ alias sl = ls
 alias g = git
 alias cd = z
 alias zed = zeditor
-
