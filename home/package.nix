@@ -46,7 +46,7 @@
    hypridle
    wayland-utils
    wayland-protocols
-   swaynotificationcenter
+   # swaynotificationcenter
    nerd-fonts.fira-code
    nerd-fonts.jetbrains-mono
    cliphist
