@@ -30,6 +30,7 @@
       "SUPER, L, exec, hyprlock"
       "SUPER SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
+      # "SUPER, M, exec, pkill dunst"
 
       #screenshot
       "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"

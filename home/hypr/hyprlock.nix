@@ -27,7 +27,7 @@
 
     background {
         color = rgba(000000FF)
-        path = /home/yasirfadhil/Pictures/Fuji.jpg
+        path = /etc/nixos/themes/pict/Fuji.jpg
         blur_size = 2
         blur_passes = 2
     }

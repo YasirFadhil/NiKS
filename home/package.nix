@@ -52,8 +52,7 @@
    cliphist
    wlr-randr
    wl-clipboard
-   hyprpanel
-   dunst
+   #dunst
    rofi-emoji-wayland
    kdePackages.gwenview
    # kdePackages.kdeconnect-kde

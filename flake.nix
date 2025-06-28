@@ -7,10 +7,14 @@
     stylix.url = "github:danth/stylix";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spicetify-nix = {
-             url = "github:Gerg-L/spicetify-nix";
-             inputs.nixpkgs.follows = "nixpkgs";
-           };
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +25,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, zen-browser, home-manager, stylix, apple-fonts, spicetify-nix, hyprland, hyprpanel }: let
+  outputs = inputs @ { self, nixpkgs, zen-browser, home-manager, stylix, apple-fonts, spicetify-nix, hyprland, hyprpanel, quickshell }: let
     system = "x86_64-linux";
     overlays = [
            hyprpanel.overlay
