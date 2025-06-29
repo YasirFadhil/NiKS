@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
 	wget
+  udisks
+  gnome-disk-utility
   xfce.thunar
   xfce.tumbler
   xfce.thunar-volman
