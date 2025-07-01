@@ -15,6 +15,7 @@ in
     ./hypr/hyprland.nix
     ./hyprpanel/default.nix
     ./nus
+    ./kitty
     ./fastfetch
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix

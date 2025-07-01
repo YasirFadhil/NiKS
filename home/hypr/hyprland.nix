@@ -28,6 +28,7 @@ in
         "hypridle &"
         "hyprpaper &"
         "nm-applet &"
+        "blueman-applet &"
         # "canberra-gtk-play -i audio-volume-change &"
         "${pkgs.libcanberra}/bin/canberra-gtk-play -i audio-volume-change &"
         "wl-paste --type text --watch cliphist store"

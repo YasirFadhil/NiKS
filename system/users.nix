@@ -13,6 +13,7 @@ in
      "networkmanager"
      "wheel"
      "video"
+     "audio"
     ];
     };
   };

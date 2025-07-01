@@ -6,7 +6,7 @@
   home.file.".config/hyprpanel/config.json".text = builtins.toJSON {
     theme = {
       font = {
-        size = "1rem";
+        size = "1.1rem";
         weight = 700;
         name = "Ubuntu Nerd Font";
       };
