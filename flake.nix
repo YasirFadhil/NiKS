@@ -28,9 +28,9 @@
 
   outputs = inputs @ { self, nixpkgs, pkgs, zen-browser, home-manager, stylix, apple-fonts, spicetify-nix, hyprland, hyprpanel, quickshell }: let
     system = "x86_64-linux";
-    overlays = [
-           hyprpanel.overlay
-      ];
+    # overlays = [
+    #        hyprpanel.overlay
+    #   ];
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = system;
@@ -44,9 +44,9 @@
             trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
           };
         }
-        {
-          nixpkgs.overlays = overlays;
-        }
+        # {
+        #   nixpkgs.overlays = overlays;
+        # }
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
