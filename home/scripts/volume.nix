@@ -4,7 +4,6 @@ pkgs.writeShellScriptBin "volume-control" ''
   export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
   export XDG_RUNTIME_DIR="/run/user/$(id -u)"
   SINK=$(${pkgs.pulseaudio}/bin/pactl info | grep 'Default Sink' | awk '{print $3}')
-
   get_volume() {
     ${pkgs.pulseaudio}/bin/pactl get-sink-volume "$SINK" | grep -o '[0-9]\+%' | head -1
   }
@@ -12,7 +11,6 @@ pkgs.writeShellScriptBin "volume-control" ''
   get_mute() {
     ${pkgs.pulseaudio}/bin/pactl get-sink-mute "$SINK" | awk '{print $2}'
   }
-
   play_feedback_sound() {
     ${pkgs.libcanberra}/bin/canberra-gtk-play -i audio-volume-change
   }
