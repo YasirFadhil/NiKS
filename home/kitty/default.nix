@@ -13,7 +13,7 @@
       italic_font = "auto";
       bold_italic_font = "auto";
 
-      background_opacity = "0.9";
+      background_opacity = "0.8";
       dynamic_background_opacity = "1";
       confirm_os_window_close = "0";
 
