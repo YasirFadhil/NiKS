@@ -17,20 +17,19 @@ in
     enable = true;
     xwayland.enable = true;
     settings = {
-      monitor = [ "eDP-1,1700x950@60,0x0,1" ];
+      monitor = [
+        "eDP-1,1700x950@60,0x0,1"
+        # "HDMI-1,1920x1080@60,1700x0,0"
+      ];
       exec-once = [
         "polkit-gnome-authentication-agent-1"
         "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,pgp"
-        # "kill-dunst &"
-        # "${pkgs.procps}/bin/pkill dunst"
         "systemctl --user stop dunst &"
         "hyprpanel &"
         "hypridle &"
         "hyprpaper &"
         "nm-applet &"
         "blueman-applet &"
-        # "canberra-gtk-play -i audio-volume-change &"
-        "${pkgs.libcanberra}/bin/canberra-gtk-play -i audio-volume-change &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Ice 20"
@@ -82,6 +81,10 @@ in
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
       };
+      windowrule = [
+        "float, title:^(Volume Control)$"
+        "float, title:^(Waypaper)$"
+      ];
     };
   };
 }
