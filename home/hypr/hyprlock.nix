@@ -29,8 +29,8 @@
         color = rgba(000000FF)
         # path = /etc/nixos/themes/pict/Fuji.jpg
         path = /etc/nixos/themes/pict/Nix_Ascii.png
-        blur_size = 2
-        blur_passes = 2
+        #blur_size = 2
+        #blur_passes = 2
     }
     input-field {
         monitor =
@@ -72,9 +72,9 @@
       halign = center
       valign = center
     }
-    label { # Greeting
-        monitor =
-        text = Hii Serr
+    #label { # Greeting
+    #    monitor =
+    #    text = Hii Serr
         shadow_passes = 1
         shadow_boost = 0.5
         color = $text_color
