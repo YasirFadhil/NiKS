@@ -7,7 +7,7 @@ in
   imports = [
     ./polkitagent.nix
     ./binds.nix
-    ./hyprpaper.nix
+    #./hyprpaper.nix
     ./env.nix
   ];
 

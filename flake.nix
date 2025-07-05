@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     pkgs.follows = "nixpkgs";
     zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
-    stylix.url = "github:danth/stylix";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     quickshell = {
@@ -26,7 +25,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, pkgs, zen-browser, home-manager, stylix, apple-fonts, spicetify-nix, hyprland, hyprpanel, quickshell }: let
+  outputs = inputs @ { self, nixpkgs, pkgs, zen-browser, home-manager, apple-fonts, spicetify-nix, hyprland, hyprpanel, quickshell }: let
     system = "x86_64-linux";
     # overlays = [
     #        hyprpanel.overlay
@@ -37,7 +36,6 @@
       modules = [
         ./configuration.nix
         home-manager.nixosModules.default
-        stylix.nixosModules.stylix
         {
         nix.settings = {
             substituters = ["https://hyprland.cachix.org"];

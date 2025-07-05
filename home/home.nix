@@ -7,8 +7,6 @@ let
 in
 {
   imports = [
-     # inputs.spicetify-nix.homeManagerModules.default
-     #inputs.stylix.homeModules.stylix
     ./var.nix
     ./nh.nix
     ./spicetify

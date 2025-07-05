@@ -15,7 +15,6 @@
       ./system/display.nix
       ./system/power-btn.nix
       ./home/var.nix
-      #./themes/stylix/nixy.nix
     ];
 
   # Bootloader.
