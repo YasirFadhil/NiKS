@@ -84,6 +84,8 @@ in
       windowrule = [
         "float, title:^(Volume Control)$"
         "float, title:^(Waypaper)$"
+        "float, title:^(KDE Connect)$"
+        "size 1035 661, title:^(KDE Connect)$"
       ];
     };
   };
