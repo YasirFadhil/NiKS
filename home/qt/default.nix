@@ -4,9 +4,9 @@
     qt = {
       enable = true;
       platformTheme.name = "gtk";
-      font = {
-        name = "Fira Code Nerd Font";
-        size = 12;
-      };
+      # font = {
+      #   name = "Fira Code Nerd Font";
+      #   size = 12;
+      # };
     };
   }

@@ -5,20 +5,23 @@
   home.packages = with pkgs; [
     whitesur-gtk-theme
     bibata-cursors
-    # whitesur-icon-theme # Uncomment jika ingin pakai icon theme
+    whitesur-icon-theme # Uncomment jika ingin pakai icon theme
   ];
 
   gtk = {
     enable = true;
     theme = {
-      name = lib.mkForce "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
+      name = "WhiteSur-Dark";
+      package = pkgs.whitesur-gtk-theme;
     };
-    # Uncomment jika ingin icon theme
-    # iconTheme = {
-      # name = "Mkos-Big-Sur";
-    #   package = pkgs.whitesur-icon-theme;
-    # };
+    font = {
+      name = "Fira Code Nerd Font";
+      size = 10;
+    };
+    iconTheme = {
+      name = "WhiteSur";
+      package = pkgs.whitesur-icon-theme;
+    };
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;

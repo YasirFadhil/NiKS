@@ -19,6 +19,7 @@ in
     ./hypr/polkitagent.nix
     ./zenn
     ./gtk
+    ./qt
     ./nwg-dock/default.nix
     hyprlockConfig
     hyprIdleConfig
