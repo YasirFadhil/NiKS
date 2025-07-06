@@ -28,13 +28,12 @@
 	efibootmgr
 	pamixer
 	brightnessctl
-	noto-fonts
-	noto-fonts-emoji
 	samba
   mediawriter
   ventoy-full
   python
   ];
+
 
   nixpkgs.config.permittedInsecurePackages = [
   "ventoy-1.1.05"
