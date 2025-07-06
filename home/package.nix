@@ -18,6 +18,7 @@
    carapace
    zoxide
    btop
+   obs-studio
    # python2
    #cope
    #python311Packages.pip
@@ -47,13 +48,16 @@
    wayland-utils
    wayland-protocols
    waypaper
-   # swaynotificationcenter
+   swaynotificationcenter
+   noto-fonts
+	 noto-fonts-color-emoji
    nerd-fonts.fira-code
    nerd-fonts.jetbrains-mono
    cliphist
    wlr-randr
    wl-clipboard
    #dunst
+   rofimoji
    rofi-emoji-wayland
    kdePackages.gwenview
    # kdePackages.kdeconnect-kde

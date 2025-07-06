@@ -20,6 +20,7 @@
     bind = [
       "SUPER, T, exec, kitty"
       "SUPER, B, exec, zen"
+      "SUPER, E, exec, rofimoji"
       # "SUPER, F, exec, thunar"
       "SUPER, F, exec, nautilus"
       "SUPER CTRL, V, exec, pavucontrol"
