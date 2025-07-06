@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     hyprlock
     (import ../scripts/battery.nix { inherit pkgs ; })
+    (import ../scripts/nowplay.nix { inherit pkgs ; })
   ];
 
   xdg.configFile."hypr/hyprlock.conf".text = ''
@@ -120,7 +121,8 @@
     }
     label { #Music
         monitor =
-        text = cmd[update:5000] ~/.config/hypr/scripts/nowplay.sh
+        # text = cmd[update:5000] ~/.local/bin/hyprlock-media.sh
+        text = cmd[update:5000] nowplay
         color = $text_color
         font_family = Fira Code Mono Nerd
         font_size = 14
