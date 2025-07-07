@@ -11,10 +11,7 @@ pkgs.writeShellScriptBin "nowplay" ''
   case "$player" in
     *spotify*) icon="  Spotify: " ;;
     *firefox* | *brave* | *chromium* | *chrome*) icon="  YouTube: " ;;
-    *vlc*) icon="嗢 VLC: " ;;
-    *mpv*) icon="  MPV: " ;;
-    *kdeconnect*) icon="📱  KDE Connect: " ;;
-    *) icon="🎵 Playing: " ;;
+    *kdeconnect*) icon="  Spotify: " ;;
   esac
 
   if [[ -n "$artist" ]]; then
