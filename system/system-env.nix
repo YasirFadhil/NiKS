@@ -5,10 +5,6 @@
 	wget
   udisks
   gnome-disk-utility
-  xfce.thunar
-  xfce.tumbler
-  xfce.thunar-volman
-  nautilus
   adwaita-icon-theme
   gsettings-desktop-schemas
   librsvg
