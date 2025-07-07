@@ -8,10 +8,15 @@
    pavucontrol
    clang
    zig
+   vlc
    alsa-utils
    alsa-ucm-conf
    fastfetch
    ghostty
+   xfce.thunar
+   xfce.tumbler
+   xfce.thunar-volman
+   nautilus
   # gnome-tweaks
   # gnome-extension-manager
    google-chrome
