@@ -14,6 +14,7 @@
       ./system/network.nix
       ./system/display.nix
       ./system/power-btn.nix
+      ./system/dconf.nix
       ./home/var.nix
     ];
 
