@@ -14,10 +14,10 @@
       name = "WhiteSur-Dark";
       package = pkgs.whitesur-gtk-theme;
     };
-    font = {
-      name = "Fira Code Nerd Font";
-      size = 10;
-    };
+    # font = {
+    #   name = "Fira Code Nerd Font";
+    #   size = 10;
+    # };
     iconTheme = {
       name = "WhiteSur";
       package = pkgs.whitesur-icon-theme;
