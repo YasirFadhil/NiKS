@@ -11,7 +11,8 @@ in
     ./nh.nix
     ./spicetify
     ./hypr/hyprland.nix
-    ./hyprpanel/default.nix
+    ./hyprpanel
+    # ./waybar
     ./nus
     ./kitty
     ./fastfetch
@@ -30,7 +31,9 @@ in
 
   programs.home-manager.enable = true;
   home.packages = import ./package.nix {inherit pkgs;};
-
+  # waybar.enable = true;
+  # theming.enable = true;
+  # swaync.enable = true;
   programs.zsh.enable = true;
   programs.git = {
     enable = true;
