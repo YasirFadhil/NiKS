@@ -1,4 +1,4 @@
-{ input, pkgs, lib, ... }:
+{ inputs, pkgs, lib, ... }:
 
 let
   myPackages = import ../package.nix {inherit pkgs;};
@@ -88,6 +88,8 @@ in
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
         "size 1035 661, title:^(KDE Connect)$"
+        "float,class:^(floating-kitty)$"
+        "size 800 600,class:^(floating-kitty)$"
       ];
     };
   };

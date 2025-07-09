@@ -19,6 +19,7 @@
     ];
     bind = [
       "SUPER, T, exec, kitty"
+      "SUPER SHIFT, T, exec, kitty --class floating-kitty"
       "SUPER, B, exec, zen"
       "SUPER, E, exec, rofimoji"
       #"SUPER, F, exec, thunar"
@@ -34,7 +35,7 @@
       "SUPER SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
       "SUPER, W, exec, waypaper"
-      # "SUPER, M, exec, pkill dunst"
+      "SUPER, M, togglefloating" # floating toggle
 
       #screenshot
       "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
