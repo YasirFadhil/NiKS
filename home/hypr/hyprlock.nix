@@ -126,7 +126,7 @@
         color = $text_color
         font_family = Fira Code Mono Nerd
         font_size = 14
-        position = 0, 0
+        position = 10, -10
         halign = left
         valign = bottom
     }
