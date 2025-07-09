@@ -14,6 +14,11 @@ pkgs.writeShellScriptBin "nowplay" ''
     *kdeconnect*) icon="  Spotify: " ;;
   esac
 
+  max_length=30
+  if [ "$(echo -n "$title" | wc -c)" -gt "$max_length" ]; then
+    title="$(echo -n "$title" | cut -c1-30)..."
+  fi
+
   if [[ -n "$artist" ]]; then
     echo "$icon $artist - $title"
   else
