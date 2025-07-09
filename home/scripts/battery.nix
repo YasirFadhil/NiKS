@@ -20,7 +20,7 @@ pkgs.writeShellScriptBin "battery" ''
   # Output akhir
   if [ "$battery_status" = "Charging" ]; then
     if [ "$battery_percentage" -ge 100 ]; then
-      echo "Full"
+      echo "Charged"
     else
       echo "$battery_percentage% Charging "
     fi
