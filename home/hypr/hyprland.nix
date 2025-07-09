@@ -1,4 +1,4 @@
-{ input, pkgs, ... }:
+{ input, pkgs, lib, ... }:
 
 let
   myPackages = import ../package.nix {inherit pkgs;};
@@ -7,7 +7,8 @@ in
   imports = [
     ./polkitagent.nix
     ./binds.nix
-    #./hyprpaper.nix
+    ./hyprlock.nix
+    ./hypridle.nix
     ./env.nix
   ];
 

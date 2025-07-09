@@ -1,10 +1,5 @@
 { config, pkgs, inputs, lib, ... }:
 
-
-let
-  hyprlockConfig = import ./hypr/hyprlock.nix { inherit pkgs; };
-  hyprIdleConfig = import ./hypr/hypridle.nix { inherit pkgs; };
-in
 {
   imports = [
     ./var.nix
@@ -22,8 +17,6 @@ in
     ./gtk
     ./qt
     ./nwg-dock/default.nix
-    hyprlockConfig
-    hyprIdleConfig
   ];
 
   home.username = "yasirfadhil";
