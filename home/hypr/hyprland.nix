@@ -20,7 +20,6 @@ in
     settings = {
       monitor = [
         "eDP-1,1700x950@60,0x0,1"
-        # "HDMI-1,1920x1080@60,1700x0,0"
       ];
       exec-once = [
         "polkit-gnome-authentication-agent-1"
