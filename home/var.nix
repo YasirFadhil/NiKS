@@ -21,8 +21,6 @@
       email = "yasirfadhil46@gmail.com";
     };
 
-    # autoUpgrade = false;
-    # autoGarbageCollector = false;
 
     # Choose your theme variables here
     # theme = import ../themes/var/nixy.nix;
