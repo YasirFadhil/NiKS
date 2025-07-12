@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, pkgs, zen-browser, home-manager, apple-fonts, spicetify-nix, hyprland, hyprpanel }: let
+  outputs = inputs @ { self, nixpkgs, pkgs, home-manager, apple-fonts, spicetify-nix, hyprland, hyprpanel, zen-browser }: let
     system = "x86_64-linux";
     # overlays = [
     #        hyprpanel.overlay

@@ -39,6 +39,15 @@ def gup [] {
 alias ll = clear
 alias l = clear
 alias sl = ls
+
+#git
 alias g = git
+alias gad = git add .
+alias gcm = git commit -m "."
+alias gps = git push -u origin main
+alias gcl = git clone 
+
+#other
 alias cd = z
 alias zed = zeditor
+alias whenyh = nh os switch /etc/nixos -H nixos

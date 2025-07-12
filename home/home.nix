@@ -14,8 +14,8 @@
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix
     ./zenn
-    ./gtk
-    ./qt
+    ../themes/gtk
+    ../themes/qt
     ./nwg-dock/default.nix
   ];
 

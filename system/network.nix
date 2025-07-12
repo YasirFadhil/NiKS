@@ -6,7 +6,7 @@
   hardware.bluetooth.enable = true;
   services.dbus.enable = true;
   security.polkit.enable = true;
-  programs.kdeconnect.enable = true;
+  # programs.kdeconnect.enable = true;
   # Firewall
      networking.firewall = {
        enable = true;

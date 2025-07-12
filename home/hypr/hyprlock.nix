@@ -59,7 +59,7 @@ in {
           color = textColor;
           font_size = "90";
           font_family = "Noto Sans SemiBold";
-          position = "0, 300";
+          position = "0, 310";
           halign = "center";
           valign = "center";
         }
@@ -73,24 +73,25 @@ in {
           color = textColor;
           font_size = "15";
           font_family = "Noto Sans Medium";
-          position = "0, 210";
+          position = "0, 220";
           halign = "center";
           valign = "center";
         }
 
-        # # Greeting
-        # {
-        #   #monitor = "";
-        #   #text = "Hii Serr";
-        #   shadow_passes = "1";
-        #   shadow_boost = "0.5";
-        #   color = textColor;
-        #   font_size = "20";
-        #   font_family = font;
-        #   position = "0, 160";
-        #   halign = "center";
-        #   valign = "center";
-        # }
+        # Greeting
+        {
+          monitor = "";
+          text = "Hii Serr";
+          #text = "cmd[update:1000] ${hyprlock-greeting-script}";
+          shadow_passes = "1";
+          shadow_boost = "0.5";
+          color = textColor;
+          font_size = "20";
+          font_family = font;
+          position = "0, 170";
+          halign = "center";
+          valign = "center";
+        }
 
         # Lock icon
         {

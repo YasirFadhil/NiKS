@@ -84,11 +84,12 @@ in
       };
       windowrule = [
         "float, title:^(Volume Control)$"
+        "size 872 515, title:^(Volume Control)$"
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
         "size 1035 661, title:^(KDE Connect)$"
         "float,class:^(floating-kitty)$"
-        "size 800 600,class:^(floating-kitty)$"
+        "size 1094 633,class:^(floating-kitty)$"
       ];
     };
   };

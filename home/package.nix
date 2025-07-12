@@ -65,7 +65,7 @@
    rofimoji
    rofi-emoji-wayland
    kdePackages.gwenview
-   # kdePackages.kdeconnect-kde
+   kdePackages.kdeconnect-kde
    hyprshot
    swappy
    grim
@@ -91,4 +91,5 @@
    nwg-dock-hyprland
    vscode
    swww
+   bibata-cursors
   ]

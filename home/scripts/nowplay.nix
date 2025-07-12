@@ -10,7 +10,9 @@ pkgs.writeShellScriptBin "nowplay" ''
 
   case "$player" in
     *spotify*) icon="  Spotify: " ;;
-    *firefox* | *brave* | *chromium* | *chrome*) icon="  YouTube: " ;;
+    #*firefox* | *brave* | *chromium* | *chrome*) icon="  YouTube: " ;;
+    *firefox*) icon="  Zen Browser:" ;;
+    *google-chrome-stable* | *chromium*) icon="  Chrome:" ;;
     *kdeconnect*) icon="  Spotify: " ;;
   esac
 
