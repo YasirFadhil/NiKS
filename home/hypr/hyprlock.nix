@@ -17,7 +17,7 @@ in {
 
       background = lib.mkForce {
         monitor = "";
-        path = "/etc/nixos/themes/pict/Nix_Ascii.png";
+        path = "/etc/nixos/themes/pict/nih2_wall.jpg";
         # You can add blur, vibrancy, contrast if you want.
       };
 
@@ -79,19 +79,19 @@ in {
         }
 
         # Greeting
-        {
-          monitor = "";
-          text = "Hii Serr";
+        #{
+        #  monitor = "";
+        #  text = "Hii Serr";
           #text = "cmd[update:1000] ${hyprlock-greeting-script}";
-          shadow_passes = "1";
-          shadow_boost = "0.5";
-          color = textColor;
-          font_size = "20";
-          font_family = font;
-          position = "0, 170";
-          halign = "center";
-          valign = "center";
-        }
+        #  shadow_passes = "1";
+        #  shadow_boost = "0.5";
+        #  color = textColor;
+        #  font_size = "20";
+        #  font_family = font;
+        #  position = "0, 170";
+        #  halign = "center";
+        #  valign = "center";
+        #}
 
         # Lock icon
         {

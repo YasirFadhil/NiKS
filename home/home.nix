@@ -17,6 +17,7 @@
     ../themes/gtk
     ../themes/qt
     ./nwg-dock/default.nix
+    ./scripts/rasi.nix
   ];
 
   home.username = "yasirfadhil";

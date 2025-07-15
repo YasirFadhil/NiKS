@@ -121,7 +121,7 @@
               command = "spotify";
             };
             shortcut4 = {
-              command = "/etc/nixos/home/scripts/launcher.nix";
+              command = "rofi-launcher";
             };
           };
           right = {
