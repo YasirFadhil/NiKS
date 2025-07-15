@@ -10,6 +10,7 @@ in
     ./hyprlock.nix
     ./hypridle.nix
     ./env.nix
+    ./animation.nix
   ];
 
   home.packages = myPackages;
@@ -54,9 +55,9 @@ in
         gaps_in = 7;
         gaps_out = 15;
         gaps_workspaces = 50;
-        border_size = 0;
-        # col.active_border = "rgba(33ccffee)";
-        # col.inactive_border = "rgba(595959aa)";
+        border_size = 1;
+        "col.active_border" = "rgb(4575da) rgb(6804b5)"; #"rgba(33ccffee)";
+        "col.inactive_border" = "rgb(595959)";
       };
       decoration = {
         rounding = 8;
@@ -69,11 +70,11 @@ in
         dim_strength = 0.1;
         dim_special = 0;
       };
-      animations = {
-        enabled = true;
-        bezier = [ "myBezier,0.05,0.9,0.1,1.05" ];
-        animation = [ "windows,1,7,myBezier" ];
-      };
+      # animations = {
+      #   enabled = true;
+      #   bezier = [ "myBezier,0.05,0.9,0.1,1.05" ];
+      #   animation = [ "windows,1,7,myBezier" ];
+      # };
       dwindle = {
         pseudotile = true;
         preserve_split = true;
@@ -85,6 +86,7 @@ in
       windowrule = [
         "float, title:^(Volume Control)$"
         "size 872 515, title:^(Volume Control)$"
+        "float, title:^(Sign in - Google Accounts — Zen Browser)$"
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
         "size 1035 661, title:^(KDE Connect)$"

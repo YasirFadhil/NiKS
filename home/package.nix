@@ -92,4 +92,7 @@
    vscode
    swww
    bibata-cursors
+   xdg-desktop-portal
+   xdg-desktop-portal-gtk
+   xdg-desktop-portal-hyprland
   ]
