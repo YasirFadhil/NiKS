@@ -5,37 +5,33 @@
  *
  * Colors
  *
- * OneDark Color Scheme with Transparency Support
+ * OneDark Color Scheme
  *
  **/
 
 * {
-    background:     rgba(40, 44, 52, 0.1);
-    background-alt: rgba(61, 70, 79, 0.2);
+    background:     #282C34;
+    background-alt: #3D4651;
     foreground:     #ABB2BF;
-    selected:       rgba(97, 175, 239, 0.3);
-    active:         rgba(152, 195, 121, 0.3);
-    urgent:         rgba(224, 108, 117, 0.3);
+    selected:       #61AFEF;
+    active:         #98C379;
+    urgent:         #E06C75;
 
-    /* Additional transparency variants */
-    transparent:    rgba(0, 0, 0, 0.0);
-    semi-transparent: rgba(40, 44, 52, 0.15);
+    /* OneDark color palette */
+    red:           #E06C75;
+    green:         #98C379;
+    yellow:        #E5C07B;
+    blue:          #61AFEF;
+    magenta:       #C678DD;
+    cyan:          #56B6C2;
+    white:         #ABB2BF;
 
-    /* OneDark color palette with transparency for blur */
-    red:           rgba(224, 108, 117, 1.0);
-    green:         rgba(152, 195, 121, 1.0);
-    yellow:        rgba(229, 192, 123, 1.0);
-    blue:          rgba(97, 175, 239, 1.0);
-    magenta:       rgba(198, 120, 221, 1.0);
-    cyan:          rgba(86, 182, 194, 1.0);
-    white:         rgba(171, 178, 191, 1.0);
-
-    /* Darker variants for better contrast with blur */
-    dark-red:      rgba(190, 80, 70, 0.9);
-    dark-green:    rgba(114, 159, 207, 0.9);
-    dark-yellow:   rgba(196, 160, 0, 0.9);
-    dark-blue:     rgba(52, 101, 164, 0.9);
-    dark-magenta:  rgba(117, 80, 123, 0.9);
-    dark-cyan:     rgba(6, 152, 154, 0.9);
-    dark-white:    rgba(131, 148, 150, 0.9);
+    /* Darker variants */
+    dark-red:      #BE5046;
+    dark-green:    #729FCF;
+    dark-yellow:   #C4A000;
+    dark-blue:     #3465A4;
+    dark-magenta:  #75507B;
+    dark-cyan:     #06989A;
+    dark-white:    #839496;
 }

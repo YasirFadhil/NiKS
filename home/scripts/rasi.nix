@@ -21,9 +21,6 @@ let
         display-window:             "";
         drun-display-format:        "{name}";
         window-format:              "{w} · {c} · {t}";
-        font:                       "JetBrains Mono Nerd Font 10";
-        window-class:               "rofi-blur";
-        window-name:                "rofi-blur";
     }
 
     /*****----- Global Properties -----*****/
@@ -73,7 +70,7 @@ let
         border-radius:               10px;
         border-color:                @border-colour;
         cursor:                      "default";
-        background-color:            rgba(40, 44, 52, 0.2);
+        background-color:            rgba(40, 44, 52, 0.75);
     }
 
     mainbox {
@@ -84,7 +81,7 @@ let
         border:                      0px solid;
         border-radius:               0px 0px 0px 0px;
         border-color:                @border-colour;
-        background-color:            rgba(40, 44, 52, 0.0);
+        background-color:            transparent;
         children:                    [ "inputbar", "message", "listview" ];
     }
 
@@ -96,7 +93,7 @@ let
         border:                      0px solid;
         border-radius:               0px;
         border-color:                @border-colour;
-        background-color:            rgba(40, 44, 52, 0.0);
+        background-color:            transparent;
         text-color:                  @foreground-colour;
         children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
     }
@@ -170,9 +167,9 @@ let
     }
     scrollbar {
         handle-width:                5px ;
-        handle-color:                @handle-colour;
+        handle-color:                rgba(97, 175, 239, 0.6);
         border-radius:               10px;
-        background-color:            rgba(61, 70, 79, 0.6);
+        background-color:            rgba(61, 70, 79, 0.3);
     }
     element {
         enabled:                     true;
@@ -199,15 +196,15 @@ let
         text-color:                  var(active-foreground);
     }
     element selected.normal {
-        background-color:            rgba(97, 175, 239, 0.2);
+        background-color:            rgba(97, 175, 239, 0.3);
         text-color:                  var(selected-normal-foreground);
     }
     element selected.urgent {
-        background-color:            rgba(224, 108, 117, 0.2);
+        background-color:            rgba(224, 108, 117, 0.3);
         text-color:                  var(selected-urgent-foreground);
     }
     element selected.active {
-        background-color:            rgba(152, 195, 121, 0.2);
+        background-color:            rgba(152, 195, 121, 0.3);
         text-color:                  var(selected-active-foreground);
     }
     element alternate.normal {
@@ -289,7 +286,7 @@ let
         border:                      2px solid;
         border-radius:               10px;
         border-color:                @border-colour;
-        background-color:            rgba(40, 44, 52, 0.3);
+        background-color:            rgba(40, 44, 52, 0.85);
         text-color:                  @foreground-colour;
     }
   '';

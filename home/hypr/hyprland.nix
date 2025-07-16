@@ -63,19 +63,12 @@ in
         rounding = 8;
         blur = {
           enabled = true;
-          size = 10;
-          passes = 3;
-          new_optimizations = true;
-          xray = true;
-          ignore_opacity = true;
+          size = 8;
+          passes = 2;
         };
         dim_inactive = false;
         dim_strength = 0.1;
         dim_special = 0;
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
       };
       # animations = {
       #   enabled = true;
@@ -99,16 +92,6 @@ in
         "size 1035 661, title:^(KDE Connect)$"
         "float,class:^(floating-kitty)$"
         "size 1094 633,class:^(floating-kitty)$"
-        "float,class:^(rofi)$"
-        "dimaround,class:^(rofi)$"
-        "stayfocused,class:^(rofi)$"
-      ];
-      windowrulev2 = [
-        "animation slide,class:^(rofi)$"
-        "bordersize 0,class:^(rofi)$"
-        "rounding 10,class:^(rofi)$"
-        "opacity 0.9,class:^(rofi)$"
-        "blur,class:^(rofi)$"
       ];
     };
   };
