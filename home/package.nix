@@ -91,6 +91,7 @@
    nwg-dock-hyprland
    vscode
    swww
+   winbox
    bibata-cursors
    xdg-desktop-portal
    xdg-desktop-portal-gtk
