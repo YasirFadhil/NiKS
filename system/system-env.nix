@@ -21,6 +21,7 @@
 	zsh-syntax-highlighting
 	vim
 	neovim
+  spice-gtk
 	efibootmgr
 	pamixer
 	brightnessctl
@@ -28,6 +29,7 @@
   mediawriter
   ventoy-full
   python
+  # vmware-wokstation
   ];
 
 

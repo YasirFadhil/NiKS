@@ -14,6 +14,7 @@ in
      "wheel"
      "video"
      "audio"
+     "libvirtd"
     ];
     };
   };
