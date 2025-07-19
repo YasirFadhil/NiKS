@@ -35,7 +35,7 @@ in
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Ice 20"
-        "nwg-dock-hyprland -d -i 30 -ml 12 -mr 12 -mb 12 -nolauncher -x -l bottom"
+        "nwg-dock-hyprland -r -i 30 -ml 12 -mr 12 -mb 12 -nolauncher -x -l bottom"
       ];
       input = {
         kb_model = "chromebook";
@@ -55,12 +55,14 @@ in
         gaps_in = 7;
         gaps_out = 15;
         gaps_workspaces = 50;
-        border_size = 1;
-        "col.active_border" = "rgb(4575da) rgb(6804b5)"; #"rgba(33ccffee)";
-        "col.inactive_border" = "rgb(595959)";
+        border_size = 0;
+        #"col.active_border" = "rgb(4575da) rgb(6804b5)"; #"rgba(33ccffee)";
+        #"col.inactive_border" = "rgb(595959)";
       };
       decoration = {
-        rounding = 8;
+        active_opacity = 0.9;
+        inactive_opacity = 0.9;
+        rounding = 15;
         blur = {
           enabled = true;
           size = 8;
@@ -89,9 +91,12 @@ in
         "float, title:^(Sign in - Google Accounts — Zen Browser)$"
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
+        "float, title:^(WhatsApp — KDE Connect Daemon)$"
+        "float, class:^(org.kde.kdeconnect.daemon)$"
         "size 1035 661, title:^(KDE Connect)$"
         "float,class:^(floating-kitty)$"
         "size 1094 633,class:^(floating-kitty)$"
+        #"opacity 0.8 0.8, class:^(Spotify)$"
       ];
     };
   };

@@ -35,6 +35,7 @@
       "SUPER SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
       "SUPER, W, exec, waypaper"
+      "SUPER SHIFT, W, exec, nwg-dock-hyprland"
       "SUPER, M, togglefloating" # floating toggle
 
       #screenshot

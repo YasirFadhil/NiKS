@@ -16,6 +16,7 @@
     ./zenn
     ../themes/gtk
     ../themes/qt
+    # ../themes/font
     ./nwg-dock/default.nix
     ./scripts/rasi.nix
   ];
