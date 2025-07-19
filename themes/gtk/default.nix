@@ -5,19 +5,27 @@
   home.packages = with pkgs; [
     whitesur-gtk-theme
     bibata-cursors
-    whitesur-icon-theme # Uncomment jika ingin pakai icon theme
+    whitesur-icon-theme
+    catppuccin-gtk
+    lxappearance
   ];
 
   gtk = {
     enable = true;
     theme = {
-      name = "WhiteSur-Dark";
-      package = pkgs.whitesur-gtk-theme;
+      # name = "WhiteSur-Dark";
+      # package = pkgs.whitesur-gtk-theme;
+      name = "Catppuccin-Mocha-Standard-Blue-Dark";
+      package = pkgs.catppuccin-gtk;
     };
     # font = {
     #   name = "Fira Code Nerd Font";
     #   size = 10;
     # };
+    font = {
+      name = "SF Pro Display";  # atau SF Mono, tergantung kebutuhan
+      size = 11;
+    };
     iconTheme = {
       name = "WhiteSur";
       package = pkgs.whitesur-icon-theme;
