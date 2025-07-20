@@ -19,6 +19,7 @@ pkgs.writeShellScriptBin "nowplay" ''
   max_length=30
   if [ "$(echo -n "$title" | wc -c)" -gt "$max_length" ]; then
     title="$(echo -n "$title" | cut -c1-30)..."
+    artist="$(echo -n "$artist" | cut -c1-30)..."
   fi
 
   if [[ -n "$artist" ]]; then
