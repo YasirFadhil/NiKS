@@ -40,7 +40,9 @@
       enable = true;
       xdgOpenUsePortal = true;
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # Penting untuk aplikasi GTK
-    };
+  };
+
+
 
   home.sessionVariables = {
     PATH = "$HOME/.nix-profile/bin:/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$PATH";
