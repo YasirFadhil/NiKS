@@ -13,10 +13,10 @@
   gtk = {
     enable = true;
     theme = {
-      # name = "WhiteSur-Dark";
-      # package = pkgs.whitesur-gtk-theme;
-      name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk;
+      name = "WhiteSur-Dark";
+      package = pkgs.whitesur-gtk-theme;
+      # name = "Catppuccin-Mocha-Standard-Blue-Dark";
+      # package = pkgs.catppuccin-gtk;
     };
     # font = {
     #   name = "Fira Code Nerd Font";
