@@ -52,7 +52,8 @@
     MOZ_ENABLE_WAYLAND = "1";
     SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh";
     QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
+    QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
+    QT6CT_PLATFORMTHEME = lib.mkForce "qt6ct";
     GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "GNOME:Hyprland";

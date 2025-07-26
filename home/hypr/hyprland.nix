@@ -56,27 +56,22 @@ in
         gaps_out = 15;
         gaps_workspaces = 50;
         border_size = 0;
-        #"col.active_border" = "rgb(4575da) rgb(6804b5)"; #"rgba(33ccffee)";
-        #"col.inactive_border" = "rgb(595959)";
+        "col.active_border" = "rgb(4575da) rgb(6804b5)"; #"rgba(33ccffee)";
+        "col.inactive_border" = "rgb(595959)";
       };
       decoration = {
-        active_opacity = 0.9;
-        inactive_opacity = 0.9;
+        active_opacity = 0.7;
+        inactive_opacity = 0.8;
         rounding = 15;
         blur = {
           enabled = true;
-          size = 8;
-          passes = 2;
+          size = 5;
+          passes = 3;
         };
         dim_inactive = false;
         dim_strength = 0.1;
         dim_special = 0;
       };
-      # animations = {
-      #   enabled = true;
-      #   bezier = [ "myBezier,0.05,0.9,0.1,1.05" ];
-      #   animation = [ "windows,1,7,myBezier" ];
-      # };
       dwindle = {
         pseudotile = true;
         preserve_split = true;
@@ -88,7 +83,6 @@ in
       windowrule = [
         "float, title:^(Volume Control)$"
         "size 872 515, title:^(Volume Control)$"
-        "float, title:^(Sign in - Google Accounts — Zen Browser)$"
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
         "float, title:^(WhatsApp — KDE Connect Daemon)$"
@@ -96,7 +90,6 @@ in
         "size 1035 661, title:^(KDE Connect)$"
         "float,class:^(floating-kitty)$"
         "size 1094 633,class:^(floating-kitty)$"
-        #"opacity 0.8 0.8, class:^(Spotify)$"
       ];
     };
   };
