@@ -19,6 +19,7 @@
     # ../themes/font
     ./nwg-dock/default.nix
     ./scripts/rasi.nix
+    ./scripts/rasi2.nix
   ];
 
   home.username = "yasirfadhil";

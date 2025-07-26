@@ -65,7 +65,7 @@ in
         rounding = 15;
         blur = {
           enabled = true;
-          size = 5;
+          size = 8;
           passes = 3;
         };
         dim_inactive = false;
