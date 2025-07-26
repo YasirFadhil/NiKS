@@ -8,7 +8,7 @@ let
 
     * {
       font: "JetBrains Mono Nerd Font 13";
-      background-color: #5628d434; // biru-abu gelap transparan
+      background-color: #7828d434; // biru-abu gelap transparan
       border-radius: 24px;
       padding: 0px;
     }
@@ -19,7 +19,7 @@ let
       fullscreen: false;
       width: 500px;
       border-radius: 24px;
-      background-color: #6428d434;
+      background-color: #7828d434;
       border: 0px;
       margin: 0px;
       padding: 0px;
@@ -33,7 +33,7 @@ let
     }
 
     inputbar {
-      background-color: #3628b434;
+      background-color: #8128b434;
       border-radius: 14px;
       padding: 13px 16px;
       margin: 0px 0px 10px 0px;
@@ -52,7 +52,7 @@ let
       text-color: #cdd6f4;
       font: "JetBrains Mono Nerd Font 13";
       placeholder: "Search…";
-      placeholder-color: #8892b0;
+      placeholder-color: #9d88b0ff;
       margin: 0px;
     }
 
@@ -69,7 +69,7 @@ let
     }
 
     element {
-      background-color: #28283334;
+      background-color: #2f283334;
       border-radius: 10px;
       padding: 10px 14px;
       text-color: #cdd6f4;
@@ -77,7 +77,7 @@ let
       font: "JetBrains Mono Nerd Font 13";
     }
     element selected {
-      background-color: #3f3e80af; // biru highlight transparan
+      background-color: #6d3e80af; // biru highlight transparan
       border-radius: 10px;
       text-color: #cdd6f4;
     }
