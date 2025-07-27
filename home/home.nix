@@ -55,7 +55,8 @@
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
     QT6CT_PLATFORMTHEME = lib.mkForce "qt6ct";
-    GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
+    GTK_THEME = "Fluent-Dark";
+    GTK_APPLICATION_PREFER_DARK_THEME = "1";
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "GNOME:Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";

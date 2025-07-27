@@ -8,22 +8,23 @@
     whitesur-icon-theme
     catppuccin-gtk
     lxappearance
+    layan-gtk-theme
+    libsForQt5.qtstyleplugin-kvantum
+    fluent-gtk-theme
   ];
 
   gtk = {
     enable = true;
     theme = {
-      name = "WhiteSur-Dark";
-      package = pkgs.whitesur-gtk-theme;
-      # name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      # package = pkgs.catppuccin-gtk;
+      name = "Fluent-Dark";
+      package = pkgs.fluent-gtk-theme;
     };
     # font = {
     #   name = "Fira Code Nerd Font";
     #   size = 10;
     # };
     font = {
-      name = "SF Pro Display";  # atau SF Mono, tergantung kebutuhan
+      name = "Noto Sans Medium";
       size = 11;
     };
     iconTheme = {
@@ -41,7 +42,7 @@
   xdg.configFile."gtk-4.0/settings.ini".text = ''
     [Settings]
     gtk-icon-theme-name=WhiteSur
-    gtk-theme-name=Catppuccin-Mocha-Standard-Blue-Dark
+    gtk-theme-name=Fluent-Dark
     gtk-cursor-theme-name=Bibata-Modern-Ice
     gtk-cursor-theme-size=20
   '';

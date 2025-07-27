@@ -3,7 +3,7 @@
   {
     qt = {
       enable = true;
-      platformTheme.name = "gtk";
-      style.name = "adwaita";
+      platformTheme.name = "qt5ct";
+      style.name = "kvantum";
     };
   }

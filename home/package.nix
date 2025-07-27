@@ -16,7 +16,7 @@
    xfce.thunar
    xfce.tumbler
    xfce.thunar-volman
-   nautilus
+   # nautilus
    gnome-tweaks
    gnome-extension-manager
    google-chrome
