@@ -28,8 +28,8 @@
   programs.home-manager.enable = true;
   home.packages = import ./package.nix {inherit pkgs;};
   # waybar.enable = true;
-  # theming.enable = true;
   # swaync.enable = true;
+  # theming.enable = true;
   programs.zsh.enable = true;
   programs.git = {
     enable = true;

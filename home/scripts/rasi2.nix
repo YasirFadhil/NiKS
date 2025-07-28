@@ -19,7 +19,7 @@ let
       fullscreen: false;
       width: 500px;
       border-radius: 24px;
-      background-color: #1d0e2e34;
+      background-color: #1d0e2e6b;
       border: 0px;
       margin: 0px;
       padding: 0px;
