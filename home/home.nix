@@ -55,6 +55,7 @@
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
     QT6CT_PLATFORMTHEME = lib.mkForce "qt6ct";
+    GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
     GTK_THEME = "Fluent-Dark";
     GTK_APPLICATION_PREFER_DARK_THEME = "1";
     XDG_SESSION_TYPE = "wayland";
