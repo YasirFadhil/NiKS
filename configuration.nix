@@ -59,6 +59,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Allow unsupported system
+  nixpkgs.config.allowUnsupportedSystem = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 

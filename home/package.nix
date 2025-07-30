@@ -92,6 +92,7 @@
    vscode
    swww
    nchat
+   caffeine
    bibata-cursors
    xdg-desktop-portal
    xdg-desktop-portal-gtk
