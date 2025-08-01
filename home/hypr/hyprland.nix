@@ -83,6 +83,8 @@ in
       windowrule = [
         "float, title:^(Volume Control)$"
         "size 872 515, title:^(Volume Control)$"
+        "float, class:^(org.gnome.Calculator)$"
+        "size 567 734, class:^(org.gnome.Calculator)$" 
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
         "float, title:^(WhatsApp — KDE Connect Daemon)$"
