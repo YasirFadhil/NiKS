@@ -50,4 +50,4 @@ alias gcl = git clone
 #other
 alias cd = z
 alias zed = zeditor
-alias whenyh = nh os switch /etc/nixos -H nixos
+alias nhs = nh os switch /etc/nixos -H nixos
