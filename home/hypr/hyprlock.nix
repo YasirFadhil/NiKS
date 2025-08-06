@@ -17,7 +17,7 @@ in {
 
       background = lib.mkForce {
         monitor = "";
-        path = "/etc/nixos/themes/pict/tahu26.jpg";
+        path = "/etc/nixos/themes/pict/mont.jpg";
         # You can add blur, vibrancy, contrast if you want.
       };
 
