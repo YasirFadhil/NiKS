@@ -25,7 +25,6 @@
 	efibootmgr
 	pamixer
 	brightnessctl
-	samba
   mediawriter
   ventoy-full
   python

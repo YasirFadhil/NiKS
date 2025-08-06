@@ -72,7 +72,6 @@
    slurp
    playerctl
    spicetify-cli
-   cifs-utils
    fuzzel
    wev
    cava
@@ -91,6 +90,7 @@
    nwg-dock-hyprland
    vscode
    zoom-us
+   net-tools
    swww
    nchat
    winbox4
