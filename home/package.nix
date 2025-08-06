@@ -90,8 +90,10 @@
    neofetch
    nwg-dock-hyprland
    vscode
+   zoom-us
    swww
    nchat
+   winbox4
    caffeine
    bibata-cursors
    xdg-desktop-portal

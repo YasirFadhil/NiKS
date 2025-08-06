@@ -36,5 +36,6 @@
   nixpkgs.config.permittedInsecurePackages = [
   "ventoy-1.1.05"
   "python-2.7.18.8"
+
   ];
 }
