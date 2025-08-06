@@ -16,6 +16,7 @@
       ./system/power-btn.nix
       ./system/dconf.nix
       ./system/virtual.nix
+      ./system/samba.nix
       ./themes/font
       ./home/var.nix
     ];

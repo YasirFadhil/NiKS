@@ -8,16 +8,16 @@
   services.samba = {
     enable = true;
     openFirewall = true;
-    extraConfig = ''
-      [global]
-      client min protocol = NT1
-      client max protocol = SMB3
-      workgroup = WORKGROUP
-      security = user
-    '';
+    settings = {
+      global = {
+        "client min protocol" = "NT1";
+        "client max protocol" = "SMB3";
+        "workgroup" = "WORKGROUP";
+        "security" = "user";
+      };
+    };
   };
 
-  # Create Samba directories
   systemd.tmpfiles.rules = [
     "d /var/lock/samba 0755 root root -"
     "d /var/lib/samba 0755 root root -"
@@ -25,7 +25,6 @@
     "d /var/run/samba 0755 root root -"
   ];
 
-  # Optional: Persistent mount for the ZTE F670L Samba share
   fileSystems."/mnt/samba" = {
     device = "//192.168.1.1/samba";
     fsType = "cifs";
