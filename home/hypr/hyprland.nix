@@ -27,6 +27,7 @@ in
         "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,pgp"
         "systemctl --user stop dunst &"
         "hyprpanel &"
+        "filebrowser --address 0.0.0.0 &"
         # "waybar &"
         "hypridle &"
         "hyprpaper &"

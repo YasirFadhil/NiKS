@@ -92,6 +92,9 @@
    zoom-us
    net-tools
    swww
+   putty
+   anyrun
+   filebrowser
    nchat
    winbox4
    caffeine
