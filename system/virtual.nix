@@ -28,5 +28,5 @@
   };
 
   # Enable virt-manager as a top-level program
-  programs.virt-manager.enable = true; #
+  programs.virt-manager.enable = true;
 }

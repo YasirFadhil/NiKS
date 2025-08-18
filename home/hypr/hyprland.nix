@@ -61,13 +61,16 @@ in
         "col.inactive_border" = "rgb(595959)";
       };
       decoration = {
-        active_opacity = 0.7;
-        inactive_opacity = 0.8;
-        rounding = 15;
+        active_opacity = 0.75;
+        inactive_opacity = 0.82;
+        rounding = 14;
         blur = {
           enabled = true;
-          size = 8;
-          passes = 3;
+          size = 20;            # lebih tinggi = blur lebih tebal (coba 18 - 32)
+          passes = 4;           # lebih tinggi = lebih smooth (coba 4 - 8)
+          vibrancy = 0.33;      # lebih tinggi = warna di bawah lebih keluar (coba 0.22 - 0.4)
+          new_optimizations = true;
+          ignore_opacity = false;
         };
         dim_inactive = false;
         dim_strength = 0.1;
@@ -85,7 +88,7 @@ in
         "float, title:^(Volume Control)$"
         "size 872 515, title:^(Volume Control)$"
         "float, class:^(org.gnome.Calculator)$"
-        "size 567 734, class:^(org.gnome.Calculator)$" 
+        "size 567 734, class:^(org.gnome.Calculator)$"
         "float, title:^(Waypaper)$"
         "float, title:^(KDE Connect)$"
         "float, title:^(WhatsApp — KDE Connect Daemon)$"
