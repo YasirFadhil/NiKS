@@ -62,15 +62,15 @@ in
       };
       decoration = {
         active_opacity = 0.75;
-        inactive_opacity = 0.82;
+        inactive_opacity = 0.73;
         rounding = 14;
         blur = {
           enabled = true;
-          size = 20;            # lebih tinggi = blur lebih tebal (coba 18 - 32)
-          passes = 4;           # lebih tinggi = lebih smooth (coba 4 - 8)
+          size = 8;            # lebih tinggi = blur lebih tebal (coba 18 - 32)
+          passes = 3;           # lebih tinggi = lebih smooth (coba 4 - 8)
           vibrancy = 0.33;      # lebih tinggi = warna di bawah lebih keluar (coba 0.22 - 0.4)
-          new_optimizations = true;
-          ignore_opacity = false;
+          #new_optimizations = true;
+          #ignore_opacity = false;
         };
         dim_inactive = false;
         dim_strength = 0.1;
