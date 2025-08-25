@@ -6,8 +6,9 @@
     ./nh.nix
     ./spicetify
     ./hypr/hyprland.nix
-    ./hyprpanel
-    # ./waybar
+    ./hypr/hyprpaper.nix
+    # ./hyprpanel
+    ./waybar
     ./nus
     ./kitty
     ./fastfetch
@@ -28,9 +29,8 @@
 
   programs.home-manager.enable = true;
   home.packages = import ./package.nix {inherit pkgs;};
-  # waybar.enable = true;
-  # swaync.enable = true;
-  # theming.enable = true;
+  waybar.enable = true;
+  services.swaync.enable = true;
   programs.zsh.enable = true;
   programs.git = {
     enable = true;

@@ -341,7 +341,6 @@ in {
           layer = "top";
           position = "top";
           modules-left = [
-            "group/powermenu"
             "group/stuff"
           ];
           modules-center = [
@@ -350,8 +349,10 @@ in {
           modules-right = [
             "tray"
             "group/scroll"
-            "group/hardware"
+            # "group/hardware"
             "custom/battery"
+            "group/powermenu"
+            "custom/notification"
           ];
           "cava" = {
             framerate = 60;
@@ -400,7 +401,7 @@ in {
             modules = [
               "clock"
               "hyprland/workspaces"
-              "custom/notification"
+              # "custom/notification"
             ];
           };
           "custom/shutdown" = {
@@ -450,7 +451,7 @@ in {
           "group/scroll" = {
             orientation = "horizontal";
             modules = [
-              "pulseaudio#mic"
+              # "pulseaudio#mic"
               "pulseaudio"
               "backlight"
             ];
@@ -693,7 +694,7 @@ in {
             escape = false;
           };
           "clock" = {
-            format = "{:%H:%M}";
+            format = "{:%I:%M}";
             format-alt = "{:%A, %B %d, %Y (%R)}";
             tooltip-format = "<tt><small>{calendar}</small></tt>";
             calendar = {
