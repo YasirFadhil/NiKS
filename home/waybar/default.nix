@@ -89,7 +89,7 @@ in {
           border-radius: 8px;
         }
         #window {
-            font-size: 14px;
+            font-size: 18px;
             opacity: 100;
             transition: opacity 1s ease-in-out
         }
@@ -341,6 +341,7 @@ in {
           layer = "top";
           position = "top";
           modules-left = [
+            "custom/nixos"
             "group/stuff"
           ];
           modules-center = [
@@ -349,9 +350,8 @@ in {
           modules-right = [
             "tray"
             "group/scroll"
-            # "group/hardware"
             "custom/battery"
-            "group/powermenu"
+            "clock"
             "custom/notification"
           ];
           "cava" = {
@@ -389,7 +389,7 @@ in {
             };
             orientation = "horizontal";
             modules = [
-              "custom/nixos"
+              # "custom/nixos"
               "custom/shutdown"
               "custom/reboot"
               "custom/logout"
@@ -399,7 +399,7 @@ in {
           "group/stuff" = {
             orientation = "horizontal";
             modules = [
-              "clock"
+              # "clock"
               "hyprland/workspaces"
               # "custom/notification"
             ];
@@ -446,7 +446,7 @@ in {
           };
           "tray" = {
             spacing = 8;
-            icon-size = 12;
+            icon-size = 16;
           };
           "group/scroll" = {
             orientation = "horizontal";
