@@ -10,8 +10,6 @@ in
   };
 
   config = {
-    services.logind.extraConfig = ''
-      HandlePowerKey=${config.username.powerKeyAction}
-    '';
+    services.logind.settings.Login.HandlePowerKey = config.username.powerKeyAction;
   };
 }
