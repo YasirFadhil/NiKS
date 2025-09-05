@@ -96,8 +96,10 @@
    anyrun
    filebrowser
    nchat
+   nodejs
    winbox4
    caffeine
+   ciscoPacketTracer8
    bibata-cursors
    xdg-desktop-portal
    xdg-desktop-portal-gtk

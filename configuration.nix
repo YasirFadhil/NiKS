@@ -17,6 +17,7 @@
       ./system/dconf.nix
       ./system/virtual.nix
       ./system/samba.nix
+      ./system/firejail.nix
       ./themes/font
       ./home/var.nix
     ];

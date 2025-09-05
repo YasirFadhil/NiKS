@@ -17,7 +17,7 @@
 # them for future reference.
 
 #pfetch
-fastfetch -c ~/.config/fastfetch/config-compact.jsonc
+#fastfetch -c ~/.config/fastfetch/config-compact.jsonc
 #pokemon-colorscripts --no-title -s -r
 
 # $env.config.show_banner = false
