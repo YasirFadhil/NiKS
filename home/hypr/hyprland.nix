@@ -28,6 +28,7 @@ in
         # "hyprpanel &"
         # "filebrowser --address 0.0.0.0 &"
         # "waybar &"
+        "kdeconnect-indicator"
         "hypridle &"
         "hyprpaper &"
         "waypaper --restore"

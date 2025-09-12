@@ -21,7 +21,8 @@
    zoxide
    btop
    obs-studio
-   # python2
+   python3
+   python3Packages.pip
    #cope
    #python311Packages.pip
    #python312Packages.pip
@@ -51,7 +52,7 @@
    wayland-protocols
    waypaper
    swaynotificationcenter
-   noto-fonts	 
+   noto-fonts
    noto-fonts-color-emoji
    nerd-fonts.fira-code
    nerd-fonts.jetbrains-mono

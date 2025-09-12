@@ -67,7 +67,7 @@ in {
         # Date
         {
           monitor = "";
-          text = ''cmd[update:1000] echo $(date +%A) $(date +%d) $(date +%B)'';
+          text = ''cmd[update:1000] echo $(date +%A), $(date +%d) $(date +%B)'';
           shadow_passes = "1";
           shadow_boost = "0.5";
           color = textColor;
