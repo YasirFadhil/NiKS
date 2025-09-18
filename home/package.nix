@@ -30,7 +30,7 @@
    # spotify
    hyprpaper
    hyprpolkitagent
-   rofi-wayland
+   rofi
    blueman
    waybar
    adw-gtk3
@@ -61,7 +61,7 @@
    wl-clipboard
    #dunst
    rofimoji
-   rofi-emoji-wayland
+   rofi-emoji
    kdePackages.gwenview
    kdePackages.kdeconnect-kde
    swappy
