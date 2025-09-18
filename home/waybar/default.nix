@@ -214,7 +214,7 @@ in {
         #workspaces button {
           padding: 0px 10px 0 4px;
           margin: 4px 0px;
-          border-radius: 5;
+          border-radius: 5px;
         }
         #workspaces button:hover {
           background-color: rgba(255,255,255,0.25);
