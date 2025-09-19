@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   programs.anyrun = {
     enable = true;
     config = {
@@ -28,11 +27,11 @@
         font-size: 1.2rem;
       }
 
-       #window,
-       #match,
-       #entry,
-       #plugin,
-       #main {
+      #window,
+      #match,
+      #entry,
+      #plugin,
+      #main {
         background: transparent;
       }
 
