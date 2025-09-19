@@ -1,9 +1,12 @@
-  { pkgs, lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
-  {
-    qt = {
-      enable = true;
-      platformTheme.name = "qt5ct";
-      style.name = "kvantum";
+{
+  qt = {
+    enable = true;
+    platformTheme = "qtct";
+    style = {
+      package = pkgs.libsForQt5.qtstyleplugin-kvantum;
+      name = "kvantum";
     };
-  }
+  };
+}
