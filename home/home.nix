@@ -17,11 +17,10 @@
     ./zenn
     ./anyrun
     ../themes/gtk
-    ../themes/qt
+    # ../themes/qt
     # ../themes/font
-    ./nwg-dock/default.nix
-    ./scripts/rasi.nix
-    ./scripts/rasi2.nix
+    ./nwg-dock
+    ./rofi-launch/rasi.nix
   ];
 
   home.username = "yasirfadhil";
@@ -43,8 +42,6 @@
       xdgOpenUsePortal = true;
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # Penting untuk aplikasi GTK
   };
-
-
 
   home.sessionVariables = {
     PATH = "$HOME/.nix-profile/bin:/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$PATH";

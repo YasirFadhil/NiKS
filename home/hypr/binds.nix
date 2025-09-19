@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     (import ../scripts/volume.nix { inherit pkgs ; })
-    (import ../scripts/launcher.nix { pkgs = pkgs; })
+    (import ../rofi-launch/launcher.nix { pkgs = pkgs; })
   ];
 
   wayland.windowManager.hyprland.settings = {
@@ -26,8 +26,8 @@
       "SUPER, F, exec, nautilus"
       "SUPER CTRL, V, exec, pavucontrol"
       # "SUPER, D, exec, ~/.config/rofi/launchers/type-1/launcher.sh"
-      # "SUPER, D, exec, rofi-launcher"
-      "SUPER, D, exec, anyrun"
+      "SUPER, D, exec, rofi-launcher"
+      # "SUPER, D, exec, anyrun"
       "SUPER, X, fullscreen"
       "SUPER, Q, killactive"
       "SUPER, ESCAPE, exit"

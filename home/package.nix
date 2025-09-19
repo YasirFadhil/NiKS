@@ -90,7 +90,7 @@
    net-tools
    swww
    putty
-   anyrun
+   # anyrun
    nodejs
    winbox4
    caffeine

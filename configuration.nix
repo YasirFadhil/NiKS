@@ -16,9 +16,11 @@
       ./system/power-btn.nix
       ./system/dconf.nix
       ./system/virtual.nix
+      ./system/github-token.nix
 #      ./system/samba.nix
 #      ./system/firejail.nix
       ./themes/font
+      # ./themes/qt
       ./home/var.nix
     ];
 
