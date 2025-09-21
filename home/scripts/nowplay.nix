@@ -17,9 +17,18 @@ pkgs.writeShellScriptBin "nowplay" ''
   esac
 
   max_length=30
-  if [ "$(echo -n "$title" | wc -c)" -gt "$max_length" ]; then
-    title="$(echo -n "$title" | cut -c1-30)..."
-    artist="$(echo -n "$artist" | cut -c1-30)..."
+  kde_max_length=20
+
+  if [[ "$player" == *kdeconnect* ]]; then
+    if [ "$(echo -n "$title" | wc -c)" -gt "$kde_max_length" ]; then
+      title="$(echo -n "$title" | cut -c1-$kde_max_length)..."
+      artist="$(echo -n "$artist" | cut -c1-$kde_max_length)..."
+    fi
+  else
+    if [ "$(echo -n "$title" | wc -c)" -gt "$max_length" ]; then
+      title="$(echo -n "$title" | cut -c1-$max_length)..."
+      artist="$(echo -n "$artist" | cut -c1-$max_length)..."
+    fi
   fi
 
   if [[ -n "$artist" ]]; then

@@ -15,7 +15,7 @@
     ./fastfetch/def-comp.nix
     ./hypr/polkitagent.nix
     ./zenn
-    ./anyrun
+    # ./anyrun
     ../themes/gtk
     # ../themes/qt
     # ../themes/font
