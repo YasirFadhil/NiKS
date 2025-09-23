@@ -7,7 +7,6 @@
     zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    anyrun.url = "github:anyrun-org/anyrun";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +21,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, pkgs, home-manager, apple-fonts, spicetify-nix, hyprland, zen-browser, hyprpanel, anyrun }: let
+  outputs = inputs @ { self, nixpkgs, pkgs, home-manager, apple-fonts, spicetify-nix, hyprland, zen-browser, hyprpanel }: let
     system = "x86_64-linux";
     # overlays = [
     #        hyprpanel.overlay

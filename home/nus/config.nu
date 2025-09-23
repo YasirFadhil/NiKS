@@ -45,7 +45,7 @@ alias g = git
 alias gad = git add .
 alias gcm = git commit -m "."
 alias gps = git push -u origin main
-alias gcl = git clone 
+alias gcl = git clone
 
 #other
 alias cd = z
