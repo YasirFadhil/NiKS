@@ -17,7 +17,7 @@
     ./zenn
     ./anyrun
     ../themes/gtk
-    # ../themes/qt
+    ../themes/qt
     # ../themes/font
     ./nwg-dock
     ./rofi-launch/rasi.nix
@@ -25,7 +25,6 @@
 
   home.username = "yasirfadhil";
   home.homeDirectory = "/home/yasirfadhil";
-
   programs.home-manager.enable = true;
   home.packages = import ./package.nix {inherit pkgs;};
   waybar.enable = true;

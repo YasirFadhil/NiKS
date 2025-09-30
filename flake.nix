@@ -3,11 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    pkgs.follows = "nixpkgs";
+    # pkgs.follows = "nixpkgs";
     zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    anyrun.url = "github:fufexan/anyrun/launch-prefix";
+    anyrun.url = "github:Kirottu/anyrun";
+    anyrun-nixos-options.url = "github:n3oney/anyrun-nixos-options";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,11 +23,8 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, pkgs, home-manager, apple-fonts, spicetify-nix, hyprland, zen-browser, hyprpanel, anyrun }: let
+  outputs = inputs @ { self, nixpkgs, home-manager, ... }: let
     system = "x86_64-linux";
-    # overlays = [
-    #        hyprpanel.overlay
-    #   ];
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = system;
@@ -39,9 +37,6 @@
             trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
           };
         }
-        # {
-        #   nixpkgs.overlays = overlays;
-        # }
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
