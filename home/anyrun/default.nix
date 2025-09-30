@@ -1,22 +1,18 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }: {
   programs.anyrun = {
     enable = true;
     config = {
-      plugins = [
-        "${pkgs.anyrun}/lib/anyrun/libapplications.so"
-        "${pkgs.anyrun}/lib/anyrun/libdictionary.so"
-        "${pkgs.anyrun}/lib/anyrun/librink.so"
-        "${pkgs.anyrun}/lib/anyrun/libshell.so"
-        "${pkgs.anyrun}/lib/anyrun/libsymbols.so"
-        "${pkgs.anyrun}/lib/anyrun/libstdin.so"
-        "${pkgs.anyrun}/lib/anyrun/libtranslate.so"
-        "${pkgs.anyrun}/lib/anyrun/libwebsearch.so"
-        inputs.anyrun-nixos-options.packages.${pkgs.system}.default
+      plugins = with inputs.anyrun.packages.${pkgs.system}; [
+        applications
+        shell
+        randr
+        rink
+        symbols
+        translate
       ];
 
       width.fraction = 0.25;
@@ -81,7 +77,7 @@
         Config(
           desktop_actions: false,
           max_entries: 5,
-          terminal: Some("kitty"),
+          terminal: Some("foot"),
         )
       '';
 
