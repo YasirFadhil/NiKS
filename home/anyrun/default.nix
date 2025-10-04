@@ -77,13 +77,35 @@
         Config(
           desktop_actions: false,
           max_entries: 5,
-          terminal: Some("foot"),
         )
       '';
 
       "shell.ron".text = ''
         Config(
           prefix: ">"
+        )
+      '';
+
+      "randr.ron".text = ''
+        Config()
+      '';
+
+      "rink.ron".text = ''
+        Config(
+          prefix: "="
+        )
+      '';
+
+      "symbols.ron".text = ''
+        Config(
+          prefix: ":",
+          max_entries: 5
+        )
+      '';
+
+      "translate.ron".text = ''
+        Config(
+          prefix: "#"
         )
       '';
     };

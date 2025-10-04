@@ -13,7 +13,7 @@
       "buffer_font_size": 15,
       "vim_mode": true,
       "theme": {
-        "mode": "system",
+        "mode": "dark",
         "light": "One Light",
         "dark": "Modest Dark"
       }
