@@ -13,6 +13,7 @@
       ./system/users.nix
       ./system/network.nix
       ./system/display.nix
+      ./system/gdm.nix
       ./system/power-btn.nix
       ./system/dconf.nix
       ./system/virtual.nix

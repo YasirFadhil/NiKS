@@ -2,7 +2,7 @@
 
 {
   # Enable GDM as display manager
-  services.xserver.displayManager.gdm = {
+  services.displayManager.gdm = {
     enable = true;
     wayland = true;
     autoSuspend = false;
@@ -54,23 +54,6 @@
     # gnome-themes-extra
   ];
 
-  # Custom GDM CSS (optional)
-  # Uncomment and modify if you want custom styling
-  # environment.etc."gdm/custom.conf".text = ''
-  #   [daemon]
-  #   WaylandEnable=true
-  #
-  #   [security]
-  #   DisallowTCP=true
-  #   AllowRoot=false
-  #
-  #   [xdmcp]
-  #   Enable=false
-  #
-  #   [greeter]
-  #   IncludeAll=true
-  # '';
-
   # GDM 3 specific customizations
   programs.dconf.profiles.gdm.databases = [{
     settings = {
@@ -88,7 +71,6 @@
         font-name = "Cantarell 11";
         icon-theme = "Adwaita";
         gtk-theme = "Adwaita";
-        # Enable dark theme for login screen
         color-scheme = "prefer-dark";
       };
 
@@ -97,44 +79,18 @@
         event-sounds = true;
         theme-name = "freedesktop";
       };
-
-      # Privacy settings
-      "org/gnome/desktop/privacy" = {
-        disable-microphone = false;
-        disable-camera = false;
-      };
-
-      # Power settings for login screen
-      "org/gnome/settings-daemon/plugins/power" = {
-        power-button-action = "interactive";
-        sleep-inactive-ac-timeout = 0;
-        sleep-inactive-battery-timeout = 0;
-      };
     };
   }];
 
   # Additional GDM-related services
-  services.gnome.gnome-keyring.enable = true;
   services.accounts-daemon.enable = true;
-
-  # Optional: Custom login screen logo
-  # Uncomment and set path to your logo
-  # services.xserver.displayManager.gdm.banner = "Welcome to NixOS";
 
   # Optional: Auto login configuration
   # Uncomment and modify as needed
-  # services.xserver.displayManager.autoLogin = {
+  # services.displayManager.autoLogin = {
   #   enable = true;
   #   user = "username";
   # };
 
-  # Ensure proper permissions for GDM
-  users.groups.gdm = {};
-  users.users.gdm = {
-    group = "gdm";
-    home = "/var/lib/gdm";
-    createHome = true;
-    isSystemUser = true;
-    shell = pkgs.bash;
-  };
+
 }
