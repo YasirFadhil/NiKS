@@ -10,12 +10,34 @@
       "SUPER, mouse:272, movewindow" # Move Window (mouse)
       "SUPER, mouse:273, resizewindow" # Resize Window (mouse)
     ];
-    bindl = [
+    # Global keybinds that work even in fullscreen (including GeForce Now)
+    bindel = [
+      # Volume controls (repeatable, locked, works in fullscreen)
       ",XF86AudioRaiseVolume, exec, volume-control up"
       ",XF86AudioLowerVolume, exec, volume-control down"
       ",XF86AudioMute, exec, volume-control mute"
+
+      # Brightness controls (repeatable, locked, works in fullscreen)
       ",XF86MonBrightnessUp, exec, brightnessctl s 2%+"
       ",XF86MonBrightnessDown, exec, brightnessctl s 2%-"
+    ];
+
+    bindl = [
+      # Workspace switching (locked, works in fullscreen)
+      "SUPER, 1, workspace, 1"
+      "SUPER, 2, workspace, 2"
+      "SUPER, 3, workspace, 3"
+      "SUPER, 4, workspace, 4"
+      "SUPER, 5, workspace, 5"
+      "SUPER, 6, workspace, 6"
+      "SUPER, 7, workspace, 7"
+      "SUPER, 8, workspace, 8"
+      "SUPER, 9, workspace, 9"
+      "SUPER, 0, workspace, 10"
+
+      # Screenshot (locked, works in fullscreen)
+      "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/Screenreg-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
     ];
     bind = [
       "SUPER, T, exec, kitty"
@@ -39,35 +61,27 @@
       "SUPER SHIFT, W, exec, nwg-dock-hyprland"
       "SUPER, M, togglefloating" # floating toggle
 
-      #screenshot
-      "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      #screenshot (additional screenshot shortcuts)
       "SUPER, F5, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
-      "SUPER, F11, exec, hyprshot -m output | wl-copy"
-      "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/Screenreg-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      "SUPER, F10, exec, hyprshot -m output | wl-copy"
 
       #window focus
       "SUPER, H, movefocus, l"
-      "SUPER, L, movefocus, r"
+      "SUPER SHIFT, L, movefocus, r"
       "SUPER, K, movefocus, u"
       "SUPER, J, movefocus, d"
 
       #workspace
       "SUPER SHIFT, H, movewindow, l"
-      "SUPER SHIFT, L, movewindow, r"
+      "SUPER CTRL, L, movewindow, r"
       "SUPER SHIFT, K, movewindow, u"
       "SUPER SHIFT, J, movewindow, d"
 
-      #workspace nav
-      "SUPER, 1, workspace, 1"
-      "SUPER, 2, workspace, 2"
-      "SUPER, 3, workspace, 3"
-      "SUPER, 4, workspace, 4"
-      "SUPER, 5, workspace, 5"
-      "SUPER, 6, workspace, 6"
-      "SUPER, 7, workspace, 7"
-      "SUPER, 8, workspace, 8"
-      "SUPER, 9, workspace, 9"
-      "SUPER, 0, workspace, 10"
+      # Alternative workspace switching for gaming
+      "ALT, TAB, workspace, e+1"
+      "ALT SHIFT, TAB, workspace, e-1"
+
+      #workspace nav (move windows to workspace)
       "SUPER SHIFT, 1, movetoworkspace, 1"
       "SUPER SHIFT, 2, movetoworkspace, 2"
       "SUPER SHIFT, 3, movetoworkspace, 3"

@@ -11,7 +11,6 @@
         shell
         randr
         rink
-        symbols
         translate
       ];
 
@@ -96,12 +95,7 @@
         )
       '';
 
-      "symbols.ron".text = ''
-        Config(
-          prefix: ":",
-          max_entries: 5
-        )
-      '';
+
 
       "translate.ron".text = ''
         Config(

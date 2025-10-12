@@ -83,6 +83,8 @@ in
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
+        # Force global keybinds to work in fullscreen
+        force_default_wallpaper = 0;
       };
       windowrule = [
         "float, title:^(Volume Control)$"

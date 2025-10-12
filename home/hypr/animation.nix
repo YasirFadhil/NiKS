@@ -3,16 +3,18 @@
     animations = {
       enabled = true;
       bezier = [
-        "shot, 0.02, 1.0, 0.2, 1.0"
-        "swipe, 0.6, 0.0, 0.2, 1.05"
-        "linear, 0.0, 0.0, 1.0, 1.0"
-        "progressive, 1.0, 0.0, 0.6, 1.0"
+        "smoothOut, 0.36, 0, 0.66, -0.56"
+        "smoothIn, 0.25, 1, 0.5, 1"
+        "overshot, 0.05, 0.9, 0.1, 1.1"
+        "workspace, 0.1, 0.5, 0.5, 1.2"
       ];
 
       animation = [
-        "windows, 1, 6, shot, slide"
-        "workspaces, 1, 6, swipe, slide"
-        "fade, 1, 4, progressive"
+        "windows, 1, 4, smoothIn, slide"
+        "windowsOut, 1, 4, smoothOut, slide"
+        "border, 1, 10, default"
+        "fade, 1, 5, smoothIn"
+        "workspaces, 1, 6, workspace, slide"
       ];
     };
   };

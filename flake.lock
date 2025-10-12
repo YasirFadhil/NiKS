@@ -2,21 +2,21 @@
   "nodes": {
     "anyrun": {
       "inputs": {
-        "anyrun-provider": "anyrun-provider",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1758874004,
-        "narHash": "sha256-+RUCBtT01Z595NpGc6Tvms+dJ/C/cn1zdjT9+gE6dbU=",
-        "owner": "Kirottu",
+        "lastModified": 1731186561,
+        "narHash": "sha256-+jwC6oo7yx40SowZW4SCpTlYS+e0mPKmIuXvsBFNw3g=",
+        "owner": "fufexan",
         "repo": "anyrun",
-        "rev": "3c571bc1514c4211d1d6c011a1d482f97efd9c5f",
+        "rev": "3bc08db41dec30cd4278597c1c4bd7cf66b15fe0",
         "type": "github"
       },
       "original": {
-        "owner": "Kirottu",
+        "owner": "fufexan",
+        "ref": "launch-prefix",
         "repo": "anyrun",
         "type": "github"
       }
@@ -37,27 +37,6 @@
       "original": {
         "owner": "n3oney",
         "repo": "anyrun-nixos-options",
-        "type": "github"
-      }
-    },
-    "anyrun-provider": {
-      "inputs": {
-        "nixpkgs": [
-          "anyrun",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1758817837,
-        "narHash": "sha256-J3Jl4Z8SJHj+ogyohPeypT5LmQtCupdBteFezwiEZ9E=",
-        "owner": "anyrun-org",
-        "repo": "anyrun-provider",
-        "rev": "b20650aa1bf80ae86b5bf5253d21fc0ddb7985c7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "anyrun-org",
-        "repo": "anyrun-provider",
         "type": "github"
       }
     },
