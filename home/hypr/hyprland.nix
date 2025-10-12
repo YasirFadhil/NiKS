@@ -21,7 +21,7 @@ in
     settings = {
       # Monitor configuration
       monitor = [
-        "eDP-1,1700x950@60,0x0,1"
+        "eDP-1,1700x950@60,0x0,1" #change this to your exact monitor resolution
       ];
 
       # Autostart applications
@@ -52,7 +52,7 @@ in
 
       # Input configuration
       input = {
-        kb_model = "chromebook";
+        kb_model = "chromebook"; #you can change this to your keyboard model
         kb_layout = "us";
         follow_mouse = 1;
         sensitivity = 0.5;
