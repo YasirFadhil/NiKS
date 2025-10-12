@@ -565,6 +565,7 @@ in {
               fi
 
               if [ "$STATE" = "charging" ]; then
+                ICON="󱐋"  # Charging icon
                 TIME=$(upower -i "$BAT" | awk -F': ' '/time to full/ {print $2}')
                 if [ -z "$TIME" ]; then
                   TIME_SHOW="Calculating..."
@@ -585,7 +586,11 @@ in {
               fi
 
               # Add an extra space after the icon to avoid overlap
-              echo "{\"text\":\"$ICON  $PERCENT%\",\"tooltip\":\"$TOOLTIP\"}"
+              if [ "$STATE" = "charging" ]; then
+                echo "{\"text\":\"$ICON  $PERCENT%\",\"tooltip\":\"$TOOLTIP\"}"
+              else
+                echo "{\"text\":\"$ICON  $PERCENT%\",\"tooltip\":\"$TOOLTIP\"}"
+              fi
             '';
             return-type = "json";
             format = "{}";
