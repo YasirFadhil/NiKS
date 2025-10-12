@@ -10,6 +10,11 @@ Personal [NixOS](https://nixos.org/) + [Hyprland](https://hyprland.org/) setup.
 - Custom Hyprland window manager setup
 - Dotfiles for daily workflow
 
+## Credits & Inspiration
+
+This configuration is inspired by:
+- [FatngatirBilek/NixyDots](https://github.com/FatngatirBilek/NixyDots)
+
 ---
 
 > Made with ❤️ by [YasirFadhil](https://github.com/YasirFadhil)
