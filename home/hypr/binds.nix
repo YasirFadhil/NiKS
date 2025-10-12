@@ -1,29 +1,32 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
-    (import ../scripts/volume.nix { inherit pkgs ; })
+    (import ../scripts/volume.nix { inherit pkgs; })
     (import ../rofi-launch/launcher.nix { pkgs = pkgs; })
   ];
 
   wayland.windowManager.hyprland.settings = {
+    # Mouse bindings
     bindm = [
-      "SUPER, mouse:272, movewindow" # Move Window (mouse)
-      "SUPER, mouse:273, resizewindow" # Resize Window (mouse)
+      "SUPER, mouse:272, movewindow"    # Move window with mouse
+      "SUPER, mouse:273, resizewindow"  # Resize window with mouse
     ];
-    # Global keybinds that work even in fullscreen (including GeForce Now)
+
+    # Media and hardware control (repeatable, locked, works in fullscreen)
     bindel = [
-      # Volume controls (repeatable, locked, works in fullscreen)
+      # Volume controls
       ",XF86AudioRaiseVolume, exec, volume-control up"
       ",XF86AudioLowerVolume, exec, volume-control down"
       ",XF86AudioMute, exec, volume-control mute"
 
-      # Brightness controls (repeatable, locked, works in fullscreen)
+      # Brightness controls
       ",XF86MonBrightnessUp, exec, brightnessctl s 2%+"
       ",XF86MonBrightnessDown, exec, brightnessctl s 2%-"
     ];
 
+    # Locked bindings (work in fullscreen)
     bindl = [
-      # Workspace switching (locked, works in fullscreen)
+      # Workspace switching
       "SUPER, 1, workspace, 1"
       "SUPER, 2, workspace, 2"
       "SUPER, 3, workspace, 3"
@@ -35,53 +38,57 @@
       "SUPER, 9, workspace, 9"
       "SUPER, 0, workspace, 10"
 
-      # Screenshot (locked, works in fullscreen)
+      # Screenshot functionality
       "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
       "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/Screenreg-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
     ];
+
+    # Regular bindings
     bind = [
+      # Application launchers
       "SUPER, T, exec, kitty"
       "SUPER SHIFT, T, exec, kitty --class floating-kitty"
       "SUPER, B, exec, zen"
       "SUPER, E, exec, rofimoji"
-      #"SUPER, F, exec, thunar"
       "SUPER, F, exec, nautilus"
       "SUPER CTRL, V, exec, pavucontrol"
-      # "SUPER, D, exec, ~/.config/rofi/launchers/type-1/launcher.sh"
       "SUPER, D, exec, rofi-launcher"
-      # "SUPER, D, exec, anyrun"
+
+      # System controls
       "SUPER, X, fullscreen"
       "SUPER, Q, killactive"
       "SUPER, ESCAPE, exit"
       "SUPER, P, exec, wlogout"
       "SUPER, L, exec, hyprlock"
+      "SUPER, M, togglefloating"
+
+      # Utility functions
       "SUPER SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
       "SUPER, W, exec, waypaper"
       "SUPER SHIFT, W, exec, nwg-dock-hyprland"
-      "SUPER, M, togglefloating" # floating toggle
 
-      #screenshot (additional screenshot shortcuts)
+      # Additional screenshot bindings
       "SUPER, F5, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
-      "SUPER, F10, exec, hyprshot -m output | wl-copy"
+      "SUPER SHIFT, H, exec, hyprshot -m output | wl-copy"
 
-      #window focus
+      # Window focus controls
       "SUPER, H, movefocus, l"
       "SUPER SHIFT, L, movefocus, r"
       "SUPER, K, movefocus, u"
       "SUPER, J, movefocus, d"
 
-      #workspace
+      # Window movement
       "SUPER SHIFT, H, movewindow, l"
       "SUPER CTRL, L, movewindow, r"
       "SUPER SHIFT, K, movewindow, u"
       "SUPER SHIFT, J, movewindow, d"
 
-      # Alternative workspace switching for gaming
+      # Alternative workspace navigation (for gaming)
       "ALT, TAB, workspace, e+1"
       "ALT SHIFT, TAB, workspace, e-1"
 
-      #workspace nav (move windows to workspace)
+      # Move windows to workspaces
       "SUPER SHIFT, 1, movetoworkspace, 1"
       "SUPER SHIFT, 2, movetoworkspace, 2"
       "SUPER SHIFT, 3, movetoworkspace, 3"

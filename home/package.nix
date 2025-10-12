@@ -1,101 +1,92 @@
 { pkgs, ... }:
 
 with pkgs; [
-  git
+  # Terminal Emulators
   kitty
-  starship
-  discord
-  pavucontrol
-  clang
-  zig
-  vlc
-  alsa-utils
-  alsa-ucm-conf
-  fastfetch
-  ghostty
-  # nautilus
-  gnome-tweaks
-  gnome-extension-manager
-  google-chrome
+
+  # Shell Tools
   carapace
   zoxide
-  btop
+  cmatrix
+  cbonsai
+  neofetch
+  cava
+
+  # Development
+  zig
+  go
+  nodejs
+  vscode
+
+  # Browsers and Communication
+  google-chrome
+  discord
+  kdePackages.kdeconnect-kde
+
+  # System Tools
+  putty
+  winbox4
+
+  # Media and Entertainment
+  vlc
   obs-studio
-  python3
-  python3Packages.pip
-  #cope
-  #python311Packages.pip
-  #python312Packages.pip
-  #python313Packages.pip
-  # spotify
+  pavucontrol
+
+  # File Management and Viewers
+  kdePackages.gwenview
+  libreoffice
+  gimp3
+  swappy
+
+  # Hyprland and Wayland
   hyprpaper
   hyprpolkitagent
-  rofi
-  blueman
-  waybar
-  adw-gtk3
-  whitesur-gtk-theme
-  qt5.qtwayland
-  qt6.qtwayland
-  libsForQt5.qt5ct
-  qt6ct
   hyprshot
   hyprpicker
-  gtk3
-  gtk4
-  gtk-layer-shell
-  go
-  wlogout
   hyprlock
   hypridle
-  wayland-utils
-  wayland-protocols
   waypaper
+  wlogout
+  waybar
+  wlr-randr
+  wl-clipboard
+  swww
+
+  # Theming and Appearance
+  adw-gtk3
+  whitesur-gtk-theme
+  bibata-cursors
+  libcanberra-gtk3
+
+  # GNOME Tools
+  gnome-tweaks
+  gnome-extension-manager
+
+  # Rofi and Related
+  rofi
+  rofimoji
+  rofi-emoji
+
+  # System Tray and Notifications
   swaynotificationcenter
+  nwg-dock-hyprland
+  blueman
+  caffeine-ng
+
+  # Screenshot Tools
+  grim
+  slurp
+
+  # Clipboard
+  cliphist
+
+  # Fonts
   noto-fonts
   noto-fonts-color-emoji
   nerd-fonts.fira-code
   nerd-fonts.jetbrains-mono
-  cliphist
-  wlr-randr
-  wl-clipboard
-  #dunst
-  rofimoji
-  rofi-emoji
-  kdePackages.gwenview
-  kdePackages.kdeconnect-kde
-  swappy
-  grim
-  slurp
-  playerctl
-  #fuzzel
-  wev
-  cava
-  brightnessctl
-  pamixer
-  gimp3
-  upower
-  polkit_gnome
-  gnome-keyring
-  libcanberra-gtk3
-  libreoffice
   corefonts
-  cmatrix
-  cbonsai
-  neofetch
-  nwg-dock-hyprland
-  vscode
-  #zoom-us
-  net-tools
-  swww
-  putty
-  # anyrun
-  nodejs
-  winbox4
-  caffeine-ng
-  #ciscoPacketTracer8
-  bibata-cursors
-  xdg-desktop-portal
-  xdg-desktop-portal-gtk
-  xdg-desktop-portal-hyprland
-  ]
+
+  # System Control
+  brightnessctl
+]
