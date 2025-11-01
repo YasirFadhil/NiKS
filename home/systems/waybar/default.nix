@@ -66,6 +66,7 @@ in {
           border-radius: 0px;
           padding: 1px 0px 0px 0px;
           margin-left: 8px;
+          margin-right: 12px;
         }
         #scroll,
         #cava,
@@ -210,6 +211,9 @@ in {
         }
         #workspaces button:nth-child(10) {
           border-radius: 5px 10px 10px 5px;
+        }
+        #workspaces {
+          margin-left: 5px;
         }
         #workspaces button {
           padding: 0px 10px 0 4px;
@@ -672,11 +676,12 @@ in {
             signal = 3;
           };
           "custom/nixos" = {
-            exec = "nixos";
+            exec = "echo '{\"text\": \"󱄅\", \"tooltip\": \"NixOS '$(nixos-version)'\"}'";
             return-type = "json";
-            on-click = "anyrun";
+            on-click = "rofi-launcher";
             format = "{}";
             tooltip = true;
+            interval = 86400;
           };
           "custom/notification" = {
             tooltip = false;
