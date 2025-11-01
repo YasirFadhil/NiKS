@@ -4,14 +4,13 @@ pkgs.writeShellScriptBin "keybind-viewer" ''
   #!/usr/bin/env bash
 
   # Hyprland Keybinding Viewer with Rofi
-  # Beautiful and comprehensive keybinding cheat sheet
+  # Simple and working keybinding cheat sheet
 
   # Define keybindings with categories and colors
   KEYBINDS=$(cat << 'EOF'
 <span color="#89b4fa" weight="bold" size="large">🚀 HYPRLAND KEYBINDINGS CHEAT SHEET</span>
 
 <span color="#f38ba8" weight="bold" size="medium">📱 APPLICATION SHORTCUTS</span>
-<span color="#a6e3a1">Super + Return</span>          <span color="#cdd6f4">Terminal (Ghostty)</span>
 <span color="#a6e3a1">Super + T</span>              <span color="#cdd6f4">Terminal</span>
 <span color="#a6e3a1">Super + B</span>              <span color="#cdd6f4">Browser (Zen)</span>
 <span color="#a6e3a1">Super + F</span>              <span color="#cdd6f4">File Manager (Nautilus)</span>
@@ -59,176 +58,34 @@ pkgs.writeShellScriptBin "keybind-viewer" ''
 <span color="#89dceb" weight="bold" size="medium">📋 UTILITY SHORTCUTS</span>
 <span color="#a6e3a1">Super + Shift + V</span>     <span color="#cdd6f4">Clipboard History (Cliphist)</span>
 <span color="#a6e3a1">Super + Alt + B</span>       <span color="#cdd6f4">Toggle Hyprpanel</span>
-<span color="#a6e3a1">Super + ?</span>             <span color="#cdd6f4">Show This Keybinding Help</span>
+<span color="#a6e3a1">Super + / or ?</span>        <span color="#cdd6f4">Show This Keybinding Help</span>
 
 <span color="#6c7086" weight="bold" style="italic" size="small">Press Enter on any item to copy the keybind • Press Escape to close</span>
 EOF
 )
 
-  # Rofi configuration with Catppuccin-inspired theme
-  ROFI_CONFIG="
-  configuration {
-    modes: \"drun,run,filebrowser,keys\";
-    font: \"JetBrains Mono Nerd Font 11\";
-    show-icons: true;
-    icon-theme: \"Papirus-Dark\";
-    display-drun: \"Applications\";
-    display-run: \"Run\";
-    display-filebrowser: \"Files\";
-    display-keys: \"Keys\";
-    drun-display-format: \"{name}\";
-    disable-history: false;
-    fullscreen: false;
-    hide-scrollbar: true;
-    sidebar-mode: false;
-  }
-
-  @theme \"default\"
-
-  * {
-    bg-col: rgba(30, 30, 46, 0.95);
-    bg-col-light: rgba(49, 50, 68, 0.8);
-    border-col: rgba(137, 180, 250, 0.8);
-    selected-col: rgba(137, 180, 250, 0.2);
-    blue: #89b4fa;
-    fg-col: #cdd6f4;
-    fg-col2: #6c7086;
-    grey: #6c7086;
-    pink: #f5c2e7;
-    green: #a6e3a1;
-    red: #f38ba8;
-    yellow: #f9e2af;
-    peach: #fab387;
-    teal: #94e2d5;
-    lavender: #b4befe;
-  }
-
-  element-text, element-icon, mode-switcher {
-    background-color: inherit;
-    text-color: inherit;
-  }
-
-  window {
-    height: 75%;
-    width: 65%;
-    border: 2px;
-    border-color: @border-col;
-    border-radius: 12px;
-    background-color: @bg-col;
-    location: center;
-    anchor: center;
-  }
-
-  mainbox {
-    background-color: @bg-col;
-    border-radius: 12px;
-    children: [inputbar, listview];
-    spacing: 10px;
-    padding: 20px;
-  }
-
-  inputbar {
-    children: [prompt, entry];
-    background-color: @bg-col-light;
-    border-radius: 8px;
-    padding: 8px;
-    border: 1px;
-    border-color: @grey;
-  }
-
-  prompt {
-    background-color: @blue;
-    color: @bg-col;
-    padding: 6px 12px;
-    text-color: @bg-col;
-    border-radius: 6px;
-    margin: 0 10px 0 0;
-    font: \"JetBrains Mono Nerd Font Bold 11\";
-  }
-
-  textbox-prompt-colon {
-    expand: false;
-    str: \":\";
-  }
-
-  entry {
-    font: \"JetBrains Mono Nerd Font 11\";
-    placeholder-color: @grey;
-    placeholder: \"Search keybindings...\";
-    background-color: transparent;
-    color: @fg-col;
-  }
-
-  listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    columns: 1;
-    lines: 20;
-    background-color: @bg-col;
-    scrollbar: false;
-  }
-
-  element {
-    padding: 8px 12px;
-    background-color: @bg-col;
-    text-color: @fg-col;
-    border-radius: 6px;
-    margin: 0 0 4px 0;
-  }
-
-  element-icon {
-    size: 20px;
-    margin: 0 8px 0 0;
-  }
-
-  element selected {
-    background-color: @selected-col;
-    border: 1px solid @blue;
-    text-color: @blue;
-  }
-
-  mode-switcher {
-    spacing: 0;
-  }
-
-  button {
-    padding: 10px;
-    background-color: @bg-col-light;
-    text-color: @grey;
-    vertical-align: 0.5;
-    horizontal-align: 0.5;
-  }
-
-  button selected {
-    background-color: @bg-col;
-    text-color: @blue;
-  }
-  "
-
-  # Create temporary config file
-  CONFIG_FILE=$(mktemp)
-  echo "$ROFI_CONFIG" > "$CONFIG_FILE"
-
-  # Show keybindings in rofi with copy functionality
-  SELECTION=$(echo "$KEYBINDS" | ${pkgs.rofi-wayland}/bin/rofi \
+  # Show keybindings in rofi with simple styling
+  SELECTION=$(echo "$KEYBINDS" | ${pkgs.rofi}/bin/rofi \
     -dmenu \
     -markup-rows \
     -i \
-    -p "Keybindings" \
-    -config "$CONFIG_FILE" \
-    -theme-str 'window {width: 65%; height: 75%;}' \
-    -theme-str 'listview {lines: 22;}' \
+    -p " Keybindings" \
+    -theme-str 'window {width: 70%; height: 80%;}' \
+    -theme-str 'listview {lines: 25; scrollbar: false;}' \
+    -theme-str 'element-text {font: "JetBrains Mono Nerd Font 11";}' \
+    -theme-str 'inputbar {children: [prompt,entry]; margin: 0 0 10px 0;}' \
+    -theme-str 'prompt {background-color: @blue; text-color: @background; padding: 6px 12px; border-radius: 6px; margin: 0 10px 0 0;}' \
+    -theme-str 'entry {placeholder: "Search keybindings...";}' \
+    -theme-str 'element {padding: 8px; border-radius: 4px;}' \
+    -theme-str 'element selected {background-color: @selected-normal-background; text-color: @selected-normal-foreground;}' \
     -no-custom \
     -format 'f' \
     -selected-row 0)
 
-  # Clean up temporary config
-  rm -f "$CONFIG_FILE"
-
   # If user selected something, try to extract and copy the keybind
   if [[ -n "$SELECTION" ]]; then
-    # Extract the keybind from the selected line (text between <span color="#a6e3a1"> tags)
-    KEYBIND=$(echo "$SELECTION" | sed -n 's/.*<span color="#a6e3a1">\([^<]*\)<\/span>.*/\1/p')
+    # Extract the keybind from the selected line (text between <span color="#[^"]*"> tags)
+    KEYBIND=$(echo "$SELECTION" | sed -n 's/.*<span color="#[^"]*">\([^<]*\)<\/span>.*/\1/p')
 
     if [[ -n "$KEYBIND" ]]; then
       # Copy to clipboard

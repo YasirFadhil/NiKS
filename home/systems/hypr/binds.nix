@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     (import ../../scripts/volume.nix { inherit pkgs; })
     (import ../../programs/rofi-launch/launcher.nix { pkgs = pkgs; })
+    (import ../../scripts/keybind-viewer.nix { inherit pkgs; })
   ];
 
   wayland.windowManager.hyprland.settings = {
@@ -46,7 +47,6 @@
     # Regular bindings
     bind = [
       # Application launchers
-      "SUPER, RETURN, exec, ghostty"
       "SUPER, T, exec, ghostty"
       "SUPER SHIFT, RETURN, exec, ghostty --class floating-term"
       "SUPER, B, exec, zen"
@@ -55,6 +55,7 @@
       "SUPER CTRL, V, exec, pavucontrol"
       "SUPER, D, exec, rofi-launcher"
       "SUPER, SPACE, exec, anyrun"
+      "SUPER, slash, exec, keybind-viewer"
 
       # System controls
       "SUPER, X, fullscreen"
