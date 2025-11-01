@@ -17,7 +17,7 @@ in {
 
       background = lib.mkForce {
         monitor = "";
-        path = "/etc/nixos/home/themes/pict/Nih_Ai.jpg";
+        path = "/etc/nixos/home/themes/wallpaper/Nih_Ai.jpg";
         # You can add blur, vibrancy, contrast if you want.
       };
 
