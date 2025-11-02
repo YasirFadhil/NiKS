@@ -68,6 +68,13 @@
     qt6.qtwayland
     libsForQt5.qt5ct
     qt6ct
+
+    # Python
+    (python3.withPackages (ps: [
+      ps.requests
+      ps.pip
+      ps.numpy
+    ]))
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
