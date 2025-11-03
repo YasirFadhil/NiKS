@@ -80,8 +80,8 @@ in
       # Window decoration
       decoration = {
         # Opacity
-        active_opacity = 0.75;
-        inactive_opacity = 0.73;
+        #active_opacity = 0.75;
+        #inactive_opacity = 0.73;
 
         # Window appearance
         rounding = 14;
@@ -89,9 +89,10 @@ in
         # Blur effect
         blur = {
           enabled = true;
-          size = 8;        # Higher = thicker blur (range: 18-32)
+          size = 15;        # Higher = thicker blur (range: 18-32)
           passes = 3;      # Higher = smoother blur (range: 4-8)
           vibrancy = 0.33; # Higher = more underlying color (range: 0.22-0.4)
+          ignore_opacity = true;
         };
 
         # Dimming
