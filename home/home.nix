@@ -18,7 +18,7 @@
     ./systems/hypr/polkitagent.nix
     ./programs/zenn
     ./programs/zed
-    ./programs/anyrun
+    #./programs/anyrun
     #./hyprlauncher
     ./themes/gtk
     ./themes/qt

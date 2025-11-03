@@ -15,7 +15,7 @@
       "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "Modest Dark"
+        "dark": "One Dark Pro Max"
       }
     }
   '';
