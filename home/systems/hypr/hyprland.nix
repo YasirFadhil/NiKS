@@ -31,7 +31,6 @@ in
         "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,pgp"
 
         # System utilities
-        "caffeine"
         "hypridle &"
         "nm-applet &"
         "blueman-applet &"
@@ -80,8 +79,8 @@ in
       # Window decoration
       decoration = {
         # Opacity
-        active_opacity = 0.8;
-        inactive_opacity = 0.9;
+        active_opacity = 0.92;
+        inactive_opacity = 0.88;
 
         # Window appearance
         rounding = 14;
@@ -89,9 +88,15 @@ in
         # Blur effect
         blur = {
           enabled = true;
-          size = 8;        # Higher = thicker blur (range: 18-32)
-          passes = 3;      # Higher = smoother blur (range: 4-8)
-          vibrancy = 0.33; # Higher = more underlying color (range: 0.22-0.4)
+          size = 6;
+          passes = 3;
+          brightness = 1.05;
+          contrast = 0.95;
+          vibrancy = 0.22;  # subtle, not neon slime
+          vibrancy_darkness = 0.7;
+          noise = 0.0;      # crucial!
+          ignore_opacity = false;
+          new_optimizations = true;        
         };
 
         # Dimming

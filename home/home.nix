@@ -21,10 +21,11 @@
     #./programs/anyrun
     #./hyprlauncher
     ./themes/gtk
-    ./themes/qt
     # ./themes/font
     ./systems/nwg-dock
     ./programs/rofi-launch/rasi.nix
+    ./systems/swaync
+    ./scripts/swaync-shot.nix
   ];
 
   home.username = "yasirfadhil";
@@ -32,7 +33,6 @@
   programs.home-manager.enable = true;
   home.packages = import ./package.nix {inherit pkgs;};
   waybar.enable = true;
-  services.swaync.enable = true;
   programs.zsh.enable = true;
   programs.git = {
     enable = true;

@@ -74,6 +74,8 @@ with pkgs; [
   swaynotificationcenter
   nwg-dock-hyprland
   blueman
+  bluetuith
+  networkmanager
   caffeine-ng
 
   # Screenshot Tools

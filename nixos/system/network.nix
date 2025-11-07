@@ -2,11 +2,17 @@
 
 {
   networking.networkmanager.enable = true;
+  programs.localsend.enable = true;
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   services.dbus.enable = true;
   security.polkit.enable = true;
-  # programs.kdeconnect.enable = true;
+  programs.kdeconnect.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
   # Firewall
      networking.firewall = {
        enable = true;
