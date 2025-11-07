@@ -17,7 +17,7 @@
       dynamic_background_opacity = "1";
       confirm_os_window_close = "0";
 
-      cursor_trail = "1";
+      # cursor_trail = "1";
       linux_display_server = "auto";
 
       scrollback_lines = "2000";
