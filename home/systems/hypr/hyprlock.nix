@@ -15,7 +15,9 @@ in {
 
       background = lib.mkForce {
         monitor = "";
-        path = "/etc/nixos/home/themes/wallpaper/background_nix.jpg";
+        path = "/etc/nixos/home/themes/wallpaper/background_moon.jpg";
+        # blur_passes = 1;
+        # blur_size = 10;
         blur_sigma = 8;
         vibrancy = 0.3;
         contrast = 1.05;
@@ -36,26 +38,30 @@ in {
       };
 
       label = [
-        # JAM BESAR
+        # Clock
         {
           monitor = "";
-          text = ''cmd[update:1000] date +%H:%M'';
+          text = ''cmd[update:1000] date +%I:%M'';
+          shadow_passes = "1";
+          shadow_boost = "0.5";
           color = textColor;
-          font_size = "110";
+          font_size = "90";
           font_family = "Noto Sans SemiBold";
-          position = "0, 260";
+          position = "0, 310";
           halign = "center";
           valign = "center";
         }
 
-        # TANGGAL
+        # Date
         {
           monitor = "";
-          text = ''cmd[update:1000] date "+%A, %d %B"'';
-          color = subTextColor;
-          font_size = "20";
-          font_family = "Rubik Regular";
-          position = "0, 180";
+          text = ''cmd[update:1000] echo $(date +%A), $(date +%d) $(date +%B)'';
+          shadow_passes = "1";
+          shadow_boost = "0.5";
+          color = textColor;
+          font_size = "15";
+          font_family = "Noto Sans Medium";
+          position = "0, 220";
           halign = "center";
           valign = "center";
         }

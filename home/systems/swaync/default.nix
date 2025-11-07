@@ -18,7 +18,7 @@
       control-center-margin-right = 7;
       control-center-margin-left = 0;
       notification-2fa-action = true;
-      notification-inline-replies = false;
+      notification-inline-replies = true;
       notification-body-image-height = 100;
       notification-body-image-width = 500;
       timeout = 10;
