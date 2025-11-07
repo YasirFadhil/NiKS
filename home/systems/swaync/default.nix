@@ -92,7 +92,7 @@
           buttons-per-row = 5;
           actions = [
             {
-              label = "";
+              label = "";
               type = "button";
               command = "swaync-client --close-panel && sleep 0.7 && color=$(hyprpicker -a -f hex) && notify-send '🎨 Color copied!' $color";
             }
@@ -102,17 +102,17 @@
               command = "bash ~/.config/scripts/swaync-shot.sh";
             }
             {
-              label = "";
+              label = "";
               type = "button";
               command = "swaync-client --close-panel && kitty --class wifibt -e env -u COLORTERM TERM=xterm-old nmtui";
             }
             {
-              label = "";
+              label = "";
               type = "button";
               command = "swaync-client --close-panel && kitty --class wifibt -e bluetuith";
             }
             {
-              label = "";
+              label = "";
               type = "toggle";
               command = "sh -c 'swaync-client --toggle-dnd'";
               update-command = "sh -c 'out=$(swaync-client -D 2>/dev/null); [[ $out == true || $(echo \"$out\" | jq -r .doNotDisturb 2>/dev/null) == true ]] && echo true || echo false'";
@@ -124,10 +124,10 @@
 
     style = ''
       :root {
-        --cc-bg: rgba(0, 0, 0, 0.2);
+        --cc-bg: rgba(0, 0, 0, 0.8);
         --noti-border-color: rgba(255, 255, 255, 0.15);
-        --noti-bg: 0, 0, 0;
-        --noti-bg-alpha: 0.2;
+        --noti-bg: 40, 42, 54;
+        --noti-bg-alpha: 0.95;
         --noti-bg-darker: rgb(38, 38, 38);
         --noti-bg-hover: rgba(56, 56, 56, 0.3);
         --noti-bg-focus: rgba(68, 68, 68, 0);
@@ -153,9 +153,9 @@
       }
 
       /* Fallback for older CSS themes */
-      @define-color cc-bg rgba(46, 46, 46, 0.7);
+      @define-color cc-bg rgba(40, 42, 54, 0.95);
       @define-color noti-border-color rgba(255, 255, 255, 0.15);
-      @define-color noti-bg rgba(48, 48, 48, 0.8);
+      @define-color noti-bg rgba(40, 42, 54, 0.95);
       @define-color noti-bg-opaque rgb(48, 48, 48);
       @define-color noti-bg-darker rgb(38, 38, 38);
       @define-color noti-bg-hover rgb(56, 56, 56);
@@ -225,7 +225,7 @@
       }
 
       .mpris {
-          background: rgba(0, 0, 0, 0.25);
+          background: rgba(40, 42, 54, 0.8);
           border-radius: 12px;
           margin: 8px;
           padding: 8px;
@@ -286,7 +286,7 @@
       }
 
       .widget-buttons-grid button {
-          background: rgba(0, 0, 0, 0.2);
+          background: rgba(98, 114, 164, 0.7);
           border-radius: 10px;
           padding: 8px 12px;
           font-size: 18px;
@@ -299,7 +299,7 @@
       }
 
       .widget-buttons-grid button:checked {
-          background: rgba(0, 0, 0, 0.4);
+          background: rgba(255, 85, 85, 0.8);
           color: #ffffff;
       }
 
