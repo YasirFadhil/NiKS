@@ -4,6 +4,6 @@
     jetbrains-mono      # Great monospace font
     noto-fonts          # Comprehensive font family
     noto-fonts-cjk-sans # CJK support
-    ubuntu_font_family  # Clean, modern font
+    ubuntu-classic  # Clean, modern font
   ];
 }
