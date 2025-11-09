@@ -17,7 +17,7 @@
     options snd-intel-dspcfg dsp_driver=3
   '';
   hardware.firmware = [
-    pkgs.firmwareLinuxNonfree
+    pkgs.linux-firmware
   ];
 
   # Bluetooth
