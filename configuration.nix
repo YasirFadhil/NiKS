@@ -62,9 +62,6 @@
   programs.firefox.enable = true;
 
   # Add niri to system packages for session availability
-  environment.systemPackages = with pkgs; [
-    niri-stable
-  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

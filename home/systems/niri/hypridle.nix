@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.file.".config/hypridle.conf".text = ''
+  home.file.".config/niri/hypridle.conf".text = ''
     general {
         lock_cmd = pidof swaylock || swaylock-blur
         before_sleep_cmd = loginctl lock-session

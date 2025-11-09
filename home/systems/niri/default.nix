@@ -149,6 +149,7 @@ in
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
         { command = ["clipboard-manager" "store-image"]; }
+        { command = ["hypridle" "-c" "~/.config/niri/hypridle.conf"]; }
       ];
 
       # Cursor settings

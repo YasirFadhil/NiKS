@@ -6,6 +6,7 @@ with pkgs; [
   # Custom scripts
   (import ./scripts/volume.nix { inherit pkgs; })
   (import ./scripts/clipboard.nix { inherit pkgs; })
+  (import ./scripts/swaylock-blur.nix { inherit pkgs; })
   # Terminal Emulators
   kitty
   ghostty
