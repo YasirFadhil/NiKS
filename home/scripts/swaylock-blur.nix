@@ -40,14 +40,11 @@ pkgs.writeShellScriptBin "swaylock-blur" ''
     --font-size 16 \
     --indicator-radius 120 \
     --indicator-thickness 3 \
-    --timestr "%H:%M" \
+    --timestr "%I:%M %p" \
     --datestr "%A, %d %B" \
-    --clock-font-size 85 \
     --indicator-x-position 0 \
-    --indicator-y-position -80 \
+    --indicator-y-position -50 \
     --grace 0 \
     --caps-lock-key-hl-color ffffffff \
-    --caps-lock-bs-hl-color ffffffff \
-    --layout-font-size 0 \
-    --layout-text-color 00000000
+    --caps-lock-bs-hl-color ffffffff
 ''

@@ -1,40 +1,52 @@
 { lib, pkgs, inputs, ... }: let
-  textColor = "rgba(255,255,255,0.95)";
-  subTextColor = "rgba(255,255,255,0.7)";
-  entryBg = "rgba(255,255,255,0.05)";
-  entryBorder = "rgba(255,255,255,0.25)";
+  textColor = "rgba(255,255,255,1)";
+  entryBg = "rgba(51,51,51,0.07)";
+  entryBorder = "rgba(59,59,59,0.33)";
+  entryColor = "rgba(255,255,255,1)";
+  font = "Rubik Light";
+  fontSymbols = "Material Symbols Rounded";
 in {
   programs.hyprlock = {
     enable = true;
     settings = {
       general = {
         grace = 0;
-        disable_loading_bar = true;
         no_fade_in = false;
+        disable_loading_bar = false;
       };
 
       background = lib.mkForce {
         monitor = "";
         path = "/etc/nixos/home/themes/wallpaper/background_moon.jpg";
-        # blur_passes = 1;
-        # blur_size = 10;
-        blur_sigma = 8;
-        vibrancy = 0.3;
-        contrast = 1.05;
+        # You can add blur, vibrancy, contrast if You want.
+      };
+
+      animations = {
+        enabled = true;
+        bezier = "ease, 0.25, 0.1, 0.25, 1.0";
+        animation = [
+          "windows, 1, 4, ease"
+          "fade, 1, 6, ease"
+          "workspaces, 1, 4, ease"
+          "border, 1, 10, ease"
+          "layers, 1, 6, ease"
+        ];
       };
 
       input-field = {
         monitor = "";
-        size = "260, 42";
-        outline_thickness = 1;
+        size = "250, 40";
+        outline_thickness = 2;
+        dots_size = 0.1;
+        dots_spacing = 0.3;
         outer_color = entryBorder;
         inner_color = entryBg;
-        font_color = textColor;
+        font_color = entryColor;
         fade_on_empty = true;
-        position = "0, -180";
+        position = "0, -200";
         halign = "center";
         valign = "center";
-        font_family = "Rubik Light";
+        font_family = font;
       };
 
       label = [
@@ -66,7 +78,7 @@ in {
           valign = "center";
         }
 
-        # GREETING
+         # GREETING
         {
           monitor = "";
           text = ''cmd[update:60000] ${pkgs.writeShellScript "greet" ''
@@ -87,29 +99,57 @@ in {
           valign = "bottom";
         }
 
-        # BATTERY
+        # Lock icon
+        #{
+        #  monitor = "";
+        #  text = "  locked";
+        #  color = textColor;
+        #  font_size = "18";
+        #  font_family = fontSymbols;
+        #  position = "0, 10";
+        #  halign = "center";
+        #  valign = "bottom";
+        #}
+
+        # Locked text
+        # {
+        #   #monitor = "";
+        #   #text = "locked";
+        #   shadow_passes = "1";
+        #   shadow_boost = "0.5";
+        #   color = textColor;
+        #   font_size = "14";
+        #   font_family = font;
+        #   position = "0, 45";
+        #   halign = "center";
+        #   valign = "bottom";
+        # }
+
+        # Battery
         {
           monitor = "";
           text = ''cmd[update:1000] battery'';
-          color = subTextColor;
-          font_size = "13";
-          font_family = "Fira Code Nerd Font";
-          position = "-10, 15";
+          shadow_passes = "1";
+          shadow_boost = "0.5";
+          color = textColor;
+          font_size = "14";
+          font_family = "Fira Code Mono Nerd";
+          position = "-10, 10";
           halign = "right";
           valign = "bottom";
         }
 
-        # LOCK TEXT
-        #{
-          #monitor = "";
-          #text = "Locked";
-          #color = "rgba(255,255,255,0.45)";
-          #font_size = "14";
-          #font_family = "Rubik Regular";
-          #position = "0, 15";
-          #halign = "center";
-          #valign = "bottom";
-        #}
+        # Now Playing
+        {
+          monitor = "";
+          text = ''cmd[update:5000] nowplay'';
+          color = textColor;
+          font_family = "Fira Code Mono Nerd";
+          font_size = "14";
+          position = "10, 10";
+          halign = "left";
+          valign = "bottom";
+        }
       ];
     };
   };

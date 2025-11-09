@@ -2,6 +2,7 @@
 
 let
   myPackages = import ../../package.nix { inherit pkgs; };
+  hypridle = import ./hypridle.nix { inherit pkgs; };
 in
 {
   imports = [
@@ -31,79 +32,94 @@ in
         };
 
         mouse = {
-          sensitivity = 0.5;
+          accel-speed = 0.8;
         };
       };
 
       # Output configuration
       outputs = {
         "eDP-1" = {
-          mode = "1700x950@60";
+          mode = {
+            width = 1700;
+            height = 950;
+            refresh = 60.0;
+          };
           position = { x = 0; y = 0; };
-          scale = 1.0;
+          scale = 0.85;
         };
       };
 
       # Layout settings
       layout = {
         gaps = 15;
-        center-focused-column = "never";
+        always-center-single-column = true;
         preset-column-widths = [
-          { proportion = 1.0/3.0; }
-          { proportion = 1.0/2.0; }
-          { proportion = 2.0/3.0; }
+          { proportion = 0.333; }
+          { proportion = 0.5; }
+          { proportion = 0.667; }
         ];
-        default-column-width = { proportion = 1.0/2.0; };
+        default-column-width = { proportion = 0.6; };
         focus-ring = {
           enable = true;
-          width = 2;
-          active-color = "rgb(75 117 218)";
-          inactive-color = "rgb(89 89 89)";
+          width = 1;
+          active.color = "rgb(59 130 246)";
+          inactive.color = "rgb(89 89 89)";
         };
         border = {
-          enable = false;
+          enable = true;
+          width = 1;
+          active.color = "rgb(59 130 246)";
+          inactive.color = "rgba(89, 89, 89, 0.5)";
         };
       };
 
       # Window rules
       window-rules = [
         {
-          matches = [{ app-id = "^org\\.gnome\\.Calculator$"; }];
-          default-column-width = { fixed = 567; };
-          open-floating = true;
+          matches = [
+            {is-window-cast-target = true;}
+          ];
+          focus-ring = {
+            active = {color = "#f38ba8";};
+            inactive = {color = "#7d0d2d";};
+          };
+          border = {
+            inactive = {color = "#7d0d2d";};
+          };
+          shadow = {
+            color = "#7d0d2d70";
+          };
+          tab-indicator = {
+            active = {color = "#f38ba8";};
+            inactive = {color = "#7d0d2d";};
+          };
         }
         {
-          matches = [{ title = "^Volume Control$"; }];
-          default-column-width = { fixed = 872; };
-          open-floating = true;
-        }
-        {
-          matches = [{ app-id = "^floating-kitty$"; }];
-          default-column-width = { fixed = 1094; };
-          open-floating = true;
+          geometry-corner-radius = {
+            top-left = 12.0;
+            top-right = 12.0;
+            bottom-left = 12.0;
+            bottom-right = 12.0;
+          };
+          clip-to-geometry = true;
+          draw-border-with-background = false;
         }
       ];
 
       # Animations
       animations = {
         slowdown = 1.0;
-        spring = {
-          damping-ratio = 1.0;
-          stiffness = 800;
-          epsilon = 0.0001;
-        };
 
         window-open = {
-          spring = {
+          kind.spring = {
             damping-ratio = 0.8;
             stiffness = 1000;
             epsilon = 0.0001;
           };
-          duration-ms = 250;
         };
 
         config-notification-open-close = {
-          spring = {
+          kind.spring = {
             damping-ratio = 0.6;
             stiffness = 1000;
             epsilon = 0.001;
@@ -127,13 +143,12 @@ in
       spawn-at-startup = [
         { command = ["polkit-gnome-authentication-agent-1"]; }
         { command = ["gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh,pgp"]; }
-        { command = ["caffeine"]; }
         { command = ["nm-applet"]; }
         { command = ["blueman-applet"]; }
         { command = ["waypaper" "--restore"]; }
         { command = ["kdeconnect-indicator"]; }
-        { command = ["wl-paste" "--type" "text" "--watch" "cliphist" "store"]; }
-        { command = ["wl-paste" "--type" "image" "--watch" "cliphist" "store"]; }
+        { command = ["clipboard-manager" "store-text"]; }
+        { command = ["clipboard-manager" "store-image"]; }
       ];
 
       # Cursor settings
@@ -152,10 +167,9 @@ in
 
       # Prefer no CSD
       prefer-no-csd = true;
-    };
 
-    # Key bindings
-    binds = {
+      # Key bindings
+      binds = {
       "Mod+Shift+Slash".action.show-hotkey-overlay = {};
 
       # Movement
@@ -211,33 +225,39 @@ in
       # Column width
       "Mod+R".action.switch-preset-column-width = {};
       "Mod+Shift+R".action.reset-window-height = {};
-      "Mod+Ctrl+R".action.toggle-window-height = {};
+      "Mod+Ctrl+R".action.reset-window-height = {};
 
       # Applications
-      "Mod+T".action.spawn = "kitty";
-      "Mod+Return".action.spawn = "kitty";
-      "Mod+D".action.spawn = "anyrun";
+      "Mod+T".action.spawn = "ghostty";
+      "Mod+D".action.spawn = "rofi-launcher";
       "Mod+E".action.spawn = "nautilus";
 
       # Media keys
-      "XF86AudioRaiseVolume".action.spawn = ["pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"];
-      "XF86AudioLowerVolume".action.spawn = ["pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"];
-      "XF86AudioMute".action.spawn = ["pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"];
+      "XF86AudioRaiseVolume".action.spawn = ["volume-control" "up"];
+      "XF86AudioLowerVolume".action.spawn = ["volume-control" "down"];
+      "XF86AudioMute".action.spawn = ["volume-control" "mute"];
       "XF86MonBrightnessUp".action.spawn = ["brightnessctl" "set" "5%+"];
       "XF86MonBrightnessDown".action.spawn = ["brightnessctl" "set" "5%-"];
 
       # Screenshots
-      "Print".action.screenshot = {};
-      "Ctrl+Print".action.screenshot-screen = {};
-      "Alt+Print".action.screenshot-window = {};
+      "Mod+Shift+S".action.screenshot = {};
+      "Mod+S".action.screenshot-screen = {};
+      "Mod+Alt+S".action.screenshot-window = {};
 
       # System
-      "Mod+Shift+E".action.quit = {};
+      "Mod+Shift+Q".action.quit = {};
+      "Mod+P".action.spawn = ["wlogout"];
       "Mod+Shift+P".action.power-off-monitors = {};
+      "Mod+Shift+L".action.spawn = ["swaylock-blur"];
+
+      # Clipboard
+      "Mod+Shift+V".action.spawn = ["clipboard-manager" "show"];
+      "Mod+Shift+C".action.spawn = ["clipboard-manager" "clear"];
 
       # Scratchpad
       "Mod+Shift+Minus".action.move-window-to-workspace = "scratchpad";
-      "Mod+Minus".action.toggle-window-from-scratchpad = {};
+      "Mod+Minus".action.focus-workspace = "scratchpad";
+      };
     };
   };
 }

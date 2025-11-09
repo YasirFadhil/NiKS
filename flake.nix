@@ -41,6 +41,9 @@
         ./configuration.nix
         home-manager.nixosModules.default
         {
+          nixpkgs.overlays = [ niri.overlays.niri ];
+        }
+        {
         nix.settings = {
             substituters = ["https://hyprland.cachix.org"];
             trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
@@ -49,7 +52,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup2";
+          home-manager.backupFileExtension = "backup";
           home-manager.users.yasirfadhil = import ./home/home.nix;
           home-manager.extraSpecialArgs = { inherit inputs; };
         }

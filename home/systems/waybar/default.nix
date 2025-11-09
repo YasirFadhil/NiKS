@@ -14,8 +14,7 @@ in {
     programs.waybar = {
       enable = true;
       systemd = {
-        enable = true;
-        target = "hyprland-session.target";
+        enable = false;
       };
       style = ''
         @define-color accent #2362ba;
@@ -227,7 +226,11 @@ in {
           animation-name: workspacesanim;
           animation-fill-mode: both;
           animation-duration: 300ms;
-          animation-direction: normal;
+        }
+        /* Niri specific workspaces styling */
+        .modules-left > #workspaces,
+        .modules-right > #workspaces {
+          margin-left: 5px;
         }
         #cpu,
         #clock,
@@ -349,7 +352,7 @@ in {
             "group/stuff"
           ];
           modules-center = [
-            "hyprland/window"
+            "niri/window"
           ];
           modules-right = [
             "tray"
@@ -376,13 +379,13 @@ in {
             input_delay = 0;
             sleep_timer = 300;
           };
-          "hyprland/window" = {
-            format = "{}";
+          "niri/window" = {
+            format = " {title}";
             icon = true;
-            icon-size = 18;
+            icon-size = 15;
             rewrite = {
-              "(.*)Mozilla Firefox" = "Mozilla Firefox";
-              "(.*)Ablaze Floorp" = "Ablaze Floorp";
+              "(.*)Mozilla Firefox" = " Firefox";
+              "(.*)Ablaze Floorp" = " Floorp";
             };
           };
           "group/powermenu" = {
@@ -404,7 +407,7 @@ in {
             orientation = "horizontal";
             modules = [
               # "clock"
-              "hyprland/workspaces"
+              "niri/workspaces"
               # "custom/notification"
             ];
           };
@@ -419,8 +422,8 @@ in {
             tooltip = false;
           };
           "custom/logout" = {
-            format = "<span color='#63c773'>󰍃</span>";
-            on-click = "hyprctl dispatch exit";
+            format = "󰗽";
+            on-click = "niri msg action quit";
             tooltip = false;
           };
           "custom/lock" = {
@@ -428,7 +431,7 @@ in {
             on-click = "hyprlock";
             tooltip = false;
           };
-          "hyprland/workspaces" = {
+          "niri/workspaces" = {
             format = "{icon}";
             on-click = "activate";
             all-outputs = true;
@@ -649,10 +652,7 @@ in {
               "deactivated" = " ";
             };
           };
-          "hyprland/submap" = {
-            format = "{}";
-            tooltip = false;
-          };
+
           "custom/updates" = {
             format = "{}";
             interval = 3600;

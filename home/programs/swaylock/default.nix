@@ -7,73 +7,85 @@
     settings = {
       # Display
       show-failed-attempts = true;
-      show-keyboard-layout = true;
+      show-keyboard-layout = false;
 
-      # Colors
-      color = "1e1e2e";
+      # Background
+      image = "/etc/nixos/home/themes/wallpaper/background_moon.jpg";
+      scaling = "fill";
 
-      # Inside colors (the input circle)
-      inside-color = "313244";
-      inside-clear-color = "313244";
-      inside-caps-lock-color = "313244";
-      inside-ver-color = "89b4fa";
-      inside-wrong-color = "f38ba8";
+      # Colors - matching hyprlock's white/transparent theme
+      color = "00000000";  # Transparent background
 
-      # Ring colors (outer circle)
-      ring-color = "45475a";
-      ring-clear-color = "45475a";
-      ring-caps-lock-color = "f9e2af";
-      ring-ver-color = "89b4fa";
-      ring-wrong-color = "f38ba8";
+      # Inside colors (the input circle) - semi-transparent like hyprlock
+      inside-color = "33333312";  # rgba(51,51,51,0.07) equivalent
+      inside-clear-color = "33333312";
+      inside-caps-lock-color = "33333312";
+      inside-ver-color = "ffffff55";  # White with transparency for verification
+      inside-wrong-color = "ff000055";  # Red with transparency for wrong
 
-      # Key highlight colors
-      key-hl-color = "cba6f7";
+      # Ring colors (outer circle) - matching hyprlock entry border
+      ring-color = "3b3b3b55";  # rgba(59,59,59,0.33) equivalent
+      ring-clear-color = "3b3b3b55";
+      ring-caps-lock-color = "3b3b3b55";
+      ring-ver-color = "ffffff88";
+      ring-wrong-color = "ff0000aa";
 
-      # Line colors (separator)
+      # Key highlight colors - white theme
+      key-hl-color = "ffffffaa";
+
+      # Line colors (separator) - transparent
       line-color = "00000000";
       line-clear-color = "00000000";
       line-caps-lock-color = "00000000";
       line-ver-color = "00000000";
       line-wrong-color = "00000000";
 
-      # Text colors
-      text-color = "cdd6f4";
-      text-clear-color = "cdd6f4";
-      text-caps-lock-color = "f9e2af";
-      text-ver-color = "89b4fa";
-      text-wrong-color = "f38ba8";
+      # Text colors - white like hyprlock
+      text-color = "ffffffff";  # rgba(255,255,255,1)
+      text-clear-color = "ffffffff";
+      text-caps-lock-color = "ffffffff";
+      text-ver-color = "ffffffff";
+      text-wrong-color = "ff0000ff";
 
       # Separator colors
       separator-color = "00000000";
 
-      # Layout
-      font = "JetBrainsMono Nerd Font";
-      font-size = 24;
+      # Layout - matching hyprlock fonts
+      font = "Rubik Light";
+      font-size = 16;
 
-      # Input field
-      indicator-radius = 100;
-      indicator-thickness = 7;
+      # Input field - similar to hyprlock dimensions
+      indicator-radius = 125;  # Adjusted for 250x40 equivalent
+      indicator-thickness = 2;  # Match hyprlock outline_thickness
 
-      # Effects
-      screenshots = true;
-      effect-blur = "7x5";
-      effect-vignette = "0.5:0.5";
+      # Effects - minimal blur like hyprlock background
+      screenshots = false;  # Use image instead
+      effect-blur = "3x2";  # Lighter blur
+      effect-vignette = "0.3:0.3";  # Subtle vignette
+
+      # Clock and date - matching hyprlock style
       clock = true;
+      timestr = "%I:%M";  # 12-hour format like hyprlock
+      datestr = "%A, %d %B";  # Match hyprlock date format
+      clock-font-size = 90;  # Large clock like hyprlock
 
-      # Timeouts
-      fade-in = 0.2;
-      grace = 2;
-      grace-no-mouse = true;
-      grace-no-touch = true;
+      # Positioning adjustments
+      indicator-x-position = 0;
+      indicator-y-position = -100;  # Move up like hyprlock input field
 
-      # Text strings
-      text-caps-lock-color = "f9e2af";
-      caps-lock-key-hl-color = "f9e2af";
-      caps-lock-bs-hl-color = "f9e2af";
+      # Timeouts - match hyprlock grace period
+      fade-in = 0.3;
+      grace = 0;  # Match hyprlock grace = 0
+      grace-no-mouse = false;
+      grace-no-touch = false;
 
-      # Additional styling
-      datestr = "%A, %B %e";
-      timestr = "%H:%M";
+      # Additional styling to match hyprlock
+      caps-lock-key-hl-color = "ffffffff";
+      caps-lock-bs-hl-color = "ffffffff";
+
+      # Disable some elements for cleaner look
+      layout-font-size = 0;  # Hide keyboard layout
+      layout-text-color = "00000000";
     };
   };
 

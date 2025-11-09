@@ -61,8 +61,15 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Add niri to system packages for session availability
+  environment.systemPackages = with pkgs; [
+    niri-stable
+  ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Session packages are now configured in display.nix
 
   # Allow unsupported system
   nixpkgs.config.allowUnsupportedSystem = true;

@@ -6,6 +6,8 @@
     ./var.nix
     ./nh.nix
     ./programs/spicetify
+    ./programs/swaylock
+    ./systems/niri
     ./systems/hypr/hyprland.nix
     ./systems/hypr/hyprpaper.nix
     # ./systems/hyprpanel
@@ -36,8 +38,10 @@
   programs.zsh.enable = true;
   programs.git = {
     enable = true;
-    userName = "YasirFadhil";
-    userEmail = "yasirfadhil46@gmail.com";
+    settings = {
+      user.name = "YasirFadhil";
+      user.email = "yasirfadhil46@gmail.com";
+    };
   };
 
   xdg.portal = {

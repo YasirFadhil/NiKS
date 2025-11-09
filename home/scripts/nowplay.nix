@@ -13,7 +13,7 @@ pkgs.writeShellScriptBin "nowplay" ''
     #*firefox* | *brave* | *chromium* | *chrome*) icon="  YouTube: " ;;
     *firefox*) icon="  Zen Browser: " ;;
     *google-chrome-stable* | *chromium*) icon="  Chrome: " ;;
-    *kdeconnect*) icon="📱  KDE Connect: " ;;
+    *kdeconnect*) icon="  KDE Connect: " ;;
   esac
 
   max_length=30
