@@ -2,11 +2,11 @@
 
 let
   myPackages = import ../../package.nix { inherit pkgs; };
-  hypridle = import ./hypridle.nix { inherit pkgs; };
 in
 {
   imports = [
     inputs.niri.homeModules.niri
+    ./hypridle.nix
   ];
 
   home.packages = myPackages;
@@ -133,7 +133,6 @@ in
         XCURSOR_SIZE = "20";
         NIXOS_OZONE_WL = "1";
         MOZ_ENABLE_WAYLAND = "1";
-        QT_QPA_PLATFORM = "wayland";
         XDG_SESSION_TYPE = "wayland";
         XDG_CURRENT_DESKTOP = "niri";
         XDG_SESSION_DESKTOP = "niri";
@@ -146,6 +145,8 @@ in
         { command = ["nm-applet"]; }
         { command = ["blueman-applet"]; }
         { command = ["waypaper" "--restore"]; }
+        { command = ["systemctl" "--user" "restart" "waybar.service"]; }
+        { command = ["xwayland-satellite"]; }
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
         { command = ["clipboard-manager" "store-image"]; }
@@ -226,7 +227,7 @@ in
       # Column width
       "Mod+R".action.switch-preset-column-width = {};
       "Mod+Shift+R".action.reset-window-height = {};
-      "Mod+Ctrl+R".action.reset-window-height = {};
+      "Mod+Ctrl+R".action.reset-window-width = {};
 
       # Applications
       "Mod+T".action.spawn = "ghostty";

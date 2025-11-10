@@ -2,14 +2,34 @@
 
 {
   home.packages = with pkgs; [
+    # GTK Themes
     whitesur-gtk-theme
-    bibata-cursors
-    whitesur-icon-theme
-    catppuccin-gtk
-    lxappearance
-    layan-gtk-theme
     fluent-gtk-theme
+    catppuccin-gtk
+    layan-gtk-theme
+    adw-gtk3
+
+    # Icon Themes
+    whitesur-icon-theme
+    papirus-icon-theme
+
+    # Cursor Themes
+    bibata-cursors
+
+    # GNOME theming tools
+    gnome-tweaks
+    gnome-extension-manager
+
+    # System libraries for GTK
+    libcanberra-gtk3
   ];
+
+  # GTK Environment Variables
+  home.sessionVariables = {
+    GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
+    GTK_THEME = "Fluent-Dark";
+    GTK_APPLICATION_PREFER_DARK_THEME = "1";
+  };
 
   gtk = {
     enable = true;

@@ -21,11 +21,14 @@
         "XMODIFIERS = @im=fcitx"
 
         # ############ Themes #############
-        "QT_QPA_PLATFORM = wayland, xcb"
-        "QT_QPA_PLATFORMTHEME, qt6ct"
+        # Qt themes now managed in themes/qt/default.nix
         # QT_STYLE_OVERRIDE = "kvantum";
         # WLR_NO_HARDWARE_CURSORS = "1";
         "GDK_BACKEND = wayland,x11,*"
+
+        # ############ Desktop Environment #############
+        "XDG_CURRENT_DESKTOP = Hyprland"
+        "XDG_SESSION_DESKTOP = Hyprland"
 
         # ######## Screen tearing #########
         # WLR_DRM_NO_ATOMIC = "1";

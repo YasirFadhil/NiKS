@@ -4,15 +4,14 @@
   imports = [
     ./gtk
     ./qt
-    ./font
+    ./font/fontconfig.nix
   ];
 
   # Common theme-related packages
   home.packages = with pkgs; [
     # Theme utilities
-    lxappearance
     dconf-editor
-  ];
+  ] ++ (import ./font { inherit pkgs; });
 
   # Common theme environment variables
   home.sessionVariables = {

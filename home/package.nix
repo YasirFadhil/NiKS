@@ -59,16 +59,6 @@ with pkgs; [
   wl-clipboard
   swww
 
-  # Theming and Appearance
-  adw-gtk3
-  whitesur-gtk-theme
-  bibata-cursors
-  libcanberra-gtk3
-
-  # GNOME Tools
-  gnome-tweaks
-  gnome-extension-manager
-
   # Rofi and Related
   rofi
   rofimoji
@@ -89,15 +79,9 @@ with pkgs; [
   # Clipboard
   cliphist
 
-  # Fonts
-  noto-fonts
-  noto-fonts-color-emoji
-  noto-fonts-cjk-sans
-  font-awesome
-  nerd-fonts.fira-code
-  nerd-fonts.jetbrains-mono
-  nerd-fonts.symbols-only
-  corefonts
+
+
+
 
   # System Control
   brightnessctl

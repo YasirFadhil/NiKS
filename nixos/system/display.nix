@@ -24,6 +24,9 @@ in
     enable = true;
   };
 
+  # Enable XWayland for X11 app compatibility
+  programs.xwayland.enable = true;
+
   # Add niri-session to available sessions
   services.displayManager.sessionPackages = [ niri-session-package ];
 
@@ -31,7 +34,10 @@ in
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
-    QT_QPA_PLATFORM = "wayland";
+    # Qt platform configuration - try xcb first for OnlyOffice compatibility
+    QT_QPA_PLATFORM = "xcb;wayland";
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "niri";
     XDG_SESSION_DESKTOP = "niri";

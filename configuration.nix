@@ -20,8 +20,6 @@
       ./nixos/system/virtual.nix
 #      ./nixos/system/samba.nix
 #      ./nixos/system/firejail.nix
-      ./home/themes/font/default.nix
-      # ./home/themes/qt/default.nix
       ./home/var.nix
     ];
 

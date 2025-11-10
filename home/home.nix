@@ -22,8 +22,7 @@
     ./programs/zed
     #./programs/anyrun
     #./hyprlauncher
-    ./themes/gtk
-    # ./themes/font
+    ./themes
     ./systems/nwg-dock
     ./programs/rofi-launch/rasi.nix
     ./systems/swaync
@@ -50,21 +49,18 @@
   };
 
   home.sessionVariables = {
+     # PATH configuration
      PATH = "$HOME/.nix-profile/bin:/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$PATH";
-     XCURSOR_THEME = "Bibata-Modern-Ice";
-     XCURSOR_SIZE = "20";
+
+     # Wayland support for applications
      NIXOS_OZONE_WL = "1";
      MOZ_ENABLE_WAYLAND = "1";
+
+     # SSH and Authentication
      SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh";
-     QT_QPA_PLATFORM = "wayland";
-     QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
-     QT6CT_PLATFORMTHEME = lib.mkForce "qt6ct";
-     GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
-     GTK_THEME = "Fluent-Dark";
-     GTK_APPLICATION_PREFER_DARK_THEME = "1";
+
+     # Session type (static for all Wayland sessions)
      XDG_SESSION_TYPE = "wayland";
-     XDG_CURRENT_DESKTOP = "GNOME:Hyprland";
-     XDG_SESSION_DESKTOP = "Hyprland";
   };
 
   fonts.fontconfig.enable = true;

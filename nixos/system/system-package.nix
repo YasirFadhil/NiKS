@@ -14,6 +14,7 @@
     polkit_gnome
     gnome-keyring
     upower
+    xwayland-satellite
 
     # Audio/Video
     alsa-utils
@@ -47,7 +48,6 @@
 
     # GNOME/GTK Tools
     gnome-disk-utility
-    dconf-editor
     adwaita-icon-theme
     gsettings-desktop-schemas
     librsvg
@@ -62,12 +62,11 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    xwayland
+    xorg.xhost
+    xorg.xauth
 
-    # Qt Libraries
-    qt5.qtwayland
-    qt6.qtwayland
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
+
 
     # Python
     (python3.withPackages (ps: [
