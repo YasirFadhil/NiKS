@@ -6,7 +6,6 @@ in
 {
   imports = [
     inputs.niri.homeModules.niri
-    ./hypridle.nix
   ];
 
   home.packages = myPackages;
@@ -40,12 +39,13 @@ in
       outputs = {
         "eDP-1" = {
           mode = {
-            width = 1700;
-            height = 950;
+            width = 1366;
+            height = 768;
             refresh = 60.0;
           };
           position = { x = 0; y = 0; };
-          scale = 0.85;
+          scale = 1.0;
+          #scale = 0.85;
         };
       };
 
@@ -142,10 +142,10 @@ in
       spawn-at-startup = [
         { command = ["polkit-gnome-authentication-agent-1"]; }
         { command = ["gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh,pgp"]; }
+        { command = ["systemctl" "--user" "restart" "waybar.service"]; }
         { command = ["nm-applet"]; }
         { command = ["blueman-applet"]; }
         { command = ["waypaper" "--restore"]; }
-        { command = ["systemctl" "--user" "restart" "waybar.service"]; }
         { command = ["xwayland-satellite"]; }
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
@@ -160,11 +160,11 @@ in
       };
 
       # Screenshot settings
-      screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
+      screenshot-path = "~/Pictures/Screenshots/Screenshot niri %Y-%m-%d %H-%M-%S.png";
 
       # Hotkey daemon
       hotkey-overlay = {
-        skip-at-startup = true;
+        skip-at-startup = false;
       };
 
       # Prefer no CSD
@@ -227,7 +227,6 @@ in
       # Column width
       "Mod+R".action.switch-preset-column-width = {};
       "Mod+Shift+R".action.reset-window-height = {};
-      "Mod+Ctrl+R".action.reset-window-width = {};
 
       # Applications
       "Mod+T".action.spawn = "ghostty";

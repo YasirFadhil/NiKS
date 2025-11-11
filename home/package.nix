@@ -58,6 +58,7 @@ with pkgs; [
   wlr-randr
   wl-clipboard
   swww
+  swayidle
 
   # Rofi and Related
   rofi

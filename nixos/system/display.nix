@@ -24,38 +24,11 @@ in
     enable = true;
   };
 
-  # Enable XWayland for X11 app compatibility
-  programs.xwayland.enable = true;
-
   # Add niri-session to available sessions
   services.displayManager.sessionPackages = [ niri-session-package ];
 
-  # Environment variables for Wayland sessions
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    # Qt platform configuration - try xcb first for OnlyOffice compatibility
-    QT_QPA_PLATFORM = "xcb;wayland";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "niri";
-    XDG_SESSION_DESKTOP = "niri";
-    XCURSOR_THEME = "Bibata-Modern-Ice";
-    XCURSOR_SIZE = "20";
-  };
-
-  # Ensure systemd user services start properly
-  services.xserver.displayManager.sessionCommands = ''
-    ${pkgs.systemd}/bin/systemctl --user import-environment PATH DISPLAY WAYLAND_DISPLAY
-    ${pkgs.systemd}/bin/systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP
-    ${pkgs.systemd}/bin/systemctl --user import-environment NIXOS_OZONE_WL MOZ_ENABLE_WAYLAND QT_QPA_PLATFORM
-    ${pkgs.systemd}/bin/systemctl --user start graphical-session.target
-  '';
-
   services.desktopManager.gnome.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  programs.niri.enable = true;
   # Additional GNOME optimization (optional)
   environment.gnome.excludePackages = with pkgs; [
     # Remove if you want to keep these

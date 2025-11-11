@@ -10,7 +10,7 @@ pkgs.writeShellScriptBin "swaylock-blur" ''
     --screenshots \
     --effect-blur 7x5 \
     --effect-vignette 0.5:0.5 \
-    --fade-in 0.2 \
+    --fade-in 0.1 \
     --clock \
     --indicator-idle-visible \
     --color 000000aa \
@@ -19,29 +19,29 @@ pkgs.writeShellScriptBin "swaylock-blur" ''
     --inside-caps-lock-color ffffff22 \
     --inside-ver-color ffffff66 \
     --inside-wrong-color ff000066 \
-    --ring-color ffffff88 \
-    --ring-clear-color ffffff88 \
-    --ring-caps-lock-color ffffff88 \
-    --ring-ver-color ffffffaa \
-    --ring-wrong-color ff0000aa \
-    --key-hl-color ffffffcc \
+    --ring-color ffffffee \
+    --ring-clear-color ffffffee \
+    --ring-caps-lock-color ffff00ee \
+    --ring-ver-color 00ff00ee \
+    --ring-wrong-color ff0000ff \
+    --key-hl-color 0099ffff \
     --line-color 00000000 \
     --line-clear-color 00000000 \
     --line-caps-lock-color 00000000 \
-    --line-ver-color 00000000 \
-    --line-wrong-color 00000000 \
+    --line-ver-color 0099ffff \
+    --line-wrong-color ff0000ff \
     --text-color ffffffff \
     --text-clear-color ffffffff \
-    --text-caps-lock-color ffffffff \
-    --text-ver-color ffffffff \
-    --text-wrong-color ffffffff \
+    --text-caps-lock-color ffff00ff \
+    --text-ver-color 00ff00ff \
+    --text-wrong-color ff0000ff \
     --separator-color 00000000 \
-    --font "Rubik Light" \
-    --font-size 16 \
-    --indicator-radius 120 \
-    --indicator-thickness 3 \
+    --font "Noto Sans SemiBold" \
+    --font-size 28 \
+    --indicator-radius 110 \
+    --indicator-thickness 8 \
     --timestr "%I:%M %p" \
-    --datestr "%A, %d %B" \
+    --datestr "%b %d, %Y" \
     --grace 0 \
     --caps-lock-key-hl-color ffffffff \
     --caps-lock-bs-hl-color ffffffff
