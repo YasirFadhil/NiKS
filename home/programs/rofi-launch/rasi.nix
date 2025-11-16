@@ -1,13 +1,13 @@
 let
   improvedRasi = ''
     configuration {
-      modi: "drun,run";
+      modi: "drun,run,emoji:rofimoji --action copy";
       show-icons: true;
       drun-display-format: "{icon} {name}";
     }
 
     * {
-      font: "JetBrains Mono Nerd Font 13";
+      font: "JetBrains Mono Nerd Font 13, Noto Color Emoji 13";
       background-color: #1a0d2e;
       border-radius: 12px;
       padding: 0px;
@@ -43,7 +43,7 @@ let
     prompt {
       background-color: transparent;
       text-color: #e8d5ff;
-      font: "JetBrains Mono Nerd Font Bold 13";
+      font: "JetBrains Mono Nerd Font Bold 13, Noto Color Emoji 13";
       margin: 0px 12px 0px 0px;
     }
 
@@ -51,7 +51,7 @@ let
       background-color: transparent;
       border: 0px;
       text-color: #e8d5ff;
-      font: "JetBrains Mono Nerd Font 13";
+      font: "JetBrains Mono Nerd Font 13, Noto Color Emoji 13";
       placeholder: "Search applications...";
       placeholder-color: #8b45ff;
       margin: 0px;
@@ -75,7 +75,7 @@ let
       padding: 12px 16px;
       text-color: #e8d5ff;
       spacing: 12px;
-      font: "JetBrains Mono Nerd Font 13";
+      font: "JetBrains Mono Nerd Font 13, Noto Color Emoji 13";
       border: 0px;
     }
 
@@ -121,7 +121,7 @@ let
       vertical-align: 0.5;
       text-color: inherit;
       background-color: transparent;
-      font: "JetBrains Mono Nerd Font 13";
+      font: "JetBrains Mono Nerd Font 13, Noto Color Emoji 13";
     }
 
     scrollbar {

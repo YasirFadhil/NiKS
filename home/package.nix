@@ -80,10 +80,6 @@ with pkgs; [
   # Clipboard
   cliphist
 
-
-
-
-
   # System Control
   brightnessctl
 ]
