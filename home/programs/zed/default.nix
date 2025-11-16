@@ -3,6 +3,11 @@
 {
   home.packages = with pkgs; [
     zed
+    python3
+    python3Packages.pip
+    python3Packages.pylsp-mypy
+    python3Packages.python-lsp-server
+    python3Packages.pyflakes
   ];
 
   # Zed settings
@@ -16,6 +21,17 @@
         "mode": "dark",
         "light": "One Light",
         "dark": "One Dark Pro Max"
+      },
+      "languages": {
+        "Python": {
+          "language_servers": ["pylsp"],
+          "formatter": {
+            "external": {
+              "command": "black",
+              "arguments": ["-"]
+            }
+          }
+        }
       }
     }
   '';
