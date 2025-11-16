@@ -150,7 +150,6 @@ in
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
         { command = ["clipboard-manager" "store-image"]; }
-        { command = ["hypridle" "-c" "~/.config/niri/hypridle.conf"]; }
       ];
 
       # Cursor settings
@@ -232,6 +231,7 @@ in
       "Mod+T".action.spawn = "ghostty";
       "Mod+D".action.spawn = "rofi-launcher";
       "Mod+E".action.spawn = "nautilus";
+      "Mod+W".action.spawn = "waypaper";
 
       # Media keys
       "XF86AudioRaiseVolume".action.spawn = ["volume-control" "up"];
