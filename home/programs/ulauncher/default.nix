@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    ulauncher
-  ];
-
   # Create ulauncher config directory and settings
   home.file.".config/ulauncher/settings.json".text = builtins.toJSON {
     blacklisted-desktop-dirs = "/usr/share/locale:/usr/share/app-install:/usr/share/kservices5:/usr/share/fk5:/usr/share/kservicetypes5:/usr/share/applications/screensavers:/usr/share/kde4:/usr/share/mimelnk";

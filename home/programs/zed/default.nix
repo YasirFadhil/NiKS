@@ -1,15 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    zed
-    python3
-    python3Packages.pip
-    python3Packages.pylsp-mypy
-    python3Packages.python-lsp-server
-    python3Packages.pyflakes
-  ];
-
   # Zed settings
   home.file.".config/zed/settings.json".text = ''
     {

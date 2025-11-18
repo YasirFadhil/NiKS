@@ -28,10 +28,6 @@
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
   networking.hosts = {
       "127.0.0.1" = ["localhost"];
-      "192.168.122.128" = ["damurdamm.test"];
-      "10.60.149.102" = ["damurdamm.test"];
-      "172.16.57.129" = ["damurdamm.test"];
-      "172.16.193.2" = ["damurdamm.test"];
     };
   environment.systemPackages = with pkgs; [
     networkmanagerapplet

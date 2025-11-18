@@ -31,12 +31,11 @@
     # System Monitoring
     btop
     fastfetch
+    neofetch
 
     # Text Editors
-    zed-editor
     vim
     neovim
-    onlyoffice-desktopeditors
 
     # Shells and Shell Utilities
     fish
@@ -66,7 +65,15 @@
     xorg.xhost
     xorg.xauth
 
+    # Screenshot Tools
+    grim
+    slurp
 
+    # Clipboard
+    cliphist
+
+    # System Control
+    brightnessctl
 
     # Python
     (python3.withPackages (ps: [

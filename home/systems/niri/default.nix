@@ -6,7 +6,6 @@ in
 {
   imports = [
     inputs.niri.homeModules.niri
-    # ./hypridle.nix
   ];
 
   home.packages = myPackages;
@@ -161,7 +160,7 @@ in
       };
 
       # Screenshot settings
-      screenshot-path = "~/Pictures/Screenshots/Screenshot niri %Y-%m-%d %H-%M-%S.png";
+      screenshot-path = "~/Pictures/Screenshots/Screenshot_niri_%Y-%m-%d %H-%M-%S.png";
 
       # Hotkey daemon
       hotkey-overlay = {
@@ -255,7 +254,7 @@ in
 
       # Clipboard
       "Mod+Shift+V".action.spawn = ["clipboard-manager" "show"];
-      "Mod+Shift+C".action.spawn = ["clipboard-manager" "clear"];
+      "Mod+Alt+C".action.spawn = ["clipboard-manager" "clear"];
 
       # Scratchpad
       "Mod+Shift+Minus".action.move-window-to-workspace = "scratchpad";

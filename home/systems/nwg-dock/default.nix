@@ -1,6 +1,4 @@
 { pkgs,  ...}: {
-  home.packages = with pkgs;[nwg-dock-hyprland];
-
   xdg.configFile."nwg-dock-hyprland/style.css".text  =  ''
     window {
     /*  background: rgba(99, 100, 127, 0.9);*/
@@ -13,7 +11,7 @@
     border-color: #f4b8e4;
     /*	border-bottom: none;*/
    /* border-bottom-right-radius: 70px;
-    border-bottom-left-radius: 70px; */ 
+    border-bottom-left-radius: 70px; */
     /*	border-color: #B1ABB9;*/
   }
 
@@ -56,12 +54,12 @@
     margin-right: 4px;
     color: #e64553;
     font-size: 11px;
-  } 
+  }
 
   button:hover {
     border-radius: 8px;
     background-color: rgba(204, 208, 218,1);
-  } 
+  }
 
   button:focus {
     box-shadow: none

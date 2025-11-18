@@ -89,8 +89,4 @@
     };
   };
 
-  # Add swaylock to system packages for manual usage
-  home.packages = with pkgs; [
-    swaylock-effects
-  ];
 }

@@ -1,34 +1,6 @@
 { pkgs, lib, config, ... }:
 
 {
-  home.packages = with pkgs; [
-    # Qt5 and Qt6 theme tools
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
-
-    # Qt style plugins
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qtstyleplugins
-    libsForQt5.qtquickcontrols2
-    libsForQt5.qtgraphicaleffects
-
-    # Qt Wayland Support
-    qt5.qtwayland
-    qt6.qtwayland
-
-    # KDE/Breeze Themes
-    kdePackages.breeze
-    kdePackages.breeze-icons
-    kdePackages.breeze-gtk
-
-    # Kvantum themes
-    libsForQt5.qtstyleplugin-kvantum
-    whitesur-gtk-theme
-
-    # Additional Qt Libraries
-    libsForQt5.qtbase
-  ];
-
   # Qt Configuration - Use qt5ct/qt6ct for theme management
   qt = {
     enable = true;

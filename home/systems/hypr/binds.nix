@@ -1,11 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    (import ../../scripts/volume.nix { inherit pkgs; })
-    (import ../../scripts/launcher.nix { pkgs = pkgs; })
-    (import ../../scripts/keybind-viewer.nix { inherit pkgs; })
-  ];
-
   wayland.windowManager.hyprland.settings = {
     # Mouse bindings
     bindm = [

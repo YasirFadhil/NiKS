@@ -13,13 +13,10 @@
       ./nixos/system/users.nix
       ./nixos/system/network.nix
       ./nixos/system/display.nix
-      ./nixos/system/gdm.nix
       ./nixos/system/power-btn.nix
       ./nixos/system/var-conf.nix
       ./nixos/services/dconf.nix
       ./nixos/system/virtual.nix
-#      ./nixos/system/samba.nix
-#      ./nixos/system/firejail.nix
       ./home/var.nix
     ];
 

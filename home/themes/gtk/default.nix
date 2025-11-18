@@ -1,25 +1,6 @@
 { pkgs, lib, config, ... }:
 
 {
-  home.packages = with pkgs; [
-    # GTK Themes
-    whitesur-gtk-theme
-    adw-gtk3
-
-    # Icon Themes
-    whitesur-icon-theme
-
-    # Cursor Themes
-    bibata-cursors
-
-    # GNOME theming tools
-    gnome-tweaks
-    gnome-extension-manager
-
-    # System libraries for GTK
-    libcanberra-gtk3
-  ];
-
   # GTK Environment Variables
   home.sessionVariables = {
     GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";

@@ -99,7 +99,7 @@
             {
               label = "󰹑";
               type = "button";
-              command = "bash ~/.config/scripts/swaync-shot.sh";
+              command = "swaync-shot";
             }
             {
               label = "";

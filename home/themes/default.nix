@@ -7,12 +7,6 @@
     ./font
   ];
 
-  # Common theme-related packages
-  home.packages = with pkgs; [
-    # Theme utilities
-    dconf-editor
-  ];
-
   # Common theme environment variables
   home.sessionVariables = {
     # Cursor theme (Bibata Modern Ice)

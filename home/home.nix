@@ -2,29 +2,33 @@
 
 {
   imports = [
-    ./var.nix
-    ./nh.nix
-    ./programs/spicetify
-    ./programs/swaylock
+    # System home
     ./systems/niri
     ./systems/hypr/hyprland.nix
     ./systems/hypr/hyprpaper.nix
-    # ./systems/hyprpanel
     ./systems/waybar
+    ./systems/swaync
+    ./systems/nwg-dock
+    # ./systems/hyprpanel
+
+    #Programs home
+    ./programs/spicetify
+    ./programs/swaylock
+    ./programs/polkitagent
     ./programs/nus
     ./programs/kitty
     ./programs/ghostty
     ./programs/fastfetch
     ./programs/fastfetch/def-comp.nix
-    ./systems/hypr/polkitagent.nix
     ./programs/zenn
     ./programs/zed
+    ./programs/rofi-launch
     #./programs/anyrun
+
+    # Others
     ./themes
-    ./systems/nwg-dock
-    ./programs/rofi-launch/rasi.nix
-    ./systems/swaync
-    ./scripts/swaync-shot.nix
+    ./var.nix
+    ./nh.nix
   ];
 
   home.username = "yasirfadhil";

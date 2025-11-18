@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ hyprpanel ];
-
   home.file.".config/hyprpanel/config.json".text = builtins.toJSON {
     theme = {
       font = {

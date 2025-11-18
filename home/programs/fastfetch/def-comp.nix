@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ fastfetch ];
-
   # Config fastfetch custom (dari yang kamu kirim di atas)
   home.file.".config/fastfetch/config-compact.jsonc".text = ''
     {

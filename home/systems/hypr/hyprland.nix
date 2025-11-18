@@ -5,7 +5,6 @@ let
 in
 {
   imports = [
-    ../programs/polkitagent
     ./binds.nix
     ./hyprlock.nix
     # ./hypridle.nix  # Commented out - using Niri's hypridle instead

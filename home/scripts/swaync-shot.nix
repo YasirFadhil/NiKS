@@ -1,44 +1,37 @@
-{ config, pkgs, lib, ... }:
+{ pkgs }:
 
-{
-  home.file.".config/scripts/swaync-shot.sh" = {
-    text = ''
-      #!/usr/bin/env bash
+pkgs.writeShellScriptBin "swaync-shot" ''
+  # Screenshot script for swaync
 
-      # Screenshot script for swaync
+  # Create screenshots directory if it doesn't exist
+  SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
+  mkdir -p "$SCREENSHOT_DIR"
 
-      # Create screenshots directory if it doesn't exist
-      SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
-      mkdir -p "$SCREENSHOT_DIR"
+  # Generate filename with timestamp
+  FILENAME="screenshot_$(date +%Y%m%d_%H%M%S).png"
+  FILEPATH="$SCREENSHOT_DIR/$FILENAME"
 
-      # Generate filename with timestamp
-      FILENAME="screenshot_$(date +%Y%m%d_%H%M%S).png"
-      FILEPATH="$SCREENSHOT_DIR/$FILENAME"
+  # Close swaync panel
+  swaync-client --close-panel
 
-      # Close swaync panel
-      swaync-client --close-panel
+  # Wait a moment for panel to close
+  sleep 0.3
 
-      # Wait a moment for panel to close
-      sleep 0.3
+  # Take screenshot using grim and slurp for area selection
+  if grim -g "$(slurp)" "$FILEPATH"; then
+      # Copy to clipboard
+      wl-copy < "$FILEPATH"
 
-      # Take screenshot using grim and slurp for area selection
-      if grim -g "$(slurp)" "$FILEPATH"; then
-          # Copy to clipboard
-          wl-copy < "$FILEPATH"
-
-          # Send success notification
-          notify-send "📷 Screenshot Captured!" \
-              "Saved to: $FILENAME\nCopied to clipboard" \
-              --icon="$FILEPATH" \
-              --app-name="Screenshot"
-      else
-          # Send error notification if screenshot failed
-          notify-send "❌ Screenshot Failed!" \
-              "Unable to capture screenshot" \
-              --urgency=critical \
-              --app-name="Screenshot"
-      fi
-    '';
-    executable = true;
-  };
-}
+      # Send success notification
+      notify-send "📷 Screenshot Captured!" \
+          "Saved to: $FILENAME\nCopied to clipboard" \
+          --icon="$FILEPATH" \
+          --app-name="Screenshot"
+  else
+      # Send error notification if screenshot failed
+      notify-send "❌ Screenshot Failed!" \
+          "Unable to capture screenshot" \
+          --urgency=critical \
+          --app-name="Screenshot"
+  fi
+''

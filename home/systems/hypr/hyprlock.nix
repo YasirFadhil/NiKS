@@ -154,9 +154,4 @@ in {
     };
   };
 
-  home.packages = with pkgs; [
-    hyprlock
-    (import ../../scripts/battery.nix { inherit pkgs; })
-    (import ../../scripts/nowplay.nix { inherit pkgs; })
-  ];
 }
