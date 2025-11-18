@@ -8,7 +8,7 @@ in
     ./polkitagent.nix
     ./binds.nix
     ./hyprlock.nix
-    ./hypridle.nix
+    # ./hypridle.nix  # Commented out - using Niri's hypridle instead
     ./env.nix
     ./animation.nix
   ];
@@ -96,7 +96,7 @@ in
           vibrancy_darkness = 0.7;
           noise = 0.0;      # crucial!
           ignore_opacity = false;
-          new_optimizations = true;        
+          new_optimizations = true;
         };
 
         # Dimming

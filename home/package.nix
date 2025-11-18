@@ -18,6 +18,7 @@ with pkgs; [
   cbonsai
   neofetch
   cava
+  scrcpy
 
   # Development
   zig

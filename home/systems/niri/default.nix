@@ -6,6 +6,7 @@ in
 {
   imports = [
     inputs.niri.homeModules.niri
+    # ./hypridle.nix
   ];
 
   home.packages = myPackages;
@@ -143,6 +144,7 @@ in
         { command = ["polkit-gnome-authentication-agent-1"]; }
         { command = ["gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh,pgp"]; }
         { command = ["systemctl" "--user" "restart" "waybar.service"]; }
+        { command = ["systemctl" "--user" "start" "hypridle.service"]; }
         { command = ["nm-applet"]; }
         { command = ["blueman-applet"]; }
         { command = ["waypaper" "--restore"]; }

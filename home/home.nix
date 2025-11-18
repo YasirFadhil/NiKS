@@ -2,7 +2,6 @@
 
 {
   imports = [
-    #inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     ./var.nix
     ./nh.nix
     ./programs/spicetify
@@ -21,7 +20,6 @@
     ./programs/zenn
     ./programs/zed
     #./programs/anyrun
-    #./hyprlauncher
     ./themes
     ./systems/nwg-dock
     ./programs/rofi-launch/rasi.nix
