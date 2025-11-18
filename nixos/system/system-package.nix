@@ -34,8 +34,10 @@
     neofetch
 
     # Text Editors
+    zed-editor
     vim
     neovim
+    onlyoffice-desktopeditors
 
     # Shells and Shell Utilities
     fish
@@ -64,6 +66,18 @@
     xwayland
     xorg.xhost
     xorg.xauth
+
+    # Samba
+    samba
+    cifs-utils
+
+    # Network
+    networkmanagerapplet
+
+    # Qt configuration
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
+    libsForQt5.qtstyleplugin-kvantum
 
     # Screenshot Tools
     grim

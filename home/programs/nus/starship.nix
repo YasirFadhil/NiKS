@@ -9,8 +9,8 @@ in {
       add_newline = true;
 
       format = lib.concatStrings [
-        "[$username@$hostname:$directory]($style) "
-        # "[$directory]($style)"
+        # "[$username@$hostname:$directory]($style) "
+        "[$username:$directory]($style)"
         "$character"
       ];
 
