@@ -1,12 +1,12 @@
 { pkgs, ... }:
 
 with pkgs; [
-  # Custom launchers
-  (import ./programs/rofi-launch/launcher.nix { inherit pkgs; })
   # Custom scripts
   (import ./scripts/volume.nix { inherit pkgs; })
+  (import ./scripts/launcher.nix { inherit pkgs; })
   (import ./scripts/clipboard.nix { inherit pkgs; })
   (import ./scripts/swaylock-blur.nix { inherit pkgs; })
+
   # Terminal Emulators
   kitty
   ghostty

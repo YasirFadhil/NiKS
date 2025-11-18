@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     (import ../../scripts/volume.nix { inherit pkgs; })
-    (import ../../programs/rofi-launch/launcher.nix { pkgs = pkgs; })
+    (import ../../scripts/launcher.nix { pkgs = pkgs; })
     (import ../../scripts/keybind-viewer.nix { inherit pkgs; })
   ];
 
@@ -54,8 +54,6 @@
       "SUPER, F, exec, nautilus"
       "SUPER CTRL, V, exec, pavucontrol"
       "SUPER, D, exec, rofi-launcher"
-      "SUPER, SPACE, exec, anyrun"
-      "SUPER, slash, exec, keybind-viewer"
 
       # System controls
       "SUPER, X, fullscreen"

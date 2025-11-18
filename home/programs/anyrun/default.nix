@@ -6,7 +6,7 @@
   programs.anyrun = {
     enable = true;
     config = {
-      plugins = with inputs.anyrun.packages.${pkgs.system}; [
+      plugins = with inputs.anyrun.packages.${pkgs.stndev.hostPlatform.system}; [
         applications
         shell
         randr
