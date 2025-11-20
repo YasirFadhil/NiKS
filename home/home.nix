@@ -64,6 +64,23 @@
 
      # Session type (static for all Wayland sessions)
      XDG_SESSION_TYPE = "wayland";
+
+     # GTK environment variables (merged from themes/gtk)
+     GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
+     GTK_THEME = "WhiteSur-Dark";
+     GTK_APPLICATION_PREFER_DARK_THEME = "1";
+     GTK_USE_PORTAL = "1";
+     GTK_DEBUG = "";
+
+     # Qt environment variables (merged from themes/qt)
+     QT_QPA_PLATFORMTHEME = "qt5ct";
+     QT_QPA_PLATFORM = "xcb;wayland";
+     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+     QT_SCALE_FACTOR = "1";
+     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+
+     # XWayland display for X11 applications
+     DISPLAY = ":0";
   };
 
   fonts.fontconfig.enable = true;

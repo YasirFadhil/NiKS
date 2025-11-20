@@ -20,9 +20,10 @@ in
 {
   services.xserver.enable = true;
 
-  # Use ly display manager
-  services.displayManager.ly = {
+  # Use GDM display manager
+  services.xserver.displayManager.gdm = {
     enable = true;
+    wayland = true;
   };
 
   # Add niri-session to available sessions
@@ -61,8 +62,7 @@ in
   security.pam.services.swaylock = {};
 
   # Enable systemd user services in PAM
-  security.pam.services.ly.enableGnomeKeyring = true;
-  security.pam.services.ly.startSession = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
 
   # Enable user lingering for systemd services
   systemd.services."user@".enable = true;

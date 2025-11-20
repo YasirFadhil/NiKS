@@ -41,6 +41,7 @@ with pkgs; [
   putty
   winbox4
   ulauncher
+  cloudflare-warp
 
   # Media and Entertainment
   vlc
@@ -89,7 +90,6 @@ with pkgs; [
   bibata-cursors
   gnome-tweaks
   gnome-extension-manager
-  libcanberra-gtk3
 
   # Qt5 and Qt6 theme tools
   libsForQt5.qt5ct

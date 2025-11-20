@@ -8,22 +8,9 @@
     style.name = "kvantum";
   };
 
-  # Qt Environment Variables
-  home.sessionVariables = {
-    # Use qt5ct/qt6ct as platform theme
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-
-    # Qt Platform - prioritize XCB for OnlyOffice compatibility, fallback to Wayland
-    QT_QPA_PLATFORM = "xcb;wayland";
-
-    # Qt Scaling and Display Settings
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    QT_SCALE_FACTOR = "1";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-
-    # XWayland Display for X11 applications
-    DISPLAY = ":0";
-  };
+  # Note: Qt-related session environment variables were intentionally removed
+  # from this theme file. They are now defined centrally in `home.nix` so
+  # that session variables are applied consistently for the whole user profile.
 
   # Qt5ct configuration with WhiteSur Dark theme
   xdg.configFile."qt5ct/qt5ct.conf".text = ''

@@ -2,11 +2,11 @@
 
 {
   # GTK Environment Variables
-  home.sessionVariables = {
-    GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
-    GTK_THEME = "WhiteSur-Dark";
-    GTK_APPLICATION_PREFER_DARK_THEME = "1";
-  };
+  # home.sessionVariables = {
+  #   GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
+  #   GTK_THEME = "WhiteSur-Dark";
+  #   GTK_APPLICATION_PREFER_DARK_THEME = "1";
+  # };
 
   gtk = {
     enable = true;
