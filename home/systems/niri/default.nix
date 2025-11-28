@@ -144,7 +144,7 @@ in
         { command = ["gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh,pgp"]; }
         { command = ["nm-applet"]; }
         { command = ["blueman-applet"]; }
-        { command = ["swaybg" "-m" "fill" "-i" "../../themes/wallpaper/wallpaper.jpg"]; }
+        { command = ["swaybg" "-m" "fill" "-i" "/etc/nixos/home/themes/wallpaper/wallpaper.jpg"]; }
         { command = ["xwayland-satellite"]; }
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
