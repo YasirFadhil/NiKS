@@ -7,7 +7,7 @@ in
   imports = [
     ./binds.nix
     ./hyprlock.nix
-    # ./hypridle.nix  # Commented out - using Niri's hypridle instead
+    ./hypridle.nix  # Commented out - using Niri's hypridle instead
     ./env.nix
     ./animation.nix
   ];
@@ -141,6 +141,10 @@ in
         "size 1094 633,class:^(floating-kitty)$"
         # "float,class:^(floating-term)$"
         # "size 1094 633,class:^(floating-ghostty)$"
+
+        # Browser fullscreen optimization
+        "idleinhibit focus, fullscreen:1"
+        "suppressevent maximize, class:.*"
       ];
     };
   };

@@ -39,6 +39,9 @@
     neovim
     onlyoffice-desktopeditors
 
+    # AI/ML Tools
+    ollama
+
     # Shells and Shell Utilities
     fish
     zsh

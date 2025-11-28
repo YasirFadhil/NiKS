@@ -21,7 +21,7 @@ in
   services.xserver.enable = true;
 
   # Use GDM display manager
-  services.xserver.displayManager.gdm = {
+  services.displayManager.gdm = {
     enable = true;
     wayland = true;
   };

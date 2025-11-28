@@ -24,7 +24,7 @@
     ./programs/zed
     ./programs/rofi-launch
     # ./programs/ulauncher
-    #./programs/anyrun
+
 
     # Others
     ./themes

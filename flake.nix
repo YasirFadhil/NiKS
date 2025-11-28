@@ -7,7 +7,6 @@
     zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    anyrun.url = "github:fufexan/anyrun";
     niri.url = "github:sodiboo/niri-flake";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";

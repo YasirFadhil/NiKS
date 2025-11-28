@@ -42,6 +42,7 @@ with pkgs; [
   winbox4
   ulauncher
   cloudflare-warp
+  swaybg
 
   # Media and Entertainment
   vlc
@@ -61,7 +62,6 @@ with pkgs; [
   hyprpicker
   hyprlock
   hypridle
-  waypaper
   wlogout
   waybar
   wlr-randr
@@ -113,7 +113,4 @@ with pkgs; [
 
   # Theme utilities
   dconf-editor
-
-  # Hyprpanel
-  hyprpanel
 ]

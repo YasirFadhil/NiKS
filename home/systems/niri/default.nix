@@ -142,11 +142,9 @@ in
       spawn-at-startup = [
         { command = ["polkit-gnome-authentication-agent-1"]; }
         { command = ["gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh,pgp"]; }
-        { command = ["systemctl" "--user" "restart" "waybar.service"]; }
-        { command = ["systemctl" "--user" "start" "hypridle.service"]; }
         { command = ["nm-applet"]; }
         { command = ["blueman-applet"]; }
-        { command = ["waypaper" "--restore"]; }
+        { command = ["swaybg" "-m" "fill" "-i" "./themes/wallpaper.jpg"]; }
         { command = ["xwayland-satellite"]; }
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }

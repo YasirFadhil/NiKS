@@ -33,14 +33,7 @@
       "SUPER, 9, workspace, 9"
       "SUPER, 0, workspace, 10"
 
-      # Screenshot functionality
-      "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
-      "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/Screenreg-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
-    ];
-
-    # Regular bindings
-    bind = [
-      # Application launchers
+      # Application launchers (locked for fullscreen)
       "SUPER, T, exec, ghostty"
       "SUPER SHIFT, RETURN, exec, ghostty --class floating-term"
       "SUPER, B, exec, zen"
@@ -57,33 +50,19 @@
       "SUPER, L, exec, hyprlock"
       "SUPER, M, togglefloating"
 
-      # Utility functions
-      "SUPER SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-      "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
-      "SUPER, W, exec, waypaper"
-      "SUPER SHIFT, W, exec, nwg-dock-hyprland"
-
-      # Additional screenshot bindings
-      "SUPER, F5, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
-      "SUPER SHIFT, H, exec, hyprshot -m output | wl-copy"
-
-      # Window focus controls
+      # Window focus controls (locked)
       "SUPER, H, movefocus, l"
       "SUPER SHIFT, L, movefocus, r"
       "SUPER, K, movefocus, u"
       "SUPER, J, movefocus, d"
 
-      # Window movement
+      # Window movement (locked)
       "SUPER SHIFT, H, movewindow, l"
       "SUPER CTRL, L, movewindow, r"
       "SUPER SHIFT, K, movewindow, u"
       "SUPER SHIFT, J, movewindow, d"
 
-      # Alternative workspace navigation (for gaming)
-      "ALT, TAB, workspace, e+1"
-      "ALT SHIFT, TAB, workspace, e-1"
-
-      # Move windows to workspaces
+      # Move windows to workspaces (locked)
       "SUPER SHIFT, 1, movetoworkspace, 1"
       "SUPER SHIFT, 2, movetoworkspace, 2"
       "SUPER SHIFT, 3, movetoworkspace, 3"
@@ -94,6 +73,27 @@
       "SUPER SHIFT, 8, movetoworkspace, 8"
       "SUPER SHIFT, 9, movetoworkspace, 9"
       "SUPER SHIFT, 0, movetoworkspace, 10"
+
+      # Alternative workspace navigation
+      "ALT, TAB, workspace, e+1"
+      "ALT SHIFT, TAB, workspace, e-1"
+
+      # Screenshot functionality
+      "SUPER, S, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      "SUPER SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/Screenreg-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+    ];
+
+    # Regular bindings (for non-fullscreen scenarios)
+    bind = [
+      # Utility functions
+      "SUPER SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+      "SUPER ALT, B, exec, hyprpanel -q; hyprpanel"
+      "SUPER, W, exec, waypaper"
+      "SUPER SHIFT, W, exec, nwg-dock-hyprland"
+
+      # Additional screenshot bindings
+      "SUPER, F5, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
+      "SUPER SHIFT, H, exec, hyprshot -m output | wl-copy"
     ];
   };
 }
