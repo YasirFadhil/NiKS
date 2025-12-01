@@ -83,6 +83,5 @@
      DISPLAY = ":0";
   };
 
-  fonts.fontconfig.enable = true;
   home.stateVersion = "24.05";
 }
