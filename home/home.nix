@@ -4,8 +4,7 @@
   imports = [
     # System home
     ./systems/niri
-    ./systems/hypr/hyprland.nix
-    ./systems/hypr/hyprpaper.nix
+    ./systems/hypr
     ./systems/waybar
     ./systems/swaync
     ./systems/nwg-dock
@@ -19,12 +18,10 @@
     ./programs/kitty
     ./programs/ghostty
     ./programs/fastfetch
-    ./programs/fastfetch/def-comp.nix
     ./programs/zenn
     ./programs/zed
     ./programs/rofi-launch
     # ./programs/ulauncher
-
 
     # Others
     ./themes
