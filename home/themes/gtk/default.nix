@@ -1,13 +1,7 @@
 { pkgs, lib, config, ... }:
 
 {
-  # GTK Environment Variables
-  # home.sessionVariables = {
-  #   GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
-  #   GTK_THEME = "WhiteSur-Dark";
-  #   GTK_APPLICATION_PREFER_DARK_THEME = "1";
-  # };
-
+  # GTK theme configuration
   gtk = {
     enable = true;
     theme = {
@@ -29,6 +23,26 @@
     };
   };
 
+  # Additional GTK environment variables for better compatibility
+  home.sessionVariables = {
+    GTK2_RC_FILES = "${config.home.homeDirectory}/.gtkrc-2.0";
+    GTK_THEME = "WhiteSur-Dark";
+    GTK_APPLICATION_PREFER_DARK_THEME = "1";
+  };
+
+  # GTK3 configuration
+  xdg.configFile."gtk-3.0/settings.ini".text = ''
+    [Settings]
+    gtk-icon-theme-name=WhiteSur-dark
+    gtk-theme-name=WhiteSur-Dark
+    gtk-cursor-theme-name=Bibata-Modern-Ice
+    gtk-cursor-theme-size=20
+    gtk-font-name=Noto Sans 11
+    gtk-application-prefer-dark-theme=1
+    gtk-primary-button-warps-slider=false
+    gtk-decoration-layout=appmenu:close
+  '';
+
   # GTK4 configuration
   xdg.configFile."gtk-4.0/settings.ini".text = ''
     [Settings]
@@ -38,16 +52,11 @@
     gtk-cursor-theme-size=20
     gtk-font-name=Noto Sans 11
     gtk-application-prefer-dark-theme=1
+    gtk-primary-button-warps-slider=false
+    gtk-decoration-layout=appmenu:close
   '';
 
-  # GTK2 configuration (uses different format)
-  xdg.configFile."gtk-2.0/gtkrc".text = ''
-    gtk-theme-name="WhiteSur-Dark"
-    gtk-icon-theme-name="WhiteSur-dark"
-    gtk-font-name="Noto Sans 11"
-    gtk-cursor-theme-name="Bibata-Modern-Ice"
-    gtk-cursor-theme-size=20
-  '';
+  # GTK2 configuration is handled automatically by home manager's gtk module
 
   # GNOME/dconf settings for dark theme
   dconf.settings = {

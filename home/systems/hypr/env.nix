@@ -16,7 +16,7 @@
         "INPUT_METHOD = fcitx"
 
         "GTK_IM_MODULE = fcitx"
-        "GTK_THEME,WhiteSur-Dark"
+        "GTK_THEME = WhiteSur-Dark"
         "QT_IM_MODULE = fcitx"
         "XMODIFIERS = @im=fcitx"
 

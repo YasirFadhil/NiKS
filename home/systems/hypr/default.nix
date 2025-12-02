@@ -34,11 +34,14 @@ in
         "nm-applet &"
         "blueman-applet &"
 
+        # GTK theme setup
+        "gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Dark'"
+        "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+
         # Desktop components
-        "hyprpaper &"
-        "waypaper --restore"
         "kdeconnect-indicator"
         "nwg-dock-hyprland -r -i 30 -ml 12 -mr 12 -mb 12 -nolauncher -x -l bottom"
+        "swaybg -m fill -i home/themes/wallpaper/wallpaper.jpg &"
 
         # Clipboard management
         "wl-paste --type text --watch cliphist store"

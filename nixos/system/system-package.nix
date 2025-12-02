@@ -59,12 +59,18 @@
     gtk4
     gtk-layer-shell
 
+    # GTK Themes and Icons
+    whitesur-gtk-theme
+    whitesur-icon-theme
+    bibata-cursors
+
     # Display Servers & Protocols
     spice-gtk
     wayland-utils
     wayland-protocols
     xdg-desktop-portal
     xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
     xdg-desktop-portal-hyprland
     xwayland
     xorg.xhost
