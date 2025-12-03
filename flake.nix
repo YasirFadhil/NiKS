@@ -4,9 +4,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     # pkgs.follows = "nixpkgs";
-    zen-browser.url = "git+https://git.sr.ht/~canasta/zen-browser-flake/";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     niri.url = "github:sodiboo/niri-flake";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
