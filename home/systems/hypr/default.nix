@@ -41,7 +41,7 @@ in
         # Desktop components
         "kdeconnect-indicator"
         "nwg-dock-hyprland -r -i 30 -ml 12 -mr 12 -mb 12 -nolauncher -x -l bottom"
-        "swaybg -m fill -i home/themes/wallpaper/wallpaper.jpg &"
+        "swaybg -m fill -i /etc/nixos/home/themes/wallpaper/wallpaper.jpg"
 
         # Clipboard management
         "wl-paste --type text --watch cliphist store"
