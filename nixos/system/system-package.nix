@@ -21,6 +21,7 @@
     alsa-ucm-conf
     pamixer
     playerctl
+    ffmpeg_7
 
     # Development Tools
     git
