@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Enable dconf for GNOME-based applications
@@ -16,7 +16,7 @@
   services.dbus.packages = [ pkgs.dconf ];
 
   # Ensure proper XDG environment for GTK apps
-  environment.variables = {
+  environment.variables = lib.mkForce {
     # Force GTK apps to use the portal for file dialogs
     GTK_USE_PORTAL = "1";
     # Ensure gsettings schema path is available
