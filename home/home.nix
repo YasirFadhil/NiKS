@@ -3,12 +3,13 @@
 {
   imports = [
     # System home
-    ./systems/niri
+    ./systems/niri  # Commented out because DMS handles niri configuration
     ./systems/hypr
     ./systems/waybar
     ./systems/swaync
     ./systems/nwg-dock
-    # ./systems/hyprpanel
+    ./systems/hyprpanel
+    # ./systems/dms
 
     #Programs home
     ./programs/spicetify

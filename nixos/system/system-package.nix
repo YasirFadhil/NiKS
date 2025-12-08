@@ -23,11 +23,21 @@
     playerctl
     ffmpeg_7
 
+
     # Development Tools
     git
     python3
     python3Packages.pip
     clang
+    cmake
+    gnumake
+    just
+
+    # Qt6 Development
+    qt6.qtbase
+    qt6.qtdeclarative
+    qt6.qttools
+    qt6.qmake
 
     # System Monitoring
     btop

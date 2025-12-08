@@ -61,6 +61,9 @@ in
   # PAM configuration for swaylock
   security.pam.services.swaylock = {};
 
+  # PAM configuration for hyprlock
+  security.pam.services.hyprlock = {};
+
   # Enable systemd user services in PAM
   security.pam.services.gdm.enableGnomeKeyring = true;
 

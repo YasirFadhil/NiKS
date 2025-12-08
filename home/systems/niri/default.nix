@@ -58,7 +58,7 @@ in
           { proportion = 0.5; }
           { proportion = 0.667; }
         ];
-        default-column-width = { proportion = 0.6; };
+        default-column-width = { proportion = 0.9; };
         focus-ring = {
           enable = true;
           width = 1;
@@ -146,6 +146,7 @@ in
         { command = ["blueman-applet"]; }
         { command = ["swaybg" "-m" "fill" "-i" "/etc/nixos/home/themes/wallpaper/wallpaper.jpg"]; }
         { command = ["xwayland-satellite"]; }
+        { command = ["hypridle"]; }
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
         { command = ["clipboard-manager" "store-image"]; }
@@ -230,7 +231,7 @@ in
       "Mod+T".action.spawn = "ghostty";
       "Mod+D".action.spawn = "rofi-launcher";
       "Mod+E".action.spawn = "nautilus";
-      "Mod+W".action.spawn = "waypaper";
+      "Mod+Alt+V".action.spawn = "pavucontrol";
 
       # Media keys
       "XF86AudioRaiseVolume".action.spawn = ["volume-control" "up"];
@@ -248,7 +249,8 @@ in
       "Mod+Shift+Q".action.quit = {};
       "Mod+P".action.spawn = ["wlogout"];
       "Mod+Shift+P".action.power-off-monitors = {};
-      "Mod+Shift+L".action.spawn = ["swaylock-blur"];
+      "Mod+Shift+L".action.spawn = ["loginctl" "lock-session"];
+      # "Mod+Shift+L".action.spawn = ["swaylock-blur"];
 
       # Clipboard
       "Mod+Shift+V".action.spawn = ["clipboard-manager" "show"];

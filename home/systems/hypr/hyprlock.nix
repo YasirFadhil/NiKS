@@ -10,9 +10,6 @@ in {
     enable = true;
     settings = {
       general = {
-        grace = 0;
-        no_fade_in = false;
-        disable_loading_bar = false;
       };
 
       background = lib.mkForce {
@@ -21,21 +18,11 @@ in {
         # You can add blur, vibrancy, contrast if You want.
       };
 
-      animations = {
-        enabled = true;
-        bezier = "ease, 0.25, 0.1, 0.25, 1.0";
-        animation = [
-          "windows, 1, 4, ease"
-          "fade, 1, 6, ease"
-          "workspaces, 1, 4, ease"
-          "border, 1, 10, ease"
-          "layers, 1, 6, ease"
-        ];
-      };
+
 
       input-field = {
         monitor = "";
-        size = "250, 40";
+        size = "250, 35";
         outline_thickness = 2;
         dots_size = 0.1;
         dots_spacing = 0.3;
@@ -43,7 +30,7 @@ in {
         inner_color = entryBg;
         font_color = entryColor;
         fade_on_empty = true;
-        position = "0, -200";
+        position = "0, -150";
         halign = "center";
         valign = "center";
         font_family = font;
@@ -57,9 +44,9 @@ in {
           shadow_passes = "1";
           shadow_boost = "0.5";
           color = textColor;
-          font_size = "90";
+          font_size = "80";
           font_family = "Noto Sans SemiBold";
-          position = "0, 310";
+          position = "0, 234";
           halign = "center";
           valign = "center";
         }
@@ -71,9 +58,9 @@ in {
           shadow_passes = "1";
           shadow_boost = "0.5";
           color = textColor;
-          font_size = "15";
-          font_family = "Noto Sans Medium";
-          position = "0, 220";
+          font_size = "16";
+          font_family = "Noto Sans SemiBold";
+          position = "0, 296";
           halign = "center";
           valign = "center";
         }
@@ -92,7 +79,7 @@ in {
             fi
           ''}'';
           color = "rgba(255,255,255,0.5)";
-          font_size = "16";
+          font_size = "14";
           font_family = "Rubik Regular";
           position = "0, 15";
           halign = "center";
@@ -132,7 +119,7 @@ in {
           shadow_passes = "1";
           shadow_boost = "0.5";
           color = textColor;
-          font_size = "14";
+          font_size = "12";
           font_family = "Fira Code Mono Nerd";
           position = "-10, 10";
           halign = "right";
@@ -145,7 +132,7 @@ in {
           text = ''cmd[update:5000] nowplay'';
           color = textColor;
           font_family = "Fira Code Mono Nerd";
-          font_size = "14";
+          font_size = "12";
           position = "10, 10";
           halign = "left";
           valign = "bottom";

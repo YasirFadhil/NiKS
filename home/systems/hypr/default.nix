@@ -7,7 +7,7 @@ in
   imports = [
     ./binds.nix
     ./hyprlock.nix
-    ./hypridle.nix  # Commented out - using Niri's hypridle instead
+    ./hypridle.nix
     ./env.nix
     ./animation.nix
   ];

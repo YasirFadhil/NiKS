@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./nixos/system/system-package.nix
       ./nixos/system/audio.nix
+      # ./nixos/system/audio-1.nix
       ./nixos/system/users.nix
       ./nixos/system/network.nix
       ./nixos/system/display.nix

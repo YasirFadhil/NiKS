@@ -21,6 +21,7 @@ with pkgs; [
   cbonsai
   cava
   scrcpy
+  quickshell
 
   # Development
   zig
@@ -65,6 +66,7 @@ with pkgs; [
   wlogout
   waybar
   wlr-randr
+  wlopm
   wl-clipboard
   swww
   swayidle

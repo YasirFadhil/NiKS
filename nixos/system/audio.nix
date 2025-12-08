@@ -15,9 +15,12 @@
   };
   boot.extraModprobeConfig = ''
     options snd-intel-dspcfg dsp_driver=3
+    options snd-sof-intel-hda-common hda_model=alc5682
+    options snd-hda-intel jackpoll_ms=1
   '';
-  hardware.firmware = [
-    pkgs.linux-firmware
+  hardware.firmware = with pkgs; [
+    linux-firmware
+    sof-firmware
   ];
 
   # Bluetooth
