@@ -348,7 +348,8 @@ in {
           layer = "top";
           position = "top";
           modules-left = [
-            "custom/nixos"
+            # "custom/nixos"
+            "group/powermenu"
             "group/stuff"
           ];
           modules-center = [
@@ -396,7 +397,7 @@ in {
             };
             orientation = "horizontal";
             modules = [
-              # "custom/nixos"
+              "custom/nixos"
               "custom/shutdown"
               "custom/reboot"
               "custom/logout"
@@ -471,14 +472,16 @@ in {
             };
             orientation = "horizontal";
             "modules" = [
-              "custom/cog"
-              "custom/vpn"
-              "custom/weather"
-              "network"
-              "memory"
-              "cpu"
-              "temperature"
-              "custom/gpu"
+              "custom/nixos"
+              "group/powermenu"
+              # "custom/cog"
+              # "custom/vpn"
+              # "custom/weather"
+              # "network"
+              # "memory"
+              # "cpu"
+              # "temperature"
+              # "custom/gpu"
             ];
           };
           "pulseaudio#mic" = {
