@@ -10,6 +10,8 @@
     gvfs
     mediawriter
     ventoy-full
+    lm_sensors
+
     #net-tools
     polkit_gnome
     gnome-keyring
