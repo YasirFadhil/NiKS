@@ -35,6 +35,7 @@ with pkgs; [
 
   # Browsers and Communication
   google-chrome
+  microsoft-edge
   discord
   kdePackages.kdeconnect-kde
 
