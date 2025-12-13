@@ -147,6 +147,7 @@ in
         { command = ["swaybg" "-m" "fill" "-i" "/etc/nixos/home/themes/wallpaper/wallpaper.jpg"]; }
         { command = ["xwayland-satellite"]; }
         { command = ["hypridle"]; }
+        # { command = ["noctalia-shell"]; }
         { command = ["kdeconnect-indicator"]; }
         { command = ["clipboard-manager" "store-text"]; }
         { command = ["clipboard-manager" "store-image"]; }
@@ -230,6 +231,7 @@ in
       # Applications
       "Mod+T".action.spawn = "ghostty";
       "Mod+D".action.spawn = "rofi-launcher";
+      # "Mod+D".action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
       "Mod+E".action.spawn = "nautilus";
       "Mod+Alt+V".action.spawn = "pavucontrol";
 
@@ -249,6 +251,7 @@ in
       "Mod+Shift+Q".action.quit = {};
       "Mod+P".action.spawn = ["wlogout"];
       "Mod+Shift+P".action.power-off-monitors = {};
+      # "Mod+Shift+L".action.spawn = ["noctalia-shell" "ipc" "call" "lockScreen" "lock"];
       "Mod+Shift+L".action.spawn = ["loginctl" "lock-session"];
       # "Mod+Shift+L".action.spawn = ["swaylock-blur"];
 
