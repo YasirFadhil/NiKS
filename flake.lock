@@ -558,6 +558,30 @@
         "type": "github"
       }
     },
+    "nix4nvchad": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nvchad-starter": [
+          "nvchad-starter"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765013597,
+        "narHash": "sha256-++TPRCm1NI5Z8hHEV8zqToJybnBROdgqWn9vdnQWp4Y=",
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "rev": "3ce15d9ae05d9562da5ae6bff750ab19f3cf0862",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1750776420,
@@ -622,6 +646,26 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765334861,
+        "narHash": "sha256-HOYDxRIjqIrvtZWtmdVgn6jcwpNvPnIXfJzlSIrIUqk=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "4751f4c80fdefe6cc58c17703718d9d835caecb1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "type": "github"
+      }
+    },
     "nvchad-starter": {
       "flake": false,
       "locked": {
@@ -635,30 +679,6 @@
       "original": {
         "owner": "YasirFadhil",
         "repo": "chad",
-        "type": "github"
-      }
-    },
-    "nvchad4nix": {
-      "inputs": {
-        "flake-utils": "flake-utils_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nvchad-starter": [
-          "nvchad-starter"
-        ]
-      },
-      "locked": {
-        "lastModified": 1764490110,
-        "narHash": "sha256-xIqZmwVNgLyDMN0cGCriBYuDj+r0jsmOTYu3R49tWwU=",
-        "owner": "nix-community",
-        "repo": "nix4nvchad",
-        "rev": "05ae1fb388809858f83eba8cf21db6e797922992",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nix4nvchad",
         "type": "github"
       }
     },
@@ -693,9 +713,10 @@
         "hyprland": "hyprland",
         "hyprpanel": "hyprpanel",
         "niri": "niri",
+        "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs_3",
+        "noctalia": "noctalia",
         "nvchad-starter": "nvchad-starter",
-        "nvchad4nix": "nvchad4nix",
         "spicetify-nix": "spicetify-nix",
         "zen-browser": "zen-browser"
       }
