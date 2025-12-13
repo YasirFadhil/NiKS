@@ -2,15 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running 'nixos-help').
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nixos/system/system-package.nix
-      ./nixos/system/audio.nix
-      # ./nixos/system/audio-1.nix
+      # ./nixos/system/audio.nix
+      ./nixos/system/audi.nix
       ./nixos/system/users.nix
       ./nixos/system/network.nix
       ./nixos/system/display.nix
@@ -52,6 +52,14 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+  };
+
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        nvchad = inputs.nix4nvchad.packages."${pkgs.system}".nvchad;
+      })
+    ];
   };
 
   # Install firefox.
