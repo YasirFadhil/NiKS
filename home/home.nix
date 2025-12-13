@@ -9,6 +9,7 @@
     ./systems/swaync
     ./systems/nwg-dock
     ./systems/hyprpanel
+    ./systems/noctalia
     # ./systems/dms
 
     #Programs home
@@ -22,6 +23,7 @@
     ./programs/zenn
     ./programs/zed
     ./programs/rofi-launch
+    ./programs/nvchad
     # ./programs/ulauncher
 
     # Others
