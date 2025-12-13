@@ -71,11 +71,11 @@ in {
           text = ''cmd[update:60000] ${pkgs.writeShellScript "greet" ''
             hour=$(date +%H)
             if [ $hour -lt 12 ]; then
-              echo "Good morning, Yassir"
+              echo "Goedemorgen, Yassir"
             elif [ $hour -lt 18 ]; then
-              echo "Good afternoon, Yassir"
+              echo "Goedemiddag, Yassir"
             else
-              echo "Good evening, Yassir"
+              echo "Goedenavond, Yassir"
             fi
           ''}'';
           color = "rgba(255,255,255,0.5)";
