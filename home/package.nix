@@ -9,6 +9,7 @@ with pkgs; [
   (import ./scripts/swaync-shot.nix { inherit pkgs; })
   (import ./scripts/battery.nix { inherit pkgs; })
   (import ./scripts/nowplay.nix { inherit pkgs; })
+  (import ./scripts/audio-sink.nix { inherit pkgs; })
 
   # Terminal Emulators
   kitty
@@ -22,6 +23,7 @@ with pkgs; [
   cava
   scrcpy
   quickshell
+  libnotify
 
   # Development
   zig
