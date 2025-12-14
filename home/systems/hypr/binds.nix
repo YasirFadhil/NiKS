@@ -14,9 +14,13 @@
       ",XF86AudioLowerVolume, exec, volume-control down"
       ",XF86AudioMute, exec, volume-control mute"
 
+      # Audio sink switching
+      ",XF86AudioNext, exec, audio-sink --toggle"
+      ",XF86AudioPrev, exec, audio-sink --status"
+
       # Brightness controls
-      ",XF86MonBrightnessUp, exec, brightnessctl s 2%+"
-      ",XF86MonBrightnessDown, exec, brightnessctl s 2%-"
+      ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+      ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
     ];
 
     # Locked bindings (work in fullscreen)
@@ -94,6 +98,9 @@
       # Additional screenshot bindings
       "SUPER, F5, exec, grim - | tee ~/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy"
       "SUPER SHIFT, H, exec, hyprshot -m output | wl-copy"
+
+      # Audio sink switching
+      "SUPER ALT, A, exec, audio-sink --toggle"
     ];
   };
 }

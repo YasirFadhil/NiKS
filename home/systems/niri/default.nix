@@ -259,6 +259,9 @@ in
       "Mod+Shift+V".action.spawn = ["clipboard-manager" "show"];
       "Mod+Alt+C".action.spawn = ["clipboard-manager" "clear"];
 
+      # Audio and brightness control
+      "Mod+Alt+A".action.spawn = ["audio-sink" "--toggle"];
+
       # Scratchpad
       "Mod+Shift+Minus".action.move-window-to-workspace = "scratchpad";
       "Mod+Minus".action.focus-workspace = "scratchpad";
