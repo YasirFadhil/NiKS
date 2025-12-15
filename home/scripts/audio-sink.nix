@@ -16,7 +16,7 @@ pkgs.writeShellScriptBin "audio-sink" ''
 
   get_sink_name() {
     local sink_id="$1"
-    ${pkgs.wireplumber}/bin/wpctl status audio | sed -n '/├─ Sinks:/,/├─ Sources:/p' | grep "^\s*\*\?\s*$sink_id\." | sed 's/.*\.\s*//' | sed 's/\s*\[.*//'
+    ${pkgs.wireplumber}/bin/wpctl status audio | sed -n '/├─ Sinks:/,/├─ Sources:/p' | grep " $sink_id\." | sed 's/.*\. //' | sed 's/ \[.*//'
   }
 
   get_sink_id_by_name() {
@@ -25,8 +25,8 @@ pkgs.writeShellScriptBin "audio-sink" ''
   }
 
   get_sink_icon() {
-    local sink_id="$1"
-    if [ "$sink_id" = "60" ]; then
+    local sink_name="$1"
+    if [ "$sink_name" = "$SINK_2" ]; then
       echo "󰋋"
     else
       echo "󰓃"
@@ -36,7 +36,7 @@ pkgs.writeShellScriptBin "audio-sink" ''
   send_notification() {
     local sink_id="$1"
     local sink_name="$2"
-    local icon=$(get_sink_icon "$sink_id")
+    local icon=$(get_sink_icon "$sink_name")
 
     ${pkgs.libnotify}/bin/notify-send \
       --replace-id=$NOTIFY_ID \
@@ -76,9 +76,10 @@ pkgs.writeShellScriptBin "audio-sink" ''
   }
 
   toggle_sink() {
-    local current=$(get_current_sink)
+    local current_id=$(get_current_sink)
+    local current_name=$(get_sink_name "$current_id")
 
-    if [ "$current" = "60" ]; then
+    if [ "$current_name" = "$SINK_2" ]; then
       set_sink "$SINK_1"
     else
       set_sink "$SINK_2"
@@ -88,7 +89,7 @@ pkgs.writeShellScriptBin "audio-sink" ''
   show_status() {
     local current=$(get_current_sink)
     local current_name=$(get_sink_name "$current")
-    local icon=$(get_sink_icon "$current")
+    local icon=$(get_sink_icon "$current_name")
 
     echo "Current sink: [$current] $current_name"
     echo ""
