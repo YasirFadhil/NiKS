@@ -10,6 +10,7 @@
     ./systems/nwg-dock
     ./systems/hyprpanel
     ./systems/noctalia
+    ./systems/services/battery-monitor.nix
     # ./systems/dms
 
     #Programs home

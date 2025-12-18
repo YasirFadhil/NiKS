@@ -222,7 +222,7 @@ in
       "Mod+Q".action.close-window = {};
       "Mod+F".action.maximize-column = {};
       "Mod+Shift+F".action.fullscreen-window = {};
-      "Mod+Space".action.center-column = {};
+      "Mod+A".action.open-overview = {};
 
       # Column width
       "Mod+R".action.switch-preset-column-width = {};
