@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
   # Qt Configuration - Use qt5ct/qt6ct for theme management
@@ -17,10 +17,11 @@
     [General]
     style=kvantum
     palette=@Variant(\0\0\0\x80\0\0\0\t\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0)
-    font="Noto Sans,11,-1,5,50,0,0,0,0,0"
+    font="SF Pro Display,11,-1,5,50,0,0,0,0,0"
     [Appearance]
     custom_palette=false
-    icon_theme=WhiteSur-dark
+    # icon_theme=WhiteSur-dark
+    icon_theme=MacTahoe-dark
     standard_dialogs=default
     button_box_layout=0
   '';
@@ -29,9 +30,10 @@
   xdg.configFile."qt6ct/qt6ct.conf".text = ''
     [General]
     style=kvantum
-    font="Noto Sans,11,-1,5,50,0,0,0,0,0"
+    font="SF Pro Display,11,-1,5,50,0,0,0,0,0"
     [Appearance]
-    icon_theme=WhiteSur-dark
+    # icon_theme=WhiteSur-dark
+    icon_theme=MacTahoe-dark
     standard_dialogs=default
     button_box_layout=0
   '';

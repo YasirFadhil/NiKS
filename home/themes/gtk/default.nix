@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
   # GTK theme configuration
@@ -9,12 +9,14 @@
       package = pkgs.whitesur-gtk-theme;
     };
     font = {
-      name = "Noto Sans";
+      name = "SF Pro Display";
       size = 11;
     };
     iconTheme = {
-      name = "WhiteSur-dark";
-      package = pkgs.whitesur-icon-theme;
+      name = "MacTahoe-dark";
+      package = null;
+      # name = "WhiteSur-dark";
+      # package = pkgs.whitesur-icon-theme;
     };
     cursorTheme = {
       name = "Bibata-Modern-Ice";
@@ -33,11 +35,11 @@
   # GTK3 configuration
   xdg.configFile."gtk-3.0/settings.ini".text = ''
     [Settings]
-    gtk-icon-theme-name=WhiteSur-dark
+    gtk-icon-theme-name=MacTahoe-dark
     gtk-theme-name=WhiteSur-Dark
     gtk-cursor-theme-name=Bibata-Modern-Ice
     gtk-cursor-theme-size=20
-    gtk-font-name=Noto Sans 11
+    gtk-font-name=SF Pro Display 11
     gtk-application-prefer-dark-theme=1
     gtk-primary-button-warps-slider=false
     gtk-decoration-layout=appmenu:close
@@ -46,11 +48,11 @@
   # GTK4 configuration
   xdg.configFile."gtk-4.0/settings.ini".text = ''
     [Settings]
-    gtk-icon-theme-name=WhiteSur-dark
+    gtk-icon-theme-name=MacTahoe-dark
     gtk-theme-name=WhiteSur-Dark
     gtk-cursor-theme-name=Bibata-Modern-Ice
     gtk-cursor-theme-size=20
-    gtk-font-name=Noto Sans 11
+    gtk-font-name=SF Pro Display 11
     gtk-application-prefer-dark-theme=1
     gtk-primary-button-warps-slider=false
     gtk-decoration-layout=appmenu:close
@@ -62,17 +64,17 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       gtk-theme = "WhiteSur-Dark";
-      icon-theme = "WhiteSur-dark";
+      icon-theme = "MacTahoe-dark";
       cursor-theme = "Bibata-Modern-Ice";
       cursor-size = 20;
-      font-name = "Noto Sans 11";
-      document-font-name = "Noto Sans 11";
-      monospace-font-name = "JetBrains Mono 11";
+      font-name = "SF Pro Display 11";
+      document-font-name = "SF Pro Display 11";
+      monospace-font-name = "SF Mono 11";
       color-scheme = "prefer-dark";
     };
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:close";
-      titlebar-font = "Noto Sans Bold 11";
+      titlebar-font = "SF Pro Display Bold 11";
     };
   };
 }
