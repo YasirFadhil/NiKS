@@ -10,6 +10,7 @@ with pkgs; [
   (import ./scripts/battery.nix { inherit pkgs; })
   (import ./scripts/nowplay.nix { inherit pkgs; })
   (import ./scripts/audio-sink.nix { inherit pkgs; })
+  (import ./scripts/battery-monitor.nix { inherit pkgs; })
 
   # Terminal Emulators
   kitty
@@ -52,6 +53,7 @@ with pkgs; [
   vlc
   obs-studio
   pavucontrol
+  sound-theme-freedesktop
 
   # File Management and Viewers
   kdePackages.gwenview
