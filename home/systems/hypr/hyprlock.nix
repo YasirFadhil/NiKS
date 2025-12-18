@@ -3,7 +3,7 @@
   entryBg = "rgba(51,51,51,0.07)";
   entryBorder = "rgba(59,59,59,0.33)";
   entryColor = "rgba(255,255,255,1)";
-  font = "Rubik Light";
+  font = "SF Pro Display";
   fontSymbols = "Material Symbols Rounded";
 in {
   programs.hyprlock = {
@@ -45,7 +45,7 @@ in {
           shadow_boost = "0.5";
           color = textColor;
           font_size = "80";
-          font_family = "Noto Sans SemiBold";
+          font_family = "SF Pro Display Bold";
           position = "0, 234";
           halign = "center";
           valign = "center";
@@ -59,7 +59,7 @@ in {
           shadow_boost = "0.5";
           color = textColor;
           font_size = "16";
-          font_family = "Noto Sans SemiBold";
+          font_family = "SF Mono Bold";
           position = "0, 296";
           halign = "center";
           valign = "center";
@@ -80,7 +80,7 @@ in {
           ''}'';
           color = "rgba(255,255,255,0.5)";
           font_size = "14";
-          font_family = "Rubik Regular";
+          font_family = "SF Pro Display";
           position = "0, 15";
           halign = "center";
           valign = "bottom";
@@ -120,7 +120,7 @@ in {
           shadow_boost = "0.5";
           color = textColor;
           font_size = "12";
-          font_family = "Fira Code Mono Nerd";
+          font_family = "SF Mono";
           position = "-10, 10";
           halign = "right";
           valign = "bottom";
@@ -131,7 +131,7 @@ in {
           monitor = "";
           text = ''cmd[update:5000] nowplay'';
           color = textColor;
-          font_family = "Fira Code Mono Nerd";
+          font_family = "SF Pro Display Bold";
           font_size = "12";
           position = "10, 10";
           halign = "left";
