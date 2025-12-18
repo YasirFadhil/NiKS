@@ -1,7 +1,21 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+
+let
+  apple-fonts-pkg = inputs.apple-fonts.packages.${pkgs.stdenv.hostPlatform.system};
+in
 
 {
   home.packages = with pkgs; [
+    # Apple Fonts
+    apple-fonts-pkg.sf-pro
+    apple-fonts-pkg.sf-mono
+    apple-fonts-pkg.sf-compact
+    apple-fonts-pkg.ny
+    apple-fonts-pkg.sf-arabic
+    apple-fonts-pkg.sf-armenian
+    apple-fonts-pkg.sf-georgian
+    apple-fonts-pkg.sf-hebrew
+
     # Core fonts
     inter               # Similar to SF Pro
     jetbrains-mono      # Great monospace font

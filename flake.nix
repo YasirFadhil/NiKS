@@ -6,6 +6,7 @@
     # pkgs.follows = "nixpkgs";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     niri.url = "github:sodiboo/niri-flake";
+    apple-fonts.url= "github:Lyndeno/apple-fonts.nix";
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -67,7 +68,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
+          home-manager.backupFileExtension = null;
           home-manager.users.yasirfadhil = import ./home/home.nix;
           home-manager.extraSpecialArgs = { inherit inputs; };
         }
