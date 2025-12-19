@@ -46,6 +46,7 @@ in {
           color = textColor;
           font_size = "80";
           font_family = "SF Pro Display Bold";
+          font_weight = "300";
           position = "0, 234";
           halign = "center";
           valign = "center";
