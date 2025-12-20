@@ -5,21 +5,19 @@
     enable = true;
     settings = {
       main = {
-        font = "SF Pro Display:style=bold:size=12, FiraCode Nerd Font Mono:style=bold:size=12";
+        font = "SF Mono:style=bold:size=10, FiraCode Nerd Font Mono:style=bold:size=10";
         dpi-aware = "yes";
         pad = "25x25";
-        alpha = "0.8";
-        bell = "none";
       };
 
       cursor = {
         style = "block";
-        color = "dddddd ffffff";
       };
 
       colors = {
         foreground = "dddddd";
         background = "000000";
+        alpha = "0.8";
 
         # Standard colors
         regular0 = "000000";
@@ -44,30 +42,14 @@
 
       scrollback = {
         lines = 2000;
-        multiplier = 1;
       };
 
-      selection = {
-        # No selection highlight to match kitty config
+      bell = {
+        urgent = "no";
+        notify = "no";
       };
 
-      key-bindings = {
-        # Tab management
-        "ctrl+t" = "spawn-terminal";
-        "ctrl+w" = "close";
 
-        # Split management
-        "ctrl+shift+r" = "spawn-terminal -w 50%";
-        "ctrl+shift+l" = "spawn-terminal -w -50%";
-        "ctrl+shift+u" = "spawn-terminal -w 50%h";
-        "ctrl+shift+d" = "spawn-terminal -w -50%h";
-
-        # Navigation
-        "alt+r" = "focus-pane right";
-        "alt+shift+r" = "focus-pane left";
-        "alt+u" = "focus-pane up";
-        "alt+d" = "focus-pane down";
-      };
     };
   };
 }
