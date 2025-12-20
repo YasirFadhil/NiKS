@@ -7,7 +7,7 @@
     enable = true;
     settings = {
       # Font configuration
-      font-family = "FiraCode Nerd Font Mono";
+      font-family = "SF Pro Display, FiraCode Nerd Font Mono";
       font-size = 12;
       font-style = "bold";
       bold-is-bright = true;
