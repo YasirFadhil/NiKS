@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     # pkgs.follows = "nixpkgs";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     niri.url = "github:sodiboo/niri-flake";
     apple-fonts.url= "github:Lyndeno/apple-fonts.nix";
     zen-browser = {
@@ -15,10 +15,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprland = {
+      # url = "git+https://github.com/hyprwm/Hyprland";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
     home-manager = {
      url = "github:nix-community/home-manager";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -32,16 +32,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nvchad-starter.follows = "nvchad-starter";
     };
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # dgop = {
+      # url = "github:AvengeMedia/dgop";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
-    };
+    # dankMaterialShell = {
+      # url = "github:AvengeMedia/DankMaterialShell";
+      # inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.dgop.follows = "dgop";
+    # };
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";

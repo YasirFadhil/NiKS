@@ -4,11 +4,13 @@
   imports = [
     # System home
     ./systems/niri  # Commented out because DMS handles niri configuration
-    ./systems/hypr
+    # ./systems/hypr
+    ./systems/hypr/hypridle.nix
+    ./systems/hypr/hyprlock.nix
     ./systems/waybar
     ./systems/swaync
     ./systems/nwg-dock
-    ./systems/hyprpanel
+    # ./systems/hyprpanel
     ./systems/noctalia
     ./systems/services/battery-monitor.nix
     # ./systems/dms
