@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        font = "SF Mono:style=bold:size=10, FiraCode Nerd Font Mono:style=bold:size=10";
+        font = "SF Mono:style=bold:size=8, FiraCode Nerd Font Mono:style=bold:size=8";
         dpi-aware = "yes";
         pad = "25x25";
       };
