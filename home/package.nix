@@ -15,6 +15,8 @@ with pkgs; [
   # Terminal Emulators
   kitty
   ghostty
+  alacritty
+  foot
 
   # Shell Tools
   carapace

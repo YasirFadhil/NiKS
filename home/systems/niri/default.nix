@@ -229,7 +229,8 @@ in
       "Mod+Shift+R".action.reset-window-height = {};
 
       # Applications
-      "Mod+T".action.spawn = "ghostty";
+      # "Mod+T".action.spawn = "ghostty";
+      "Mod+T".action.spawn = "foot";
       "Mod+D".action.spawn = "rofi-launcher";
       # "Mod+D".action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
       "Mod+E".action.spawn = "nautilus";

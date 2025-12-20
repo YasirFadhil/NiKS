@@ -20,6 +20,7 @@
     ./programs/nus
     ./programs/kitty
     ./programs/ghostty
+    ./programs/foot
     ./programs/fastfetch
     ./programs/zenn
     ./programs/zed
