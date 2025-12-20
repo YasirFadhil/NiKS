@@ -33,30 +33,42 @@
   };
 
   # GTK3 configuration
-  xdg.configFile."gtk-3.0/settings.ini".text = ''
-    [Settings]
-    gtk-icon-theme-name=MacTahoe-dark
-    gtk-theme-name=WhiteSur-Dark
-    gtk-cursor-theme-name=Bibata-Modern-Ice
-    gtk-cursor-theme-size=20
-    gtk-font-name=SF Pro Display 11
-    gtk-application-prefer-dark-theme=1
-    gtk-primary-button-warps-slider=false
-    gtk-decoration-layout=appmenu:close
-  '';
+  xdg.configFile."gtk-3.0/settings.ini" = {
+    force = true;
+    text = ''
+      [Settings]
+      gtk-icon-theme-name=MacTahoe-dark
+      gtk-theme-name=WhiteSur-Dark
+      gtk-cursor-theme-name=Bibata-Modern-Ice
+      gtk-cursor-theme-size=20
+      gtk-font-name=SF Pro Display 11
+      gtk-application-prefer-dark-theme=1
+      gtk-primary-button-warps-slider=false
+      gtk-decoration-layout=appmenu:close
+    '';
+  };
 
   # GTK4 configuration
-  xdg.configFile."gtk-4.0/settings.ini".text = ''
-    [Settings]
-    gtk-icon-theme-name=MacTahoe-dark
-    gtk-theme-name=WhiteSur-Dark
-    gtk-cursor-theme-name=Bibata-Modern-Ice
-    gtk-cursor-theme-size=20
-    gtk-font-name=SF Pro Display 11
-    gtk-application-prefer-dark-theme=1
-    gtk-primary-button-warps-slider=false
-    gtk-decoration-layout=appmenu:close
-  '';
+  xdg.configFile."gtk-4.0/settings.ini" = {
+    force = true;
+    text = ''
+      [Settings]
+      gtk-icon-theme-name=MacTahoe-dark
+      gtk-theme-name=WhiteSur-Dark
+      gtk-cursor-theme-name=Bibata-Modern-Ice
+      gtk-cursor-theme-size=20
+      gtk-font-name=SF Pro Display 11
+      gtk-application-prefer-dark-theme=1
+      gtk-primary-button-warps-slider=false
+      gtk-decoration-layout=appmenu:close
+    '';
+  };
+
+  # GTK4 CSS configuration
+  xdg.configFile."gtk-4.0/gtk.css" = {
+    force = true;
+    text = "";
+  };
 
   # GTK2 configuration is handled automatically by home manager's gtk module
 
