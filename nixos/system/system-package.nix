@@ -10,7 +10,9 @@
     gvfs
     mediawriter
     ventoy-full
-    net-tools
+    lm_sensors
+
+    #net-tools
     polkit_gnome
     gnome-keyring
     upower
