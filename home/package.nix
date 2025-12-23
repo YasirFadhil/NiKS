@@ -32,7 +32,6 @@ with pkgs; [
   zig
   go
   nodejs
-  vscode
   zed
   python3Packages.pylsp-mypy
   python3Packages.python-lsp-server

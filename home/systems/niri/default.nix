@@ -223,6 +223,7 @@ in
       "Mod+F".action.maximize-column = {};
       "Mod+Shift+F".action.fullscreen-window = {};
       "Mod+A".action.open-overview = {};
+      "Mod+Alt+F".action.toggle-window-floating = {};
 
       # Column width
       "Mod+R".action.switch-preset-column-width = {};
