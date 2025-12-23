@@ -46,6 +46,10 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # mac-style-plymouth = {
+      # url = "github:SergioRibera/s4rchiso-plymouth-theme";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, niri, ... }: let

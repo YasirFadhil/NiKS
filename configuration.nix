@@ -18,15 +18,9 @@
       ./nixos/system/var-conf.nix
       ./nixos/services/dconf.nix
       ./nixos/system/virtual.nix
+      ./nixos/system/boot.nix
       ./home/var.nix
     ];
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
