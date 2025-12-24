@@ -5,12 +5,10 @@ with pkgs; [
   (import ./scripts/volume.nix { inherit pkgs; })
   (import ./scripts/launcher.nix { inherit pkgs; })
   (import ./scripts/clipboard.nix { inherit pkgs; })
-  (import ./scripts/swaylock-blur.nix { inherit pkgs; })
   (import ./scripts/swaync-shot.nix { inherit pkgs; })
   (import ./scripts/battery.nix { inherit pkgs; })
   (import ./scripts/nowplay.nix { inherit pkgs; })
   (import ./scripts/audio-sink.nix { inherit pkgs; })
-  (import ./scripts/battery-monitor.nix { inherit pkgs; })
 
   # Terminal Emulators
   kitty

@@ -3,7 +3,7 @@
 {
   imports = [
     # System home
-    ./systems/niri  # Commented out because DMS handles niri configuration
+    ./systems/niri
     # ./systems/hypr
     ./systems/hypr/hypridle.nix
     ./systems/hypr/hyprlock.nix
@@ -17,7 +17,6 @@
 
     #Programs home
     ./programs/spicetify
-    ./programs/swaylock
     ./programs/polkitagent
     ./programs/nus
     ./programs/kitty

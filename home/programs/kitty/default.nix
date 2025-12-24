@@ -7,7 +7,7 @@
     settings = {
       include = "./kitty-themes/00-Default.conf";
 
-      font_family = "SF Pro Display, FiraCode Nerd Font Mono Bold";
+      font_family = "SF Mono";
       font_size = "12.0";
       bold_font = "auto";
       italic_font = "auto";

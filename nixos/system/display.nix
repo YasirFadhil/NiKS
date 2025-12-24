@@ -30,6 +30,8 @@ in
   services.displayManager.sessionPackages = [ niri-session-package ];
 
   services.desktopManager.gnome.enable = true;
+  services.accounts-daemon.enable = true;
+  services.gnome.gnome-online-accounts.enable = true;
   services.gnome.gnome-keyring.enable = true;
   # Additional GNOME optimization (optional)
   environment.gnome.excludePackages = with pkgs; [
