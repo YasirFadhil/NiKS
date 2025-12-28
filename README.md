@@ -2,6 +2,8 @@
 
 <img src="https://wiki.nixos.org/w/images/a/a1/Nix-snowflake-colours.svg" alt="NixOS Logo" width="80" />
 
+Note - I moved to [NIXKs(https://github.com/YasirFadhil/NIXKs]
+
 Personal [NixOS](https://nixos.org/) + [Niri](https://github.com/YaLTeR/niri) setup.
 
 ## Features
